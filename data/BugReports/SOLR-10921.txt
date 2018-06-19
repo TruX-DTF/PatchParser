@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+  <meta name="application-name" content="JIRA" data-name="jira" data-version="7.6.3">
+  <meta name="ajs-viewissue-use-history-api" content="false"> 
+  <meta name="ajs-jira-base-url" content="https://issues.apache.org/jira"> 
+  <meta name="ajs-serverRenderedViewIssue" content="true"> 
+  <meta name="ajs-dev-mode" content="false"> 
+  <meta name="ajs-context-path" content="/jira"> 
+  <meta name="ajs-version-number" content="7.6.3"> 
+  <meta name="ajs-build-number" content="76005"> 
+  <meta name="ajs-is-beta" content="false"> 
+  <meta name="ajs-is-rc" content="false"> 
+  <meta name="ajs-is-snapshot" content="false"> 
+  <meta name="ajs-is-milestone" content="false"> 
+  <meta name="ajs-remote-user" content=""> 
+  <meta name="ajs-remote-user-fullname" content=""> 
+  <meta name="ajs-user-locale" content="en_UK"> 
+  <meta name="ajs-user-locale-group-separator" content=","> 
+  <meta name="ajs-app-title" content="ASF JIRA"> 
+  <meta name="ajs-keyboard-shortcuts-enabled" content="true"> 
+  <meta name="ajs-keyboard-accesskey-modifier" content="Ctrl+Alt"> 
+  <meta name="ajs-enabled-dark-features" content="[&quot;com.atlassian.jira.agile.darkfeature.editable.detailsview&quot;,&quot;nps.survey.inline.dialog&quot;,&quot;com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled&quot;,&quot;jira.plugin.devstatus.phasetwo&quot;,&quot;jira.frother.reporter.field&quot;,&quot;atlassian.rest.xsrf.legacy.enabled&quot;,&quot;jira.issue.status.lozenge&quot;,&quot;com.atlassian.jira.config.BIG_PIPE&quot;,&quot;com.atlassian.jira.projects.issuenavigator&quot;,&quot;com.atlassian.jira.config.PDL&quot;,&quot;jira.plugin.devstatus.phasetwo.enabled&quot;,&quot;atlassian.aui.raphael.disabled&quot;,&quot;app-switcher.new&quot;,&quot;frother.assignee.field&quot;,&quot;com.atlassian.jira.projects.ProjectCentricNavigation.Switch&quot;,&quot;sd.internal.base.off.thread.on.completion.events.enabled&quot;,&quot;jira.onboarding.cyoa&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.enabled&quot;,&quot;sd.slavalue.record.updated.date.enabled&quot;,&quot;com.atlassian.jira.config.ProjectConfig.MENU&quot;,&quot;com.atlassian.jira.projects.sidebar.DEFER_RESOURCES&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled&quot;,&quot;com.atlassian.jira.agile.darkfeature.sprint.goal.enabled&quot;,&quot;jira.zdu.admin-updates-ui&quot;,&quot;jira.zdu.jmx-monitoring&quot;,&quot;sd.sla.improved.rendering.enabled&quot;,&quot;sd.canned.responses.enabled&quot;,&quot;sd.new.settings.sidebar.location.disabled&quot;,&quot;jira.zdu.cluster-upgrade-state&quot;,&quot;com.atlassian.jira.agile.darkfeature.splitissue&quot;,&quot;com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED&quot;,&quot;com.atlassian.feedback.feedback-button-move-to-header-enable&quot;,&quot;jira.export.csv.enabled&quot;]"> 
+  <meta name="ajs-in-admin-mode" content="false"> 
+  <meta name="ajs-is-sysadmin" content="false"> 
+  <meta name="ajs-is-admin" content="false"> 
+  <meta name="ajs-outgoing-mail-enabled" content="true"> 
+  <meta name="ajs-date-relativize" content="true"> 
+  <meta name="ajs-date-time" content="HH:mm"> 
+  <meta name="ajs-date-day" content="EEEE HH:mm"> 
+  <meta name="ajs-date-dmy" content="dd/MMM/yy"> 
+  <meta name="ajs-date-complete" content="dd/MMM/yy HH:mm"> 
+  <script type="text/javascript">var AJS=AJS||{};AJS.debug=true;</script> 
+  <meta id="atlassian-token" name="atlassian-token" content="A5KQ-2QAV-T4JA-FDED|d7de4ccb1a079721833b374b89a9e61b8182e7c5|lout"> 
+  <link rel="shortcut icon" href="/jira/s/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/_/favicon.ico"> 
+  <!--[if IE]><![endif]--> 
+  <script type="text/javascript">
+    (function() {
+        var contextPath = '/jira';
+        var eventBuffer = [];
+
+        function printDeprecatedMsg() {
+            if (console && console.warn) {
+                console.warn('DEPRECATED JS - contextPath global variable has been deprecated since 7.4.0. Use `wrm/context-path` module instead.');
+            }
+        }
+
+        function sendEvent(analytics, postfix) {
+            analytics.send({
+                name: 'js.globals.contextPath.' + postfix
+            });
+        }
+
+        function sendDeprecatedEvent(postfix) {
+            try {
+                var analytics = require('jira/analytics');
+                if (eventBuffer.length) {
+                    eventBuffer.forEach(function(value) {
+                        sendEvent(analytics, value);
+                    });
+                    eventBuffer = [];
+                }
+
+                if (postfix) {
+                    sendEvent(analytics, postfix);
+                }
+            } catch(ex) {
+                eventBuffer.push(postfix);
+                setTimeout(sendDeprecatedEvent, 1000);
+            }
+        }
+
+        Object.defineProperty(window, 'contextPath', {
+            get: function() {
+                printDeprecatedMsg();
+                sendDeprecatedEvent('get');
+                return contextPath;
+            },
+            set: function(value) {
+                printDeprecatedMsg();
+                sendDeprecatedEvent('set');
+                contextPath = value;
+            }
+        });
+    })();
+
+</script> 
+  <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"/jira\"";
+WRM._unparsedData["jira.webresources:feature-flags.feature-flag-data"]="{\"enabled-feature-keys\":[\"com.atlassian.jira.agile.darkfeature.editable.detailsview\",\"nps.survey.inline.dialog\",\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled\",\"jira.plugin.devstatus.phasetwo\",\"jira.frother.reporter.field\",\"atlassian.rest.xsrf.legacy.enabled\",\"jira.issue.status.lozenge\",\"com.atlassian.jira.config.BIG_PIPE\",\"com.atlassian.jira.projects.issuenavigator\",\"com.atlassian.jira.config.PDL\",\"jira.plugin.devstatus.phasetwo.enabled\",\"atlassian.aui.raphael.disabled\",\"app-switcher.new\",\"frother.assignee.field\",\"com.atlassian.jira.projects.ProjectCentricNavigation.Switch\",\"sd.internal.base.off.thread.on.completion.events.enabled\",\"jira.onboarding.cyoa\",\"com.atlassian.jira.agile.darkfeature.kanplan.enabled\",\"sd.slavalue.record.updated.date.enabled\",\"com.atlassian.jira.config.ProjectConfig.MENU\",\"com.atlassian.jira.projects.sidebar.DEFER_RESOURCES\",\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled\",\"com.atlassian.jira.agile.darkfeature.sprint.goal.enabled\",\"jira.zdu.admin-updates-ui\",\"jira.zdu.jmx-monitoring\",\"sd.sla.improved.rendering.enabled\",\"sd.canned.responses.enabled\",\"sd.new.settings.sidebar.location.disabled\",\"jira.zdu.cluster-upgrade-state\",\"com.atlassian.jira.agile.darkfeature.splitissue\",\"com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED\",\"com.atlassian.feedback.feedback-button-move-to-header-enable\",\"jira.export.csv.enabled\"],\"feature-flag-states\":{\"com.atlassian.jira.agile.darkfeature.kanplan\":false,\"sd.internal.base.off.thread.on.completion.events\":false,\"jira.instrumentation.laas\":false,\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint\":false,\"com.atlassian.jira.issuetable.draggable\":true,\"jira.create.linked.issue\":true,\"com.atlassian.jira.agile.darkfeature.sprint.goal\":false,\"jira.sal.host.connect.accessor.existing.transaction.will.create.transactions\":true,\"jira.jql.suggestrecentfields\":false,\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions\":false,\"jira.jql.smartautoselectfirst\":false,\"com.atlassian.jira.agile.darkfeature.optimistic.transitions\":true,\"com.atlassian.jira.issuetable.move.links.hidden\":true,\"jira.priorities.per.project\":true,\"com.atlassian.jira.upgrade.startup.fix.index\":true,\"jira.renderer.consider.variable.format\":true}}";
+WRM._unparsedData["jira.webresources:default-comment-security-level.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://docs.atlassian.com/jira/jcore-docs-076/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-restrictacomment\",\"isLocal\":false}";
+WRM._unparsedData["jira.webresources:dateFormatProvider.allFormats"]="{\"dateFormats\":{\"meridiem\":[\"AM\",\"PM\"],\"eras\":[\"BC\",\"AD\"],\"months\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"monthsShort\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"],\"weekdaysShort\":[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],\"weekdays\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]},\"lookAndFeelFormats\":{\"relativize\":\"true\",\"time\":\"HH:mm\",\"day\":\"EEEE HH:mm\",\"dmy\":\"dd/MMM/yy\",\"complete\":\"dd/MMM/yy HH:mm\"}}";
+WRM._unparsedData["com.atlassian.jira.jira-issue-nav-components:issueviewer.features"]="{\"rteEnabled\":true}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-dnd-attachment-plugin:dnd-issue-drop-zone.thumbnail-mime-types"]="\"image/vnd.wap.wbmp,image/png,image/x-png,image/jpeg,image/bmp,image/gif\"";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-dnd-attachment-plugin:dnd-issue-drop-zone.upload-limit"]="\"62914560\"";
+WRM._unparsedData["com.atlassian.plugins.helptips.jira-help-tips:help-tip-manager.JiraHelpTipData"]="{\"anonymous\":true}";
+WRM._unparsedData["com.atlassian.jira.jira-view-issue-plugin:controller-subtasks.controller.subtasks.parameters"]="{\"url\":\"/rest/api/2/issue/{issueId}/subtask/move\"}";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["jira.webresources:avatar-picker.data"]="{}";
+WRM._unparsedData["com.atlassian.feedback.jira-feedback-plugin:button-resources-init.data"]="{\"jira.feedback.plugin.issue.collector.core\":\"https://jira.atlassian.com/s/576e9ab86257d4f65f6ea5b6dd50de44-T/en_UK3ljiw5/71006/b6b48b2829824b869586ac216d119363/2.0.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-UK&collectorId=abbf546d\",\"jira.feedback.plugin.issue.collector.default\":\"https://jira.atlassian.com/s/576e9ab86257d4f65f6ea5b6dd50de44-T/en_UK3ljiw5/71006/b6b48b2829824b869586ac216d119363/2.0.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-UK&collectorId=abbf546d\",\"jira.feedback.plugin.issue.collector.service.desk\":\"https://jira.atlassian.com/s/576e9ab86257d4f65f6ea5b6dd50de44-T/en_UK3ljiw5/71006/b6b48b2829824b869586ac216d119363/2.0.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-UK&collectorId=a698db21\",\"jira.feedback.plugin.issue.collector.software\":\"https://jira.atlassian.com/s/576e9ab86257d4f65f6ea5b6dd50de44-T/en_UK3ljiw5/71006/b6b48b2829824b869586ac216d119363/2.0.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-UK&collectorId=abbf546d\",\"isHeaderFeedbackButtonEnabled\":true}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:dismissedFlags.flags"]="{\"dismissed\":[]}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:newsletter-signup-tip-init.newsletterSignup"]="{\"signupDescription\":\"Get updates, inspiration and best practices from the team behind JIRA.\",\"formUrl\":\"https://www.atlassian.com/apis/exact-target/{0}/subscribe?mailingListId=1401671\",\"signupTitle\":\"Sign up!\",\"signupId\":\"newsletter-signup-tip\",\"showNewsletterTip\":false}";
+WRM._unparsedData["com.atlassian.jira.project-templates-plugin:project-templates-plugin-resources.ptAnalyticsData"]="{\"instanceCreatedDate\":\"2011-01-31\"}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-wiki-editor:wiki-editor-resources.help-data"]="{\"showHelp\":true,\"editorDocumentationUrl\":[\"https://docs.atlassian.com/jira/jcore-docs-076/Visual+editing\"],\"editorDocumentationTitle\":[\"Show me documentation for the visual editor\"]}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-wiki-editor:wiki-editor-resources.thumbnails-allowed"]="false";
+WRM._unparsedData["jira.webresources:user-message-flags.adminLockout"]="{}";
+WRM._unparsedData["jira.request.correlation-id"]="\"5fa65688f57cf8\"";
+WRM._unparsedData["project-id"]="12310230";
+WRM._unparsedData["project-key"]="\"SOLR\"";
+WRM._unparsedData["project-name"]="\"Solr\"";
+WRM._unparsedData["project-type"]="\"software\"";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:generic-filters"]="[{\"id\":\"allissues\",\"jql\":\"project = \\\"{0}\\\" ORDER BY {1}\",\"defaultOrderby\":\"created DESC\",\"label\":\"All issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[]},{\"id\":\"allopenissues\",\"jql\":\"project = \\\"{0}\\\" AND resolution = Unresolved ORDER BY {1}\",\"defaultOrderby\":\"priority DESC, updated DESC\",\"label\":\"Open issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"resolution\"]},{\"id\":\"doneissues\",\"jql\":\"project = \\\"{0}\\\" AND statusCategory = Done ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Done issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":false,\"fields\":[\"status\"]},{\"id\":\"recentlyviewed\",\"jql\":\"project = \\\"{0}\\\" AND issuekey in issueHistory() ORDER BY {1}\",\"defaultOrderby\":\"lastViewed DESC\",\"label\":\"Viewed recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"issuekey\"]},{\"id\":\"addedrecently\",\"jql\":\"project = \\\"{0}\\\" AND created \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"created DESC\",\"label\":\"Created recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"created\"]},{\"id\":\"resolvedrecently\",\"jql\":\"project = \\\"{0}\\\" AND resolutiondate \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Resolved recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":false,\"fields\":[\"resolutiondate\"]},{\"id\":\"updatedrecently\",\"jql\":\"project = \\\"{0}\\\" AND updated \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Updated recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"updated\"]}]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:default-filter-priority"]="[\"allopenissues\",\"allissues\"]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:can-manage-filters"]="false";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:project-filters"]="[]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:can-create-issues"]="false";
+WRM._unparsedData["projectId"]="12310230";
+WRM._unparsedData["projectKey"]="\"SOLR\"";
+WRM._unparsedData["projectType"]="\"software\"";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:server-rendered"]="true";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/a8a4711bc3f2eb261d8c8fd9fbcbba8b-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1fca1750044f2777c977e8d8cc023344/_/download/contextbatch/css/_super/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all"> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/74ac580603ca910fff0cfdf319e54add-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/fbf45109b31165e5b7740a9d72318cea/_/download/contextbatch/css/project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super/batch.css?agile_global_admin_condition=true&amp;hc-enabled=true&amp;is-server-instance=true&amp;jag=true&amp;jira.create.linked.issue=true&amp;nps-acknowledged=true&amp;richediton=true" data-wrm-key="project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super" data-wrm-batch-type="context" media="all"> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/611672383f6cab00ab202241ba6f9d68-T/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/7.6.3/_/download/batch/com.atlassian.feedback.jira-feedback-plugin:button-resources-init/com.atlassian.feedback.jira-feedback-plugin:button-resources-init.css" data-wrm-key="com.atlassian.feedback.jira-feedback-plugin:button-resources-init" data-wrm-batch-type="resource" media="all"> 
+  <script type="text/javascript" src="/jira/s/98ceb006e504d7924d5ffc411626c6bc-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1fca1750044f2777c977e8d8cc023344/_/download/contextbatch/js/_super/batch.js?locale=en-UK" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/c1e4d26ea276469807c3dc0918df482c-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/fbf45109b31165e5b7740a9d72318cea/_/download/contextbatch/js/project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super/batch.js?agile_global_admin_condition=true&amp;hc-enabled=true&amp;is-server-instance=true&amp;jag=true&amp;jira.create.linked.issue=true&amp;locale=en-UK&amp;nps-acknowledged=true&amp;richediton=true" data-wrm-key="project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super" data-wrm-batch-type="context" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/6bf9253c8d533109c3b02e26794be24e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/871d45c9f322a22cb3aa9b7948a69803/_/download/contextbatch/js/atl.global,-_super/batch.js?locale=en-UK" data-wrm-key="atl.global,-_super" data-wrm-batch-type="context" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1.0/_/download/batch/jira.webresources:calendar-en/jira.webresources:calendar-en.js" data-wrm-key="jira.webresources:calendar-en" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1.0/_/download/batch/jira.webresources:calendar-localisation-moment/jira.webresources:calendar-localisation-moment.js" data-wrm-key="jira.webresources:calendar-localisation-moment" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/7.6.3/_/download/batch/com.atlassian.feedback.jira-feedback-plugin:button-resources/com.atlassian.feedback.jira-feedback-plugin:button-resources.js" data-wrm-key="com.atlassian.feedback.jira-feedback-plugin:button-resources" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/ccd2e67b523185973473e8bd5735c8f9-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/e0de73613a1027de08f3da6a45e1d1a2/_/download/contextbatch/css/jira.global.look-and-feel,-_super/batch.css" data-wrm-key="jira.global.look-and-feel,-_super" data-wrm-batch-type="context" media="all"> 
+  <script type="text/javascript" src="/jira/rest/api/1.0/shortcuts/76005/33e5e0166867c8c9228d44506f60b2e8/shortcuts.js?context=issuenavigation&amp;context=issueaction"></script> 
+  <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.jira.jira-issue-nav-components:inline-edit-enabled"]="true";
+WRM._unparsedData["should-display-chaperone"]="false";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/15712b600e9aecf72ffd9fd3704a0c78-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/6b22a15c7b83f87a47b1757076f43542/_/download/contextbatch/css/com.atlassian.jira.projects.sidebar.init,-_super,-project.issue.navigator,-jira.view.issue/batch.css?jira.create.linked.issue=true&amp;richediton=true" data-wrm-key="com.atlassian.jira.projects.sidebar.init,-_super,-project.issue.navigator,-jira.view.issue" data-wrm-batch-type="context" media="all"> 
+  <script type="text/javascript" src="/jira/s/6579b6b8ba67abaa496e39b9242a18a4-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/6b22a15c7b83f87a47b1757076f43542/_/download/contextbatch/js/com.atlassian.jira.projects.sidebar.init,-_super,-project.issue.navigator,-jira.view.issue/batch.js?jira.create.linked.issue=true&amp;locale=en-UK&amp;richediton=true" data-wrm-key="com.atlassian.jira.projects.sidebar.init,-_super,-project.issue.navigator,-jira.view.issue" data-wrm-batch-type="context" data-initially-rendered></script> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="ajs-can-search-users" content="false"> 
+  <meta name="ajs-can-edit-watchers" content="false"> 
+  <meta name="ajs-default-avatar-url" content="https://issues.apache.org/jira/secure/useravatar?size=xsmall&amp;avatarId=10453"> 
+  <meta name="ajs-issue-project-type" content="software"> 
+  <meta name="ajs-issue-key" content="SOLR-10921"> 
+  <meta name="ajs-server-view-issue-is-editable" content="false"> 
+  <title>[SOLR-10921] Make boolean query clause limit configurable per-query - ASF JIRA</title> 
+  <link rel="search" type="application/opensearchdescription+xml" href="/jira/osd.jsp" title="[SOLR-10921] Make boolean query clause limit configurable per-query - ASF JIRA"> 
+ </head> 
+ <body id="jira" class="aui-layout aui-theme-default " data-version="7.6.3"> 
+  <div id="page"> 
+   <header id="header" role="banner"> 
+    <script>
+require(["jquery", "jira/license-banner"], function ($, licenseBanner) {
+    $(function () {
+        licenseBanner.showLicenseBanner("");
+        licenseBanner.showLicenseFlag("");
+    });
+});
+</script> 
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+     <div class="aui-header-inner">
+      <div class="aui-header-before">
+       <a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></a>
+       <div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}">
+        <div role="application">
+         <div class="app-switcher-loading">
+          Loading…
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="aui-header-primary">
+       <h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://issues.apache.org/jira/secure/MyJiraHome.jspa"><img src="/jira/s/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/_/jira-logo-scaled.png" alt="ASF JIRA"></a></h1>
+       <ul class="aui-nav">
+        <li><a href="/jira/secure/Dashboard.jspa" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="home_link" aria-haspopup="true" aria-controls="home_link-content" title="View and manage your dashboards" accesskey="d">Dashboards</a>
+         <div class="aui-dropdown2 aui-style-default" id="home_link-content" data-aui-dropdown2-ajax-key="home_link"></div></li>
+        <li><a href="/jira/browse/SOLR" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="browse_link" aria-haspopup="true" aria-controls="browse_link-content" title="View recent projects and browse a list of projects" accesskey="p">Projects</a>
+         <div class="aui-dropdown2 aui-style-default" id="browse_link-content" data-aui-dropdown2-ajax-key="browse_link"></div></li>
+        <li><a href="/jira/issues/" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="find_link" aria-haspopup="true" aria-controls="find_link-content" title="Search for issues and view recent issues" accesskey="i">Issues</a>
+         <div class="aui-dropdown2 aui-style-default" id="find_link-content" data-aui-dropdown2-ajax-key="find_link"></div></li> 
+       </ul>
+      </div>
+      <div class="aui-header-secondary">
+       <ul class="aui-nav">
+        <li id="quicksearch-menu"> 
+         <form action="/jira/secure/QuickSearch.jspa" method="get" id="quicksearch" class="aui-quicksearch dont-default-focus ajs-dirty-warning-exempt"> 
+          <input id="quickSearchInput" class="search" type="text" title="Search" placeholder="Search" name="searchString" accessKey="q"> 
+          <input type="submit" class="hidden" value="Search"> 
+         </form> </li> 
+        <li><a class="jira-feedback-plugin" role="button" aria-haspopup="true" id="jira-header-feedback-link" href="#"><span class="aui-icon aui-icon-small jira-feedback-plugin-icon">Give feedback to Atlassian</span></a></li> 
+        <li id="system-help-menu"> <a class="aui-nav-link aui-dropdown2-trigger" id="help_menu" aria-haspopup="true" aria-owns="system-help-menu-content" href="https://docs.atlassian.com/jira/jcore-docs-076/" target="$textUtils.htmlEncode($rootHelpMenuItem.params.target)" title="Help"><span class="aui-icon aui-icon-small aui-iconfont-help">Help</span></a> 
+         <div id="system-help-menu-content" class="aui-dropdown2 aui-style-default"> 
+          <div class="aui-dropdown2-section"> 
+           <ul id="jira-help" class="aui-list-truncate"> 
+            <li> <a id="view_core_help" class="aui-nav-link " title="Go to the online documentation for JIRA Core" href="https://docs.atlassian.com/jira/jcore-docs-076/" target="_blank">JIRA Core help</a> </li> 
+            <li> <a id="keyshortscuthelp" class="aui-nav-link " title="Get more information about JIRA's Keyboard Shortcuts" href="/jira/secure/ViewKeyboardShortcuts!default.jspa" target="_blank">Keyboard Shortcuts</a> </li> 
+            <li> <a id="view_about" class="aui-nav-link " title="Get more information about JIRA" href="/jira/secure/AboutPage.jspa">About JIRA</a> </li> 
+            <li> <a id="view_credits" class="aui-nav-link " title="See who did what" href="/jira/secure/JiraCreditsPage!default.jspa" target="_blank">JIRA Credits</a> </li> 
+           </ul> 
+          </div> 
+         </div> </li> 
+        <li id="user-options"> <a class="aui-nav-link login-link" href="/jira/login.jsp?os_destination=%2Fbrowse%2FSOLR-10921">Log In</a> 
+         <div id="user-options-content" class="aui-dropdown2 aui-style-default"> 
+          <div class="aui-dropdown2-section"> 
+          </div> 
+         </div> </li> 
+       </ul>
+      </div>
+     </div>
+     <!-- .aui-header-inner-->
+    </nav>
+    <!-- .aui-header --> 
+   </header> 
+   <section id="content" role="main"> 
+    <big-pipe data-id="sidebar-id" unresolved></big-pipe>
+    <div class="aui-sidebar  sidebar-placeholder">
+     <div class="aui-sidebar-wrapper">
+      <div class="aui-sidebar-body"></div>
+      <div class="aui-sidebar-footer">
+       <a class="aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy" data-tooltip="Expand sidebar ( [ )" href="#"><span class="aui-icon aui-icon-small"></span></a>
+      </div>
+     </div>
+    </div>
+    <script id="projects-sidebar-init">
+    require(['jira/projects/sidebar/expansion-manager'], function(expansionManager) {
+        var scriptTag = document.getElementById('projects-sidebar-init');
+        var sidebar = AJS.sidebar('.aui-sidebar');
+        expansionManager(sidebar);
+        scriptTag.parentElement.removeChild(scriptTag);
+    });
+    </script>
+    <div class="aui-page-panel">
+     <div class="aui-page-panel-inner">
+      <div class="issue-navigator">
+       <div class="content">
+        <div class="issue-view">
+         <div class="navigation-tools">
+          <div class="pager-container"></div>
+         </div>
+         <div class="issue-container">
+          <div id="issue-content" class="issue-edit-form">
+           <header id="stalker" class="issue-header js-stalker">
+            <div class="issue-header-content">
+             <header class="aui-page-header">
+              <div class="aui-page-header-inner">
+               <div class="aui-page-header-image">
+                <span id="12310230" class="aui-avatar aui-avatar-large aui-avatar-project"><span class="aui-avatar-inner"><img id="project-avatar" alt="Uploaded image for project: 'Solr'" src="https://issues.apache.org/jira/secure/projectavatar?pid=12310230&amp;avatarId=22151"></span></span>
+               </div>
+               <!-- .aui-page-header-image -->
+               <div class="aui-page-header-main">
+                <ol class="aui-nav aui-nav-breadcrumbs">
+                 <li><a id="project-name-val" href="/jira/browse/SOLR">Solr</a></li>
+                 <li><a class="issue-link" data-issue-key="SOLR-10921" href="/jira/browse/SOLR-10921" id="key-val" rel="13081134">SOLR-10921</a></li>
+                </ol>
+                <h1 id="summary-val">Make boolean query clause limit configurable per-query</h1>
+               </div>
+               <!-- .aui-page-header-main -->
+               <div class="aui-page-header-actions">
+                <div id="issue-header-pager"></div>
+               </div>
+               <!-- .aui-page-header-actions -->
+              </div>
+              <!-- .aui-page-header-inner -->
+             </header>
+             <!-- .aui-page-header -->
+             <div class="command-bar">
+              <div class="ops-cont">
+               <div class="ops-menus aui-toolbar">
+                <div class="toolbar-split toolbar-split-left">
+                 <ul id="opsbar-ops-login-lnk_container" class="toolbar-group pluggable-ops">
+                  <li class="toolbar-item"><a id="ops-login-lnk" title="Log In" class="toolbar-trigger" href="/jira/login.jsp?os_destination=%2Fbrowse%2FSOLR-10921"><span class="trigger-label">Log In</span></a></li>
+                 </ul>
+                 <ul id="opsbar-opsbar-operations" class="toolbar-group pluggable-ops"></ul>
+                 <ul id="opsbar-opsbar-transitions" class="toolbar-group pluggable-ops"></ul>
+                 <ul id="opsbar-opsbar-admin" class="toolbar-group pluggable-ops"></ul>
+                </div>
+                <div class="toolbar-split toolbar-split-right">
+                 <ul id="opsbar-jira.issue.tools" class="toolbar-group pluggable-ops">
+                  <li class="toolbar-item">
+                   <div>
+                    <a href="#" id="viewissue-export" aria-owns="viewissue-export_drop" aria-haspopup="true" title="Export this issue in another format" class="toolbar-trigger aui-button aui-style-default aui-dropdown2-trigger"><span class="icon icon-default aui-icon aui-icon-small aui-iconfont-export"></span> <span class="dropdown-text">Export</span></a>
+                    <div id="viewissue-export_drop" class="aui-style-default aui-dropdown2">
+                     <ul>
+                      <li class="aui-list-item"><a href="/jira/si/jira.issueviews:issue-xml/SOLR-10921/SOLR-10921.xml" id="jira.issueviews:issue-xml"><span class="trigger-label">XML</span></a></li>
+                      <li class="aui-list-item"><a href="/jira/si/jira.issueviews:issue-word/SOLR-10921/SOLR-10921.doc" id="jira.issueviews:issue-word"><span class="trigger-label">Word</span></a></li>
+                      <li class="aui-list-item"><a href="/jira/si/jira.issueviews:issue-html/SOLR-10921/SOLR-10921.html" id="jira.issueviews:issue-html"><span class="trigger-label">Printable</span></a></li>
+                      <li class="aui-list-item"><a href="/jira/si/com.atlassian.jira.plugins.jira-importers-plugin:issue-json/SOLR-10921/SOLR-10921.json" id="com.atlassian.jira.plugins.jira-importers-plugin:issue-json"><span class="trigger-label">JSON</span></a></li>
+                     </ul>
+                    </div>
+                   </div></li>
+                 </ul>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </header>
+           <div class="issue-body-content">
+            <div class="aui-group issue-body">
+             <div class="aui-item issue-main-column">
+              <div id="details-module" class="module toggle-wrap">
+               <div id="details-module_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Details</h2>
+               </div>
+               <div class="mod-content"> 
+                <ul id="issuedetails" class="property-list two-cols"> 
+                 <li class="item"> 
+                  <div class="wrap"> 
+                   <strong class="name">Type:</strong> 
+                   <span id="type-val" class="value"> <img alt="" height="16" src="/jira/secure/viewavatar?size=xsmall&amp;avatarId=21133&amp;avatarType=issuetype" title="Bug - A problem which impairs or prevents the functions of the product." width="16"> Bug </span> 
+                  </div> </li> 
+                 <li class="item item-right"> 
+                  <div class="wrap"> 
+                   <strong class="name">Status:</strong> 
+                   <span id="status-val" class="value"> <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Resolved</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>A resolution has been taken, and it is awaiting verification by reporter. From here issues are either reopened, or are closed.</span>">Resolved</span> </span> 
+                  </div> </li> 
+                 <li class="item new"> 
+                  <div class="wrap"> 
+                   <strong class="name">Priority:</strong> 
+                   <span id="priority-val" class="value"> <img alt="" height="16" src="/jira/images/icons/priorities/major.svg" title="Major - Major loss of function." width="16"> Major </span> 
+                  </div> </li> 
+                 <li class="item item-right"> 
+                  <div class="wrap"> 
+                   <strong class="name">Resolution:</strong> 
+                   <span id="resolution-val" class="value resolved"> Fixed </span> 
+                  </div> </li> 
+                 <li class="item"> 
+                  <div class="wrap"> 
+                   <strong class="name">Affects Version/s:</strong> 
+                   <span id="versions-val" class="value"> None </span> 
+                  </div> </li> 
+                 <li class="item item-right"> 
+                  <div class="wrap"> 
+                   <strong class="name">Fix Version/s:</strong> 
+                   <span id="fixfor-val" class="value"> <span class="shorten" id="fixVersions-field"> <a href="/jira/issues/?jql=project+%3D+SOLR+AND+fixVersion+%3D+7.0" title="7.0 First 7x release, major release after 6.6">7.0</a> </span> </span> 
+                  </div> </li> 
+                 <li class="item"> 
+                  <div class="wrap"> 
+                   <strong class="name">Component/s:</strong> 
+                   <span id="components-val" class="value"> None </span> 
+                  </div> </li> 
+                 <li class="item item-right"> 
+                  <div class="wrap"> 
+                   <strong class="name">Security Level:</strong> 
+                   <span id="security-val" class="value"> <span class="note">Public</span> (Default Security Level. Issues are Public) </span> 
+                  </div> </li> 
+                 <li class="item full-width"> 
+                  <div class="wrap" id="wrap-labels"> 
+                   <strong class="name">Labels:</strong> 
+                   <div class="labels-wrap value"> 
+                    <span class="labels" id="labels-13081134-value">None</span> 
+                   </div> 
+                  </div> </li> 
+                </ul> 
+               </div>
+              </div>
+              <div id="descriptionmodule" class="module toggle-wrap">
+               <div id="descriptionmodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Description</h2>
+               </div>
+               <div class="mod-content">
+                <div id="description-val" class="field-ignore-highlight"> 
+                 <div class="user-content-block"> 
+                  <p>This is the Solr version of <a href="https://issues.apache.org/jira/browse/LUCENE-7880" title="Make boolean query clause limit configurable per-query" class="issue-link" data-issue-key="LUCENE-7880">LUCENE-7880</a></p> 
+                  <p>Background: The removal of the arbitrary maxBooleanClauses has been blocked in <a href="https://issues.apache.org/jira/browse/SOLR-4586" title="Eliminate the maxBooleanClauses limit" class="issue-link" data-issue-key="SOLR-4586">SOLR-4586</a>, and there were objections to adding the ability to override maxBooleanClauses at the Lucene level in <a href="https://issues.apache.org/jira/browse/LUCENE-7880" title="Make boolean query clause limit configurable per-query" class="issue-link" data-issue-key="LUCENE-7880">LUCENE-7880</a>.<br> That leaves us with this last option of implementing the check in solr by raising the lucene limit and then using the maxBooleanClauses from solrconfig.xml to throw an exception when the limit is exceeded. Solr QParsers have access to the request object, which knows the schema/core/config. This should fix the last-core-wins behavior due to the lucene limit being a static.</p> 
+                  <p>Although this enables controlling the limit on a per-query basis, this issue is not about adding any user API to do so. The capability will only be used to make the current Solr maxBooleanClauses setting truly per-solr-core rather than last-core-wins.</p> 
+                 </div> 
+                </div> 
+               </div>
+              </div>
+              <div id="dnd-metadata" class="module toggle-wrap">
+               <div id="dnd-metadata_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Attachments</h2>
+               </div>
+               <div class="mod-content">
+                <div id="dnd-metadata-webpanel" data-can-attach="false" data-project-type="software" data-upload-limit="62914560" data-thumbnails-allowed="false"></div>
+               </div>
+              </div>
+              <div id="attachmentmodule" class="module toggle-wrap">
+               <div id="attachmentmodule_heading" class="mod-header">
+                <ul class="ops">
+                 <li class="drop">
+                  <div class="aui-dd-parent">
+                   <a href="#" class="icon drop-menu js-default-dropdown" title="Options"><span>Options</span></a>
+                   <div class="aui-dropdown-content aui-list">
+                    <ul id="attachment-sorting-options" class="aui-list-section aui-first">
+                     <li class="aui-list-item"><a id="attachment-sort-key-name" href="/jira/browse/SOLR-10921?attachmentSortBy=fileName#attachmentmodule" class="aui-list-checked aui-checked aui-list-item-link" title="viewissue.subtasks.tab.show.all.name"><span>Sort By Name</span></a></li>
+                     <li class="aui-list-item"><a id="attachment-sort-key-date" href="/jira/browse/SOLR-10921?attachmentSortBy=dateTime#attachmentmodule" class="aui-list-checked aui-list-item-link" title="Sort By Date"><span>Sort By Date</span></a></li>
+                    </ul>
+                    <ul id="attachment-sorting-order-options" class="aui-list-section aui-last">
+                     <li class="aui-list-item"><a id="attachment-sort-direction-asc" href="/jira/browse/SOLR-10921?attachmentOrder=asc#attachmentmodule" class="aui-list-checked aui-checked aui-list-item-link" title="Ascending"><span>Ascending</span></a></li>
+                     <li class="aui-list-item"><a id="attachment-sort-direction-desc" href="/jira/browse/SOLR-10921?attachmentOrder=desc#attachmentmodule" class="aui-list-checked aui-list-item-link" title="Descending"><span>Descending</span></a></li>
+                    </ul>
+                   </div>
+                  </div></li>
+                </ul>
+                <h2 class="toggle-title">Attachments</h2>
+               </div>
+               <div class="mod-content">
+                <ol id="file_attachments" class="item-attachments" data-sort-key="fileName" data-sort-order="asc">
+                 <li class="attachment-content js-file-attachment" data-attachment-id="12874108" data-issue-id="13081134" data-attachment-type="file">
+                  <div class="attachment-thumb">
+                   <a href="/jira/secure/attachment/12874108/SOLR-10921.patch" draggable="true" data-downloadurl="text/plain:SOLR-10921.patch:https://issues.apache.org/jira/secure/attachment/12874108/SOLR-10921.patch"><span class="aui-icon aui-icon-small attachment-icon aui-iconfont-file-txt" title="Text File"></span></a>
+                  </div>
+                  <dl>
+                   <dt class="attachment-title">
+                    <a href="/jira/secure/attachment/12874108/SOLR-10921.patch" title="Latest  22/Jun/17 16:44 - Yonik Seeley" draggable="true" data-downloadurl="text/plain:SOLR-10921.patch:https://issues.apache.org/jira/secure/attachment/12874108/SOLR-10921.patch">SOLR-10921.patch</a>
+                   </dt>
+                   <dd class="attachment-delete">
+                    <span class="icon"></span>
+                   </dd>
+                   <dd class="attachment-date">
+                    <time class="livestamp" datetime="2017-06-22T16:44:40.489Z">22/Jun/17 16:44</time>
+                   </dd>
+                   <dd class="attachment-size">
+                    11 kB
+                   </dd>
+                   <dd class="attachment-author">
+                    Yonik Seeley
+                   </dd>
+                  </dl></li>
+                 <li class="attachment-content js-file-attachment earlier-version" data-attachment-id="12873744" data-issue-id="13081134" data-attachment-type="file">
+                  <div class="attachment-thumb">
+                   <a href="/jira/secure/attachment/12873744/SOLR-10921.patch" draggable="true" data-downloadurl="text/plain:SOLR-10921.patch:https://issues.apache.org/jira/secure/attachment/12873744/SOLR-10921.patch"><span class="aui-icon aui-icon-small attachment-icon aui-iconfont-file-txt" title="Text File"></span></a>
+                  </div>
+                  <dl>
+                   <dt class="attachment-title">
+                    <a href="/jira/secure/attachment/12873744/SOLR-10921.patch" title=" 20/Jun/17 21:58 - Yonik Seeley" draggable="true" data-downloadurl="text/plain:SOLR-10921.patch:https://issues.apache.org/jira/secure/attachment/12873744/SOLR-10921.patch">SOLR-10921.patch</a>
+                   </dt>
+                   <dd class="attachment-delete">
+                    <span class="icon"></span>
+                   </dd>
+                   <dd class="attachment-date">
+                    <time class="livestamp" datetime="2017-06-20T21:58:25.678Z">20/Jun/17 21:58</time>
+                   </dd>
+                   <dd class="attachment-size">
+                    6 kB
+                   </dd>
+                   <dd class="attachment-author">
+                    Yonik Seeley
+                   </dd>
+                  </dl></li>
+                </ol>
+               </div>
+              </div>
+              <div id="linkingmodule" class="module toggle-wrap">
+               <div id="linkingmodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Issue Links</h2>
+               </div>
+               <div class="mod-content"> 
+                <div class="links-container" data-default-link-icon="/jira/images/icons/generic_link_16.png"> 
+                 <dl class="links-list "> 
+                  <dt title="relates to">
+                   relates to
+                  </dt> 
+                  <dd id="internal-13080536_10030"> 
+                   <div class="link-content"> 
+                    <p> <img src="/jira/secure/viewavatar?size=xsmall&amp;avatarId=21140&amp;avatarType=issuetype" width="16" height="16" title="Improvement - An improvement or enhancement to an existing feature or task." alt="Improvement - An improvement or enhancement to an existing feature or task."> <span title="LUCENE-7880: Make boolean query clause limit configurable per-query"> <a href="/jira/browse/LUCENE-7880" data-issue-key="LUCENE-7880" class="issue-link link-title">LUCENE-7880</a> <span class="link-summary">Make boolean query clause limit configurable per-query</span> </span> </p> 
+                    <ul class="link-snapshot"> 
+                     <li class="priority"> <img src="/jira/images/icons/priorities/major.svg" width="16" height="16" title="Major - Major loss of function." alt="Major - Major loss of function."> </li> 
+                     <li class="status"> <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-short" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>The issue is open and ready for the assignee to start work on it.</span>">Open</span> </li> 
+                    </ul> 
+                   </div> 
+                  </dd> 
+                  <dd id="internal-12637134_10030"> 
+                   <div class="link-content"> 
+                    <p> <img src="/jira/secure/viewavatar?size=xsmall&amp;avatarId=21140&amp;avatarType=issuetype" width="16" height="16" title="Improvement - An improvement or enhancement to an existing feature or task." alt="Improvement - An improvement or enhancement to an existing feature or task."> <span title="SOLR-4586: Eliminate the maxBooleanClauses limit"> <a href="/jira/browse/SOLR-4586" data-issue-key="SOLR-4586" class="issue-link link-title">SOLR-4586</a> <span class="link-summary">Eliminate the maxBooleanClauses limit</span> </span> </p> 
+                    <ul class="link-snapshot"> 
+                     <li class="priority"> <img src="/jira/images/icons/priorities/major.svg" width="16" height="16" title="Major - Major loss of function." alt="Major - Major loss of function."> </li> 
+                     <li class="status"> <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-blue-gray jira-issue-status-lozenge-new aui-lozenge-subtle jira-issue-status-lozenge-max-width-short" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Open</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>The issue is open and ready for the assignee to start work on it.</span>">Open</span> </li> 
+                    </ul> 
+                   </div> 
+                  </dd> 
+                 </dl> 
+                </div> 
+               </div>
+              </div>
+              <div id="activitymodule" class="module toggle-wrap">
+               <div id="activitymodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Activity</h2>
+               </div>
+               <div class="mod-content"> 
+                <big-pipe data-id="activity-panel-pipe-id" style="height: 70px"> 
+                 <div></div> 
+                </big-pipe> 
+               </div>
+              </div>
+             </div>
+             <div id="viewissuesidebar" class="aui-item issue-side-column">
+              <div id="peoplemodule" class="module toggle-wrap">
+               <div id="peoplemodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">People</h2>
+               </div>
+               <div class="mod-content"> 
+                <ul class="item-details" id="peopledetails"> 
+                 <li class="people-details"> 
+                  <dl> 
+                   <dt>
+                    Assignee:
+                   </dt> 
+                   <dd> 
+                    <span id="assignee-val" class="view-issue-field"> <span class="user-hover" id="issue_summary_assignee_yseeley@gmail.com" rel="yseeley@gmail.com" data-user="{&quot;avatarUrl&quot;:&quot;https://issues.apache.org/jira/secure/useravatar?size=xsmall&amp;avatarId=10452&quot;,&quot;displayName&quot;:&quot;Yonik Seeley&quot;,&quot;emailAddress&quot;:&quot;yseeley@gmail.com&quot;,&quot;username&quot;:&quot;yseeley@gmail.com&quot;}"> <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://issues.apache.org/jira/secure/useravatar?size=small&amp;avatarId=10452" alt="yseeley@gmail.com"></span></span> Yonik Seeley </span> </span> 
+                   </dd> 
+                  </dl> 
+                  <dl> 
+                   <dt>
+                    Reporter:
+                   </dt> 
+                   <dd> 
+                    <span id="reporter-val" class="view-issue-field"> <span class="user-hover" id="issue_summary_reporter_yseeley@gmail.com" rel="yseeley@gmail.com" data-user="{&quot;avatarUrl&quot;:&quot;https://issues.apache.org/jira/secure/useravatar?size=xsmall&amp;avatarId=10452&quot;,&quot;displayName&quot;:&quot;Yonik Seeley&quot;,&quot;emailAddress&quot;:&quot;yseeley@gmail.com&quot;,&quot;username&quot;:&quot;yseeley@gmail.com&quot;}"> <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://issues.apache.org/jira/secure/useravatar?size=small&amp;avatarId=10452" alt="yseeley@gmail.com"></span></span> Yonik Seeley </span> </span> 
+                   </dd> 
+                  </dl> </li> 
+                </ul> 
+                <ul class="item-details"> 
+                 <li> 
+                  <dl> 
+                   <dt>
+                    Votes:
+                   </dt> 
+                   <dd> 
+                    <span id="vote-data" class="aui-badge vote-state-off">0</span> 
+                    <span id="vote-label" title="You have to be logged in to vote for an issue.">Vote for this issue</span> 
+                   </dd> 
+                  </dl> 
+                  <dl> 
+                   <dt>
+                    Watchers:
+                   </dt> 
+                   <dd> 
+                    <span id="watcher-data" class="aui-badge watch-state-off">4</span> 
+                    <span id="watch-label" title="You have to be logged in to watch an issue.">Start watching this issue</span> 
+                   </dd> 
+                  </dl> </li> 
+                </ul> 
+               </div>
+              </div>
+              <div id="datesmodule" class="module toggle-wrap">
+               <div id="datesmodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Dates</h2>
+               </div>
+               <div class="mod-content"> 
+                <ul class="item-details"> 
+                 <li> 
+                  <dl class="dates"> 
+                   <dt>
+                    Created:
+                   </dt> 
+                   <dd class="date user-tz" title="20/Jun/17 13:42"> 
+                    <span data-name="Created" id="created-val" data-fieldtype="datetime"> <time class="livestamp" datetime="2017-06-20T13:42:57+0000">20/Jun/17 13:42</time> </span> 
+                   </dd> 
+                  </dl> 
+                  <dl class="dates"> 
+                   <dt>
+                    Updated:
+                   </dt> 
+                   <dd class="date user-tz" title="23/Jun/17 04:08"> 
+                    <span data-name="Updated" id="updated-val" data-fieldtype="datetime"> <time class="livestamp" datetime="2017-06-23T04:08:50+0000">23/Jun/17 04:08</time> </span> 
+                   </dd> 
+                  </dl> 
+                  <dl class="dates"> 
+                   <dt>
+                    Resolved:
+                   </dt> 
+                   <dd class="date user-tz" title="22/Jun/17 20:06"> 
+                    <span data-name="Resolved" id="resolutiondate-val" data-fieldtype="datetime"> <time class="livestamp" datetime="2017-06-22T20:06:27+0000">22/Jun/17 20:06</time> </span> 
+                   </dd> 
+                  </dl> </li> 
+                </ul> 
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- .aui-page-panel-inner -->
+    </div>
+    <!-- .aui-page-panel -->
+    <div class="issue-navigator-init"></div> 
+   </section> 
+   <footer id="footer" role="contentinfo"> 
+    <section class="footer-body"> 
+     <ul class="atlassian-footer"> 
+      <li> Atlassian JIRA <a class="seo-link" rel="nofollow" href="https://www.atlassian.com/software/jira">Project Management Software</a> <span id="footer-build-information">(v7.6.3#76005-<span title="8a4e38d34af948780dbf52044e7aafb13a7cae58" data-commit-id="8a4e38d34af948780dbf52044e7aafb13a7cae58}">sha1:8a4e38d</span>)</span> </li> 
+      <li> <a id="about-link" rel="nofollow" href="/jira/secure/AboutPage.jspa/secure/AboutPage.jspa">About JIRA</a> </li> 
+      <li> <a id="footer-report-problem-link" rel="nofollow" href="/jira/secure/CreateIssue!default.jspa">Report a problem</a> </li> 
+     </ul> 
+     <ul class="atlassian-footer"> 
+      <li class="licensemessage"> Powered by a free Atlassian <a rel="nofollow" href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Apache Software Foundation. Try JIRA - <a rel="nofollow" href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team. </li> 
+     </ul> 
+     <div id="footer-logo">
+      <a rel="nofollow" href="http://www.atlassian.com/">Atlassian</a>
+     </div> 
+    </section> 
+    <fieldset class="hidden parameters"> 
+     <input type="hidden" title="loggedInUser" value=""> 
+     <input type="hidden" title="ajaxTimeout" value="The call to the JIRA server did not complete within the timeout period.  We are unsure of the result of this operation."> 
+     <input type="hidden" title="JiraVersion" value="7.6.3"> 
+     <input type="hidden" title="ajaxUnauthorised" value="You are not authorised to perform this operation. Please log in."> 
+     <input type="hidden" title="baseURL" value="https://issues.apache.org/jira"> 
+     <input type="hidden" title="ajaxCommsError" value="The JIRA server could not be contacted. This may be a temporary glitch or the server may be down. "> 
+     <input type="hidden" title="ajaxServerError" value="The JIRA server was contacted but has returned an error response. We are unsure of the result of this operation."> 
+     <input type="hidden" title="ajaxErrorCloseDialog" value="Close this dialog and press refresh in your browser"> 
+     <input type="hidden" title="ajaxErrorDialogHeading" value="Communications Breakdown"> 
+     <input type="hidden" title="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost."> 
+     <input type="hidden" title="dirtyDialogMessage" value="You have entered new data in this dialog. If you navigate away from this dialog without first saving your data, the changes will be lost. Click cancel to return to the dialog."> 
+     <input type="hidden" title="keyType" value="Type"> 
+     <input type="hidden" title="keyThen" value="then"> 
+     <input type="hidden" title="dblClickToExpand" value="Double click to expand"> 
+     <input type="hidden" title="actions" value="Actions"> 
+     <input type="hidden" title="removeItem" value="Remove"> 
+     <input type="hidden" title="workflow" value="Workflow"> 
+     <input type="hidden" title="labelNew" value="New Label"> 
+     <input type="hidden" title="issueActionsHint" value="Begin typing for available operations or press down to see all"> 
+     <input type="hidden" title="closelink" value="Close"> 
+     <input type="hidden" title="dotOperations" value="Operations"> 
+     <input type="hidden" title="dotLoading" value="Loading..."> 
+     <input type="hidden" title="frotherSuggestions" value="Suggestions"> 
+     <input type="hidden" title="frotherNomatches" value="No Matches"> 
+     <input type="hidden" title="multiselectVersionsError" value="{0} is not a valid version."> 
+     <input type="hidden" title="multiselectComponentsError" value="{0} is not a valid component."> 
+     <input type="hidden" title="multiselectGenericError" value="The value {0} is invalid."> 
+    </fieldset> 
+   </footer> 
+  </div> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1.0/_/download/batch/jira.webresources:bigpipe-js/jira.webresources:bigpipe-js.js" data-wrm-key="jira.webresources:bigpipe-js" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["activity-panel-pipe-id"]="\"\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n    \u003cdiv class=\\\"tabwrap tabs2\\\"\u003e\\n\\n        \u003cul id=\\\"issue-tabs\\\" class=\\\"tabs horizontal\\\"\u003e\\n                                \\n            \u003cli  data-id=\\\"all-tabpanel\\\" data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\" data-label=\\\"All\\\" data-href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"all-tabpanel\\\" href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\"\u003e\u003cstrong\u003eAll\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  class=\\\"active\\\" id=\\\"comment-tabpanel\\\"  data-id=\\\"comment-tabpanel\\\" data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel\\\" data-label=\\\"Comments\\\" data-href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel\\\"\u003e\\n                            \u003cstrong tabindex=\\\"0\\\"\u003eComments\u003c\\/strong\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  data-id=\\\"worklog-tabpanel\\\" data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\" data-label=\\\"Work Log\\\" data-href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"worklog-tabpanel\\\" href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\"\u003e\u003cstrong\u003eWork Log\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  data-id=\\\"changehistory-tabpanel\\\" data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\" data-label=\\\"History\\\" data-href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"changehistory-tabpanel\\\" href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\"\u003e\u003cstrong\u003eHistory\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  data-id=\\\"activity-stream-issue-tab\\\" data-key=\\\"com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\" data-label=\\\"Activity\\\" data-href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"activity-stream-issue-tab\\\" href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\"\u003e\u003cstrong\u003eActivity\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  data-id=\\\"transitions-summary-tabpanel\\\" data-key=\\\"com.googlecode.jira-suite-utilities:transitions-summary-tabpanel\\\" data-label=\\\"Transitions\\\" data-href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.googlecode.jira-suite-utilities:transitions-summary-tabpanel\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"transitions-summary-tabpanel\\\" href=\\\"\\/jira\\/browse\\/SOLR-10921?page=com.googlecode.jira-suite-utilities:transitions-summary-tabpanel\\\"\u003e\u003cstrong\u003eTransitions\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                \u003c\\/ul\u003e\\n\\n                    \u003cdiv class=\\\"sortwrap\\\"\u003e\\n                                    \u003ca class=\\\"issue-activity-sort-link ajax-activity-content\\\" rel=\\\"nofollow\\\" data-tab-sort data-order=\\\"desc\\\" href=\\\"\\/jira\\/browse\\/SOLR-10921?actionOrder=desc\\\" title=\\\"Ascending order - Click to sort in descending order\\\"\u003e\\n                        \u003cspan class=\\\"aui-icon aui-icon-small aui-iconfont-up\\\"\u003eAscending order - Click to sort in descending order\u003c\\/span\u003e\\n                    \u003c\\/a\u003e\\n                            \u003c\\/div\u003e\\n            \u003c\\/div\u003e\\n    \u003cdiv class=\\\"issuePanelWrapper\\\"\u003e\\n        \u003cdiv class=\\\"issuePanelProgress\\\"\u003e\u003c\\/div\u003e\\n        \u003cdiv class=\\\"issuePanelContainer\\\" id=\\\"issue_actions_container\\\"\u003e\\n                                    \\n\\n\\n\u003cdiv id=\\\"comment-16055803\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16055803&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16055803\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16055803_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16055803_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'20\\/Jun\\/17 13:56\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-20T13:56:55+0000\'\u003e20\\/Jun\\/17 13:56\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eIf there are no objections to this approach, I plan on implementing this within the next couple of days.\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16055803_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16055803_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'20\\/Jun\\/17 13:56\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-20T13:56:55+0000\'\u003e20\\/Jun\\/17 13:56\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    If there are no objections to this approach, I plan on implementing this within the next couple of days.              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16056543\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16056543&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16056543\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16056543_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16056543_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'20\\/Jun\\/17 21:59\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-20T21:59:43+0000\'\u003e20\\/Jun\\/17 21:59\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eHere\'s a draft \\/ in-progress patch showing the current approach.  Needs more changes and tests.\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16056543_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16056543_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'20\\/Jun\\/17 21:59\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-20T21:59:43+0000\'\u003e20\\/Jun\\/17 21:59\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    Here\'s a draft \\/ in-progress patch showing the current approach.  Needs more changes and tests.              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16059666\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16059666&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16059666\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16059666_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16059666_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'22\\/Jun\\/17 16:46\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-22T16:46:54+0000\'\u003e22\\/Jun\\/17 16:46\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eUpdated patch that added a test and changed the style to this:\u003c\\/p\u003e\\n\u003cdiv class=\\\"code panel\\\" style=\\\"border-width: 1px;\\\"\u003e\u003cdiv class=\\\"codeContent panelContent\\\"\u003e\\n\u003cpre class=\\\"code-java\\\"\u003e-          \u003cspan class=\\\"code-keyword\\\"\u003ereturn\u003c\\/span\u003e q.build();\\n+          \u003cspan class=\\\"code-keyword\\\"\u003ereturn\u003c\\/span\u003e QueryUtils.build(q, parser);\\n\u003c\\/pre\u003e\\n\u003c\\/div\u003e\u003c\\/div\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16059666_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16059666_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'22\\/Jun\\/17 16:46\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-22T16:46:54+0000\'\u003e22\\/Jun\\/17 16:46\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    Updated patch that added a test and changed the style to this: \\n  \\n -           return  q.build();\\n+           return  QueryUtils.build(q, parser);\\n \\n               \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16059919\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16059919&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16059919\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"jira-bot\\\" id=\\\"commentauthor_16059919_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=jira-bot\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"jira-bot\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e ASF subversion and git services\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16059919_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'22\\/Jun\\/17 20:05\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-22T20:05:31+0000\'\u003e22\\/Jun\\/17 20:05\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eCommit 98276481e4104d4916a6b0e901d79c6b81f68d30 in lucene-solr\'s branch refs\\/heads\\/master from \u003ca href=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/ViewProfile.jspa?name=yonik%40apache.org\\\" class=\\\"user-hover\\\" rel=\\\"yonik@apache.org\\\"\u003eYonik Seeley\u003c\\/a\u003e\u003cbr\\/\u003e\\n[ \u003ca href=\\\"https:\\/\\/git-wip-us.apache.org\\/repos\\/asf?p=lucene-solr.git;h=9827648\\\" class=\\\"external-link\\\" rel=\\\"nofollow\\\"\u003ehttps:\\/\\/git-wip-us.apache.org\\/repos\\/asf?p=lucene-solr.git;h=9827648\u003c\\/a\u003e ]\u003c\\/p\u003e\\n\\n\u003cp\u003e\u003ca href=\\\"https:\\/\\/issues.apache.org\\/jira\\/browse\\/SOLR-10921\\\" title=\\\"Make boolean query clause limit configurable per-query\\\" class=\\\"issue-link\\\" data-issue-key=\\\"SOLR-10921\\\"\u003e\u003cdel\u003eSOLR-10921\u003c\\/del\u003e\u003c\\/a\u003e: raise lucene BooleanQuery.maxClauseCount, add higher level checking via QueryUtils.build\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"jira-bot\\\" id=\\\"commentauthor_16059919_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=jira-bot\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"jira-bot\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e ASF subversion and git services\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16059919_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'22\\/Jun\\/17 20:05\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-22T20:05:31+0000\'\u003e22\\/Jun\\/17 20:05\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    Commit 98276481e4104d4916a6b0e901d79c6b81f68d30 in lucene-solr\'s branch refs\\/heads\\/master from  Yonik Seeley  \\n[  https:\\/\\/git-wip-us.apache.org\\/repos\\/asf?p=lucene-solr.git;h=9827648  ] \\n\\n   SOLR-10921  : raise lucene BooleanQuery.maxClauseCount, add higher level checking via QueryUtils.build              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16060204\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16060204&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16060204\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"steve_rowe\\\" id=\\\"commentauthor_16060204_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=steve_rowe\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"steve_rowe\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Steve Rowe\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060204_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'22\\/Jun\\/17 23:46\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-22T23:46:21+0000\'\u003e22\\/Jun\\/17 23:46\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eThis doesn\'t reproduce for me but seems worthy of mention \u003ca href=\\\"https:\\/\\/jenkins.thetaphi.de\\/job\\/Lucene-Solr-master-MacOSX\\/4096\\/\\\" class=\\\"external-link\\\" rel=\\\"nofollow\\\"\u003ehttps:\\/\\/jenkins.thetaphi.de\\/job\\/Lucene-Solr-master-MacOSX\\/4096\\/\u003c\\/a\u003e:\u003c\\/p\u003e\\n\\n\u003cdiv class=\\\"preformatted panel\\\" style=\\\"border-width: 1px;\\\"\u003e\u003cdiv class=\\\"preformattedContent panelContent\\\"\u003e\\n\u003cpre\u003eChecking out Revision ae01113472378093462e88b90e6e07a2cd863f8f (refs\\/remotes\\/origin\\/master)\\n[...]\\n   [junit4]   2&gt; 1861432 ERROR (TEST-TestSolrQueryParser.testManyClauses-seed#[48DB078C2CAE9CBD]) [    ] o.a.s.SolrTestCaseJ4 REQUEST FAILED: q=id:(z0+z1+z2+z3+z4+z5+z6+z7+z8+z9+z10+z11+z12+z13+z14+z15+z16+z17+z18+z19+z20+z21+z22+z23+z24+z25+z26+z27+z28+z29+z30+z31+z32+z33+z34+z35+z36+z37+z38+z39+z40+z41+z42+z43+z44+z45+z46+z47+z48+z49+z50+z51+z52+z53+z54+z55+z56+z57+z58+z59+z60+z61+z62+z63+z64+z65+z66+z67+z68+z69+z70+z71+z72+z73+z74+z75+z76+z77+z78+z79+z80+z81+z82+z83+z84+z85+z86+z87+z88+z89+z90+z91+z92+z93+z94+z95+z96+z97+z98+z99+z100+z101+z102+z103+z104+z105+z106+z107+z108+z109+z110+z111+z112+z113+z114+z115+z116+z117+z118+z119+z120+z121+z122+z123+z124+z125+z126+z127+z128+z129+z130+z131+z132+z133+z134+z135+z136+z137+z138+z139+z140+z141+z142+z143+z144+z145+z146+z147+z148+z149+z150+z151+z152+z153+z154+z155+z156+z157+z158+z159+z160+z161+z162+z163+z164+z165+z166+z167+z168+z169+z170+z171+z172+z173+z174+z175+z176+z177+z178+z179+z180+z181+z182+z183+z184+z185+z186+z187+z188+z189+z190+z191+z192+z193+z194+z195+z196+z197+z198+z199+z200+z201+z202+z203+z204+z205+z206+z207+z208+z209+z210+z211+z212+z213+z214+z215+z216+z217+z218+z219+z220+z221+z222+z223+z224+z225+z226+z227+z228+z229+z230+z231+z232+z233+z234+z235+z236+z237+z238+z239+z240+z241+z242+z243+z244+z245+z246+z247+z248+z249+z250+z251+z252+z253+z254+z255+z256+z257+z258+z259+z260+z261+z262+z263+z264+z265+z266+z267+z268+z269+z270+z271+z272+z273+z274+z275+z276+z277+z278+z279+z280+z281+z282+z283+z284+z285+z286+z287+z288+z289+z290+z291+z292+z293+z294+z295+z296+z297+z298+z299+z300+z301+z302+z303+z304+z305+z306+z307+z308+z309+z310+z311+z312+z313+z314+z315+z316+z317+z318+z319+z320+z321+z322+z323+z324+z325+z326+z327+z328+z329+z330+z331+z332+z333+z334+z335+z336+z337+z338+z339+z340+z341+z342+z343+z344+z345+z346+z347+z348+z349+z350+z351+z352+z353+z354+z355+z356+z357+z358+z359+z360+z361+z362+z363+z364+z365+z366+z367+z368+z369+z370+z371+z372+z373+z374+z375+z376+z377+z378+z379+z380+z381+z382+z383+z384+z385+z386+z387+z388+z389+z390+z391+z392+z393+z394+z395+z396+z397+z398+z399+z400+z401+z402+z403+z404+z405+z406+z407+z408+z409+z410+z411+z412+z413+z414+z415+z416+z417+z418+z419+z420+z421+z422+z423+z424+z425+z426+z427+z428+z429+z430+z431+z432+z433+z434+z435+z436+z437+z438+z439+z440+z441+z442+z443+z444+z445+z446+z447+z448+z449+z450+z451+z452+z453+z454+z455+z456+z457+z458+z459+z460+z461+z462+z463+z464+z465+z466+z467+z468+z469+z470+z471+z472+z473+z474+z475+z476+z477+z478+z479+z480+z481+z482+z483+z484+z485+z486+z487+z488+z489+z490+z491+z492+z493+z494+z495+z496+z497+z498+z499+z500+z501+z502+z503+z504+z505+z506+z507+z508+z509+z510+z511+z512+z513+z514+z515+z516+z517+z518+z519+z520+z521+z522+z523+z524+z525+z526+z527+z528+z529+z530+z531+z532+z533+z534+z535+z536+z537+z538+z539+z540+z541+z542+z543+z544+z545+z546+z547+z548+z549+z550+z551+z552+z553+z554+z555+z556+z557+z558+z559+z560+z561+z562+z563+z564+z565+z566+z567+z568+z569+z570+z571+z572+z573+z574+z575+z576+z577+z578+z579+z580+z581+z582+z583+z584+z585+z586+z587+z588+z589+z590+z591+z592+z593+z594+z595+z596+z597+z598+z599+z600+z601+z602+z603+z604+z605+z606+z607+z608+z609+z610+z611+z612+z613+z614+z615+z616+z617+z618+z619+z620+z621+z622+z623+z624+z625+z626+z627+z628+z629+z630+z631+z632+z633+z634+z635+z636+z637+z638+z639+z640+z641+z642+z643+z644+z645+z646+z647+z648+z649+z650+z651+z652+z653+z654+z655+z656+z657+z658+z659+z660+z661+z662+z663+z664+z665+z666+z667+z668+z669+z670+z671+z672+z673+z674+z675+z676+z677+z678+z679+z680+z681+z682+z683+z684+z685+z686+z687+z688+z689+z690+z691+z692+z693+z694+z695+z696+z697+z698+z699+z700+z701+z702+z703+z704+z705+z706+z707+z708+z709+z710+z711+z712+z713+z714+z715+z716+z717+z718+z719+z720+z721+z722+z723+z724+z725+z726+z727+z728+z729+z730+z731+z732+z733+z734+z735+z736+z737+z738+z739+z740+z741+z742+z743+z744+z745+z746+z747+z748+z749+z750+z751+z752+z753+z754+z755+z756+z757+z758+z759+z760+z761+z762+z763+z764+z765+z766+z767+z768+z769+z770+z771+z772+z773+z774+z775+z776+z777+z778+z779+z780+z781+z782+z783+z784+z785+z786+z787+z788+z789+z790+z791+z792+z793+z794+z795+z796+z797+z798+z799+z800+z801+z802+z803+z804+z805+z806+z807+z808+z809+z810+z811+z812+z813+z814+z815+z816+z817+z818+z819+z820+z821+z822+z823+z824+z825+z826+z827+z828+z829+z830+z831+z832+z833+z834+z835+z836+z837+z838+z839+z840+z841+z842+z843+z844+z845+z846+z847+z848+z849+z850+z851+z852+z853+z854+z855+z856+z857+z858+z859+z860+z861+z862+z863+z864+z865+z866+z867+z868+z869+z870+z871+z872+z873+z874+z875+z876+z877+z878+z879+z880+z881+z882+z883+z884+z885+z886+z887+z888+z889+z890+z891+z892+z893+z894+z895+z896+z897+z898+z899+z900+z901+z902+z903+z904+z905+z906+z907+z908+z909+z910+z911+z912+z913+z914+z915+z916+z917+z918+z919+z920+z921+z922+z923+z924+z925+z926+z927+z928+z929+z930+z931+z932+z933+z934+z935+z936+z937+z938+z939+z940+z941+z942+z943+z944+z945+z946+z947+z948+z949+z950+z951+z952+z953+z954+z955+z956+z957+z958+z959+z960+z961+z962+z963+z964+z965+z966+z967+z968+z969+z970+z971+z972+z973+z974+z975+z976+z977+z978+z979+z980+z981+z982+z983+z984+z985+z986+z987+z988+z989+z990+z991+z992+z993+z994+z995+z996+z997+z998+z999+z1000+z1001+z1002+z1003+z1004+z1005+z1006+z1007+z1008+z1009+z1010+z1011+z1012+z1013+z1014+z1015+z1016+z1017+z1018+z1019+z1020+z1021+z1022+z1023+1+a+2+b+3+c+10+d+11+12+)&amp;wt=xml\\n   [junit4]   2&gt; 1861433 INFO  (TEST-TestSolrQueryParser.testManyClauses-seed#[48DB078C2CAE9CBD]) [    ] o.a.s.SolrTestCaseJ4 ###Ending testManyClauses\\n   [junit4]   2&gt; NOTE: reproduce with: ant test  -Dtestcase=TestSolrQueryParser -Dtests.method=testManyClauses -Dtests.seed=48DB078C2CAE9CBD -Dtests.slow=true -Dtests.locale=sq -Dtests.timezone=GMT -Dtests.asserts=true -Dtests.file.encoding=UTF-8\\n   [junit4] FAILURE 0.01s J1 | TestSolrQueryParser.testManyClauses &lt;&lt;&lt;\\n   [junit4]    &gt; Throwable #1: java.lang.AssertionError\\n   [junit4]    &gt; \\tat __randomizedtesting.SeedInfo.seed([48DB078C2CAE9CBD:16D51D19E715222]:0)\\n   [junit4]    &gt; \\tat org.apache.solr.search.TestSolrQueryParser.testManyClauses(TestSolrQueryParser.java:368)\\n\u003c\\/pre\u003e\\n\u003c\\/div\u003e\u003c\\/div\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"steve_rowe\\\" id=\\\"commentauthor_16060204_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=steve_rowe\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"steve_rowe\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Steve Rowe\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060204_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'22\\/Jun\\/17 23:46\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-22T23:46:21+0000\'\u003e22\\/Jun\\/17 23:46\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    This doesn\'t reproduce for me but seems worthy of mention  https:\\/\\/jenkins.thetaphi.de\\/job\\/Lucene-Solr-master-MacOSX\\/4096\\/ : \\n\\n  \\n Checking out Revision ae01113472378093462e88b90e6e07a2cd863f8f (refs\\/remotes\\/origin\\/master)\\n[...]\\n   [junit4]   2&gt; 1861432 ERROR (TEST-TestSolrQueryParser.testManyClauses-seed#[48DB078C2CAE9CBD]) [    ] o.a.s.SolrTestCaseJ4 REQUEST FAILED: q=id:(z0+z1+z2+z3+z4+z5+z6+z7+z8+z9+z10+z11+z12+z13+z14+z15+z16+z17+z18+z19+z20+z21+z22+z23+z24+z25+z26+z27+z28+z29+z30+z31+z32+z33+z34+z35+z36+z37+z38+z39+z40+z41+z42+z43+z44+z45+z46+z47+z48+z49+z50+z51+z52+z53+z54+z55+z56+z57+z58+z59+z60+z61+z62+z63+z64+z65+z66+z67+z68+z69+z70+z71+z72+z73+z74+z75+z76+z77+z78+z79+z80+z81+z82+z83+z84+z85+z86+z87+z88+z89+z90+z91+z92+z93+z94+z95+z96+z97+z98+z99+z100+z101+z102+z103+z104+z105+z106+z107+z108+z109+z110+z111+z112+z113+z114+z115+z116+z117+z118+z119+z120+z121+z122+z123+z124+z125+z126+z127+z128+z129+z130+z131+z132+z133+z134+z135+z136+z137+z138+z139+z140+z141+z142+z143+z144+z145+z146+z147+z148+z149+z150+z151+z152+z153+z154+z155+z156+z157+z158+z159+z160+z161+z162+z163+z164+z165+z166+z167+z168+z169+z170+z171+z172+z173+z174+z175+z176+z177+z178+z179+z180+z181+z182+z183+z184+z185+z186+z187+z188+z189+z190+z191+z192+z193+z194+z195+z196+z197+z198+z199+z200+z201+z202+z203+z204+z205+z206+z207+z208+z209+z210+z211+z212+z213+z214+z215+z216+z217+z218+z219+z220+z221+z222+z223+z224+z225+z226+z227+z228+z229+z230+z231+z232+z233+z234+z235+z236+z237+z238+z239+z240+z241+z242+z243+z244+z245+z246+z247+z248+z249+z250+z251+z252+z253+z254+z255+z256+z257+z258+z259+z260+z261+z262+z263+z264+z265+z266+z267+z268+z269+z270+z271+z272+z273+z274+z275+z276+z277+z278+z279+z280+z281+z282+z283+z284+z285+z286+z287+z288+z289+z290+z291+z292+z293+z294+z295+z296+z297+z298+z299+z300+z301+z302+z303+z304+z305+z306+z307+z308+z309+z310+z311+z312+z313+z314+z315+z316+z317+z318+z319+z320+z321+z322+z323+z324+z325+z326+z327+z328+z329+z330+z331+z332+z333+z334+z335+z336+z337+z338+z339+z340+z341+z342+z343+z344+z345+z346+z347+z348+z349+z350+z351+z352+z353+z354+z355+z356+z357+z358+z359+z360+z361+z362+z363+z364+z365+z366+z367+z368+z369+z370+z371+z372+z373+z374+z375+z376+z377+z378+z379+z380+z381+z382+z383+z384+z385+z386+z387+z388+z389+z390+z391+z392+z393+z394+z395+z396+z397+z398+z399+z400+z401+z402+z403+z404+z405+z406+z407+z408+z409+z410+z411+z412+z413+z414+z415+z416+z417+z418+z419+z420+z421+z422+z423+z424+z425+z426+z427+z428+z429+z430+z431+z432+z433+z434+z435+z436+z437+z438+z439+z440+z441+z442+z443+z444+z445+z446+z447+z448+z449+z450+z451+z452+z453+z454+z455+z456+z457+z458+z459+z460+z461+z462+z463+z464+z465+z466+z467+z468+z469+z470+z471+z472+z473+z474+z475+z476+z477+z478+z479+z480+z481+z482+z483+z484+z485+z486+z487+z488+z489+z490+z491+z492+z493+z494+z495+z496+z497+z498+z499+z500+z501+z502+z503+z504+z505+z506+z507+z508+z509+z510+z511+z512+z513+z514+z515+z516+z517+z518+z519+z520+z521+z522+z523+z524+z525+z526+z527+z528+z529+z530+z531+z532+z533+z534+z535+z536+z537+z538+z539+z540+z541+z542+z543+z544+z545+z546+z547+z548+z549+z550+z551+z552+z553+z554+z555+z556+z557+z558+z559+z560+z561+z562+z563+z564+z565+z566+z567+z568+z569+z570+z571+z572+z573+z574+z575+z576+z577+z578+z579+z580+z581+z582+z583+z584+z585+z586+z587+z588+z589+z590+z591+z592+z593+z594+z595+z596+z597+z598+z599+z600+z601+z602+z603+z604+z605+z606+z607+z608+z609+z610+z611+z612+z613+z614+z615+z616+z617+z618+z619+z620+z621+z622+z623+z624+z625+z626+z627+z628+z629+z630+z631+z632+z633+z634+z635+z636+z637+z638+z639+z640+z641+z642+z643+z644+z645+z646+z647+z648+z649+z650+z651+z652+z653+z654+z655+z656+z657+z658+z659+z660+z661+z662+z663+z664+z665+z666+z667+z668+z669+z670+z671+z672+z673+z674+z675+z676+z677+z678+z679+z680+z681+z682+z683+z684+z685+z686+z687+z688+z689+z690+z691+z692+z693+z694+z695+z696+z697+z698+z699+z700+z701+z702+z703+z704+z705+z706+z707+z708+z709+z710+z711+z712+z713+z714+z715+z716+z717+z718+z719+z720+z721+z722+z723+z724+z725+z726+z727+z728+z729+z730+z731+z732+z733+z734+z735+z736+z737+z738+z739+z740+z741+z742+z743+z744+z745+z746+z747+z748+z749+z750+z751+z752+z753+z754+z755+z756+z757+z758+z759+z760+z761+z762+z763+z764+z765+z766+z767+z768+z769+z770+z771+z772+z773+z774+z775+z776+z777+z778+z779+z780+z781+z782+z783+z784+z785+z786+z787+z788+z789+z790+z791+z792+z793+z794+z795+z796+z797+z798+z799+z800+z801+z802+z803+z804+z805+z806+z807+z808+z809+z810+z811+z812+z813+z814+z815+z816+z817+z818+z819+z820+z821+z822+z823+z824+z825+z826+z827+z828+z829+z830+z831+z832+z833+z834+z835+z836+z837+z838+z839+z840+z841+z842+z843+z844+z845+z846+z847+z848+z849+z850+z851+z852+z853+z854+z855+z856+z857+z858+z859+z860+z861+z862+z863+z864+z865+z866+z867+z868+z869+z870+z871+z872+z873+z874+z875+z876+z877+z878+z879+z880+z881+z882+z883+z884+z885+z886+z887+z888+z889+z890+z891+z892+z893+z894+z895+z896+z897+z898+z899+z900+z901+z902+z903+z904+z905+z906+z907+z908+z909+z910+z911+z912+z913+z914+z915+z916+z917+z918+z919+z920+z921+z922+z923+z924+z925+z926+z927+z928+z929+z930+z931+z932+z933+z934+z935+z936+z937+z938+z939+z940+z941+z942+z943+z944+z945+z946+z947+z948+z949+z950+z951+z952+z953+z954+z955+z956+z957+z958+z959+z960+z961+z962+z963+z964+z965+z966+z967+z968+z969+z970+z971+z972+z973+z974+z975+z976+z977+z978+z979+z980+z981+z982+z983+z984+z985+z986+z987+z988+z989+z990+z991+z992+z993+z994+z995+z996+z997+z998+z999+z1000+z1001+z1002+z1003+z1004+z1005+z1006+z1007+z1008+z1009+z1010+z1011+z1012+z1013+z1014+z1015+z1016+z1017+z1018+z1019+z1020+z1021+z1022+z1023+1+a+2+b+3+c+10+d+11+12+)&amp;wt=xml\\n   [junit4]   2&gt; 1861433 INFO  (TEST-TestSolrQueryParser.testManyClauses-seed#[48DB078C2CAE9CBD]) [    ] o.a.s.SolrTestCaseJ4 ###Ending testManyClauses\\n   [junit4]   2&gt; NOTE: reproduce with: ant test  -Dtestcase=TestSolrQueryParser -Dtests.method=testManyClauses -Dtests.seed=48DB078C2CAE9CBD -Dtests.slow=true -Dtests.locale=sq -Dtests.timezone=GMT -Dtests.asserts=true -Dtests.file.encoding=UTF-8\\n   [junit4] FAILURE 0.01s J1 | TestSolrQueryParser.testManyClauses &lt;&lt;&lt;\\n   [junit4]    &gt; Throwable #1: java.lang.AssertionError\\n   [junit4]    &gt; \\tat __randomizedtesting.SeedInfo.seed([48DB078C2CAE9CBD:16D51D19E715222]:0)\\n   [junit4]    &gt; \\tat org.apache.solr.search.TestSolrQueryParser.testManyClauses(TestSolrQueryParser.java:368)\\n \\n               \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16060272\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16060272&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16060272\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n                                            \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16060272_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060272_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 01:08\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T01:08:52+0000\'\u003e23\\/Jun\\/17 01:08\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e   - \u003cspan class=\\\"redText subText\\\" title=\\\"Yonik Seeley - 23\\/Jun\\/17 01:10\\\"\u003eedited\u003c\\/span\u003e \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eHmmm, interesting.  This is a failure in this line:\u003cbr\\/\u003e\\n      assertTrue(e.getMessage().contains(\\\"many clauses\\\"));\u003cbr\\/\u003e\\nSo the exception was thrown for exceeding max clauses as expected, but the exception message didn\'t contain the expected text.\u003cbr\\/\u003e\\nIt looks like SolrQueryParserBase caught Lucene\'s TooManyClauses exception (which should never happen now... QueryUtils throws SolrException).\u003c\\/p\u003e\\n\\n\u003cp\u003eSo I think it\'s probably this bug again (a test-framework bug):\u003cbr\\/\u003e\\n\u003ca href=\\\"https:\\/\\/issues.apache.org\\/jira\\/browse\\/SOLR-4586?focusedCommentId=14202115&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14202115\\\" class=\\\"external-link\\\" rel=\\\"nofollow\\\"\u003ehttps:\\/\\/issues.apache.org\\/jira\\/browse\\/SOLR-4586?focusedCommentId=14202115&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14202115\u003c\\/a\u003e\u003c\\/p\u003e\\n\\n\u003cp\u003eI don\'t think I\'ve ever seen this issue running an individual test case either... it must be some issue when running everything.\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n                                            \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16060272_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060272_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 01:08\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T01:08:52+0000\'\u003e23\\/Jun\\/17 01:08\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e   - \u003cspan class=\\\"redText subText\\\" title=\\\"Yonik Seeley - 23\\/Jun\\/17 01:10\\\"\u003eedited\u003c\\/span\u003e                   Hmmm, interesting.  This is a failure in this line: \\n      assertTrue(e.getMessage().contains(\\\"many clauses\\\")); \\nSo the exception was thrown for exceeding max clauses as expected, but the exception message didn\'t contain the expected text. \\nIt looks like SolrQueryParserBase caught Lucene\'s TooManyClauses exception (which should never happen now... QueryUtils throws SolrException). \\n\\n So I think it\'s probably this bug again (a test-framework bug): \\n https:\\/\\/issues.apache.org\\/jira\\/browse\\/SOLR-4586?focusedCommentId=14202115&amp;page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-14202115  \\n\\n I don\'t think I\'ve ever seen this issue running an individual test case either... it must be some issue when running everything.              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16060324\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16060324&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16060324\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"erickerickson\\\" id=\\\"commentauthor_16060324_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=erickerickson\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"erickerickson\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Erick Erickson\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060324_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 02:21\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T02:21:27+0000\'\u003e23\\/Jun\\/17 02:21\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003erandom guess: the static in Lucene is somehow getting involved?\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"erickerickson\\\" id=\\\"commentauthor_16060324_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=erickerickson\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"erickerickson\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Erick Erickson\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060324_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 02:21\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T02:21:27+0000\'\u003e23\\/Jun\\/17 02:21\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    random guess: the static in Lucene is somehow getting involved?              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16060358\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16060358&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16060358\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16060358_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060358_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 03:14\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T03:14:32+0000\'\u003e23\\/Jun\\/17 03:14\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eMy guess is that it\'s TestRuleSetupAndRestoreInstanceEnv.\u003c\\/p\u003e\\n\\n\u003cp\u003eIt\'s hard to test potential fixes because \\\"ant test\\\" fails on other tests all the time right now \u003cimg class=\\\"emoticon\\\" src=\\\"\\/jira\\/images\\/icons\\/emoticons\\/wink.png\\\" height=\\\"16\\\" width=\\\"16\\\" align=\\\"absmiddle\\\" alt=\\\"\\\" border=\\\"0\\\"\\/\u003e\u003cbr\\/\u003e\\nI don\'t know if there is a way to tell the test framework that we don\'t need\\/want TestRuleSetupAndRestoreInstanceEnv for the solr tests.\u003cbr\\/\u003e\\nOne potential workaround is to also call BooleanQuery.setMaxClauseCount in the constructor for a SolrConfig object as well (right now it\'s static initialization.).  Hopefully that will stomp it again before any tests that rely on it run.  We can\'t just hack it in SolrTestCase because then we aren\'t testing reality (i.e. we could break it and never know).\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16060358_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060358_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 03:14\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T03:14:32+0000\'\u003e23\\/Jun\\/17 03:14\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    My guess is that it\'s TestRuleSetupAndRestoreInstanceEnv. \\n\\n It\'s hard to test potential fixes because \\\"ant test\\\" fails on other tests all the time right now   \\nI don\'t know if there is a way to tell the test framework that we don\'t need\\/want TestRuleSetupAndRestoreInstanceEnv for the solr tests. \\nOne potential workaround is to also call BooleanQuery.setMaxClauseCount in the constructor for a SolrConfig object as well (right now it\'s static initialization.).  Hopefully that will stomp it again before any tests that rely on it run.  We can\'t just hack it in SolrTestCase because then we aren\'t testing reality (i.e. we could break it and never know).              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16060391\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16060391&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16060391\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"jira-bot\\\" id=\\\"commentauthor_16060391_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=jira-bot\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"jira-bot\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e ASF subversion and git services\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060391_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 04:07\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T04:07:20+0000\'\u003e23\\/Jun\\/17 04:07\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eCommit 78731ea8f4b7bd91bbd5b4fb442cc423b4caee79 in lucene-solr\'s branch refs\\/heads\\/master from \u003ca href=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/ViewProfile.jspa?name=yonik%40apache.org\\\" class=\\\"user-hover\\\" rel=\\\"yonik@apache.org\\\"\u003eYonik Seeley\u003c\\/a\u003e\u003cbr\\/\u003e\\n[ \u003ca href=\\\"https:\\/\\/git-wip-us.apache.org\\/repos\\/asf?p=lucene-solr.git;h=78731ea\\\" class=\\\"external-link\\\" rel=\\\"nofollow\\\"\u003ehttps:\\/\\/git-wip-us.apache.org\\/repos\\/asf?p=lucene-solr.git;h=78731ea\u003c\\/a\u003e ]\u003c\\/p\u003e\\n\\n\u003cp\u003e\u003ca href=\\\"https:\\/\\/issues.apache.org\\/jira\\/browse\\/SOLR-10921\\\" title=\\\"Make boolean query clause limit configurable per-query\\\" class=\\\"issue-link\\\" data-issue-key=\\\"SOLR-10921\\\"\u003e\u003cdel\u003eSOLR-10921\u003c\\/del\u003e\u003c\\/a\u003e: set setMaxClauseCount for every SolrConfig creation to work around test framework issues\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"jira-bot\\\" id=\\\"commentauthor_16060391_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=jira-bot\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"jira-bot\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e ASF subversion and git services\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060391_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 04:07\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T04:07:20+0000\'\u003e23\\/Jun\\/17 04:07\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    Commit 78731ea8f4b7bd91bbd5b4fb442cc423b4caee79 in lucene-solr\'s branch refs\\/heads\\/master from  Yonik Seeley  \\n[  https:\\/\\/git-wip-us.apache.org\\/repos\\/asf?p=lucene-solr.git;h=78731ea  ] \\n\\n   SOLR-10921  : set setMaxClauseCount for every SolrConfig creation to work around test framework issues              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-16060392\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/SOLR-10921?focusedCommentId=16060392&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-16060392\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16060392_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060392_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 04:08\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T04:08:50+0000\'\u003e23\\/Jun\\/17 04:08\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cblockquote\u003e\u003cp\u003eOne potential workaround is to also call BooleanQuery.setMaxClauseCount in the constructor for a SolrConfig object as well \u003c\\/p\u003e\u003c\\/blockquote\u003e\\n\\n\u003cp\u003eOk, I implemented that workaround, and it appears to work (at least the first couple of test failures didn\'t have any trace of max clause wonkiness).\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"yseeley@gmail.com\\\" id=\\\"commentauthor_16060392_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=yseeley%40gmail.com\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"yseeley@gmail.com\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Yonik Seeley\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_16060392_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'23\\/Jun\\/17 04:08\'\u003e\u003ctime class=\'livestamp\' datetime=\'2017-06-23T04:08:50+0000\'\u003e23\\/Jun\\/17 04:08\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                     One potential workaround is to also call BooleanQuery.setMaxClauseCount in the constructor for a SolrConfig object as well   \\n\\n Ok, I implemented that workaround, and it appears to work (at least the first couple of test failures didn\'t have any trace of max clause wonkiness).              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script> 
+  <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["scope-filter-data"]="{\"createScopeActions\":[],\"scopes\":[]}";
+WRM._unparsedData["sidebar-collapsed-by-default"]="true";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:can-manage"]="false";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:with-icons"]="false";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:shortcuts"]="[]";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:project-id"]="12310230";
+WRM._unparsedData["sidebar-id"]="\"\u003cdiv class=\\\"aui-sidebar  projects-sidebar sidebar-pending\\\" \u003e\u003cdiv class=\\\"aui-sidebar-wrapper\\\"\u003e\u003cdiv class=\\\"aui-sidebar-body\\\"\u003e\u003cheader class=\\\"aui-page-header\\\"\u003e\u003cdiv class=\\\"aui-page-header-inner\\\"\u003e\u003cdiv class=\\\"aui-page-header-image\\\"\u003e\u003ca href=\\\"\\/jira\\/projects\\/SOLR\\/summary\\\" title=\\\"Solr\\\" class=\\\"jira-project-avatar\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-large aui-avatar-project\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"\\/jira\\/secure\\/projectavatar?pid=12310230&amp;avatarId=22151\\\" alt=\\\"Solr\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e\u003cimg src=\\\"data:image\\/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI\\/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDMwMCAzMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwMCAzMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJMYXllcl8yIj4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRjc5MjMyOyIgZD0iTTE1MCwwQzY2LjY2NywwLDAsNjYuNjY3LDAsMTUwczY2LjY2NywxNTAsMTUwLDE1MHMxNTAtNjYuNjY3LDE1MC0xNTBTMjMzLjMzMywwLDE1MCwweg0KCQkgTTEzNi42NjcsMTc4LjMzM0wxMjUsMTkwbC00MS42NjctNDBMOTUsMTM4LjMzM2wzMC0zMEwxMzYuNjY3LDEyMGwtMzAsMzBMMTM2LjY2NywxNzguMzMzeiBNMjA1LDE2MS42NjdsLTMwLDMwTDE2My4zMzMsMTgwDQoJCWwzMC0zMGwtMzAtMzBMMTc1LDEwOC4zMzNMMjE2LjY2NywxNTBMMjA1LDE2MS42Njd6Ii8+DQo8L2c+DQo8Zz4NCgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgcG9pbnRzPSIxNzUsMTkxLjY2NyAyMDUsMTYxLjY2NyAyMTYuNjY3LDE1MCAxNzUsMTA4LjMzMyAxNjMuMzMzLDEyMCAxOTMuMzMzLDE1MCAxNjMuMzMzLDE4MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIHBvaW50cz0iMTI1LDEwOC4zMzMgOTUsMTM4LjMzMyA4My4zMzMsMTUwIDEyNSwxOTAgMTM2LjY2NywxNzguMzMzIDEwNi42NjcsMTUwIDEzNi42NjcsMTIwIAkiLz4NCjwvZz4NCjwvc3ZnPg0K\\\" alt=\\\"Icon indicating the project type\\\" class=\\\"jira-project-avatar-icon\\\" \\/\u003e\u003c\\/a\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-image --\u003e\u003cdiv class=\\\"aui-page-header-main\\\"\u003e\u003ch1\u003e\u003cdiv class=\\\"aui-group aui-group-split\\\"\u003e\u003cdiv class=\\\"aui-item project-title\\\"\u003e\u003ca href=\\\"\\/jira\\/projects\\/SOLR\\/summary\\\" title=\\\"Solr\\\"\u003eSolr\u003c\\/a\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/h1\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-main --\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-inner --\u003e\u003c\\/header\u003e\u003c!-- .aui-page-header --\u003e\u003cnav class=\\\"aui-navgroup aui-navgroup-vertical\\\"\u003e\u003cdiv class=\\\"aui-navgroup-inner sidebar-content-container\\\"\u003e\u003cdiv class=\\\"aui-sidebar-group aui-sidebar-group-tier-one\\\" data-id=\\\"sidebar-navigation-panel\\\"\u003e\u003cul class=\\\"aui-nav\\\"\u003e\u003cli class=\\\"aui-nav-selected\\\" \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/jira\\/projects\\/SOLR\\/issues\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-issue-navigator:sidebar-issue-navigator\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-issues\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Issues\\\"\u003eIssues\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/jira\\/projects\\/SOLR?selectedItem=com.atlassian.jira.jira-projects-plugin:report-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:report-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large agile-icon-report\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Reports\\\"\u003eReports\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/jira\\/projects\\/SOLR?selectedItem=com.atlassian.jira.jira-projects-plugin:components-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:components-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-components\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Components\\\"\u003eComponents\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003c\\/ul\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/nav\u003e\u003c\\/div\u003e\u003cdiv class=\\\"aui-sidebar-footer\\\"\u003e\u003ca class=\\\"aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy\\\" data-tooltip=\\\"Expand sidebar ( [ )\\\" href=\\\"#\\\"\u003e\u003cspan class=\\\"aui-icon aui-icon-small\\\"\u003e\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/div\u003e\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1.0/_/download/batch/jira.webresources:bigpipe-init/jira.webresources:bigpipe-init.js" data-wrm-key="jira.webresources:bigpipe-init" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <form id="jira_request_timing_info" class="dont-default-focus"> 
+   <fieldset class="parameters hidden"> 
+    <input type="hidden" title="jira.request.start.millis" value="1520343095184"> 
+    <input type="hidden" title="jira.request.server.time" value="160"> 
+    <input type="hidden" title="jira.request.id" value="811x97545495x3"> 
+    <input type="hidden" title="jira.session.expiry.time" value="-"> 
+    <input type="hidden" title="jira.session.expiry.in.mins" value="-"> 
+    <input id="jiraConcurrentRequests" type="hidden" name="jira.request.concurrent.requests" value="2"> 
+    <input type="hidden" title="db.reads.time.in.ms" value="41"> 
+    <input type="hidden" title="db.conns.time.in.ms" value="47"> 
+   </fieldset> 
+  </form> 
+  <!--
+	                 REQUEST ID : 811x97545495x3
+	          REQUEST TIMESTAMP : [06/Mar/2018:13:31:35 +0000]
+	               REQUEST TIME : 0.1600
+	                 ASESSIONID : -
+	        CONCURRENT REQUESTS : 2
+
+	                      db.reads : OpSnapshot{name='db.reads', invocationCount=25, elapsedTotal=41370248, elapsedMin=738517, elapsedMax=18999902, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+	                      db.conns : OpSnapshot{name='db.conns', invocationCount=29, elapsedTotal=47610181, elapsedMin=701425, elapsedMax=19027200, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+-->   
+ </body>
+</html>

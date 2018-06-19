@@ -1,0 +1,800 @@
+<!doctype html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+  <meta name="application-name" content="JIRA" data-name="jira" data-version="7.6.3">
+  <meta name="ajs-viewissue-use-history-api" content="false"> 
+  <meta name="ajs-jira-base-url" content="https://issues.apache.org/jira"> 
+  <meta name="ajs-serverRenderedViewIssue" content="true"> 
+  <meta name="ajs-dev-mode" content="false"> 
+  <meta name="ajs-context-path" content="/jira"> 
+  <meta name="ajs-version-number" content="7.6.3"> 
+  <meta name="ajs-build-number" content="76005"> 
+  <meta name="ajs-is-beta" content="false"> 
+  <meta name="ajs-is-rc" content="false"> 
+  <meta name="ajs-is-snapshot" content="false"> 
+  <meta name="ajs-is-milestone" content="false"> 
+  <meta name="ajs-remote-user" content=""> 
+  <meta name="ajs-remote-user-fullname" content=""> 
+  <meta name="ajs-user-locale" content="en_UK"> 
+  <meta name="ajs-user-locale-group-separator" content=","> 
+  <meta name="ajs-app-title" content="ASF JIRA"> 
+  <meta name="ajs-keyboard-shortcuts-enabled" content="true"> 
+  <meta name="ajs-keyboard-accesskey-modifier" content="Ctrl+Alt"> 
+  <meta name="ajs-enabled-dark-features" content="[&quot;com.atlassian.jira.agile.darkfeature.editable.detailsview&quot;,&quot;nps.survey.inline.dialog&quot;,&quot;com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled&quot;,&quot;jira.plugin.devstatus.phasetwo&quot;,&quot;jira.frother.reporter.field&quot;,&quot;atlassian.rest.xsrf.legacy.enabled&quot;,&quot;jira.issue.status.lozenge&quot;,&quot;com.atlassian.jira.config.BIG_PIPE&quot;,&quot;com.atlassian.jira.projects.issuenavigator&quot;,&quot;com.atlassian.jira.config.PDL&quot;,&quot;jira.plugin.devstatus.phasetwo.enabled&quot;,&quot;atlassian.aui.raphael.disabled&quot;,&quot;app-switcher.new&quot;,&quot;frother.assignee.field&quot;,&quot;com.atlassian.jira.projects.ProjectCentricNavigation.Switch&quot;,&quot;sd.internal.base.off.thread.on.completion.events.enabled&quot;,&quot;jira.onboarding.cyoa&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.enabled&quot;,&quot;sd.slavalue.record.updated.date.enabled&quot;,&quot;com.atlassian.jira.config.ProjectConfig.MENU&quot;,&quot;com.atlassian.jira.projects.sidebar.DEFER_RESOURCES&quot;,&quot;com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled&quot;,&quot;com.atlassian.jira.agile.darkfeature.sprint.goal.enabled&quot;,&quot;jira.zdu.admin-updates-ui&quot;,&quot;jira.zdu.jmx-monitoring&quot;,&quot;sd.sla.improved.rendering.enabled&quot;,&quot;sd.canned.responses.enabled&quot;,&quot;sd.new.settings.sidebar.location.disabled&quot;,&quot;jira.zdu.cluster-upgrade-state&quot;,&quot;com.atlassian.jira.agile.darkfeature.splitissue&quot;,&quot;com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED&quot;,&quot;com.atlassian.feedback.feedback-button-move-to-header-enable&quot;,&quot;jira.export.csv.enabled&quot;]"> 
+  <meta name="ajs-in-admin-mode" content="false"> 
+  <meta name="ajs-is-sysadmin" content="false"> 
+  <meta name="ajs-is-admin" content="false"> 
+  <meta name="ajs-outgoing-mail-enabled" content="true"> 
+  <meta name="ajs-date-relativize" content="true"> 
+  <meta name="ajs-date-time" content="HH:mm"> 
+  <meta name="ajs-date-day" content="EEEE HH:mm"> 
+  <meta name="ajs-date-dmy" content="dd/MMM/yy"> 
+  <meta name="ajs-date-complete" content="dd/MMM/yy HH:mm"> 
+  <script type="text/javascript">var AJS=AJS||{};AJS.debug=true;</script> 
+  <meta id="atlassian-token" name="atlassian-token" content="A5KQ-2QAV-T4JA-FDED|0d5ec014252c30a13831929eb240ddb353c9cfef|lout"> 
+  <link rel="shortcut icon" href="/jira/s/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/_/favicon.ico"> 
+  <!--[if IE]><![endif]--> 
+  <script type="text/javascript">
+    (function() {
+        var contextPath = '/jira';
+        var eventBuffer = [];
+
+        function printDeprecatedMsg() {
+            if (console && console.warn) {
+                console.warn('DEPRECATED JS - contextPath global variable has been deprecated since 7.4.0. Use `wrm/context-path` module instead.');
+            }
+        }
+
+        function sendEvent(analytics, postfix) {
+            analytics.send({
+                name: 'js.globals.contextPath.' + postfix
+            });
+        }
+
+        function sendDeprecatedEvent(postfix) {
+            try {
+                var analytics = require('jira/analytics');
+                if (eventBuffer.length) {
+                    eventBuffer.forEach(function(value) {
+                        sendEvent(analytics, value);
+                    });
+                    eventBuffer = [];
+                }
+
+                if (postfix) {
+                    sendEvent(analytics, postfix);
+                }
+            } catch(ex) {
+                eventBuffer.push(postfix);
+                setTimeout(sendDeprecatedEvent, 1000);
+            }
+        }
+
+        Object.defineProperty(window, 'contextPath', {
+            get: function() {
+                printDeprecatedMsg();
+                sendDeprecatedEvent('get');
+                return contextPath;
+            },
+            set: function(value) {
+                printDeprecatedMsg();
+                sendDeprecatedEvent('set');
+                contextPath = value;
+            }
+        });
+    })();
+
+</script> 
+  <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"/jira\"";
+WRM._unparsedData["jira.webresources:feature-flags.feature-flag-data"]="{\"enabled-feature-keys\":[\"com.atlassian.jira.agile.darkfeature.editable.detailsview\",\"nps.survey.inline.dialog\",\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled\",\"jira.plugin.devstatus.phasetwo\",\"jira.frother.reporter.field\",\"atlassian.rest.xsrf.legacy.enabled\",\"jira.issue.status.lozenge\",\"com.atlassian.jira.config.BIG_PIPE\",\"com.atlassian.jira.projects.issuenavigator\",\"com.atlassian.jira.config.PDL\",\"jira.plugin.devstatus.phasetwo.enabled\",\"atlassian.aui.raphael.disabled\",\"app-switcher.new\",\"frother.assignee.field\",\"com.atlassian.jira.projects.ProjectCentricNavigation.Switch\",\"sd.internal.base.off.thread.on.completion.events.enabled\",\"jira.onboarding.cyoa\",\"com.atlassian.jira.agile.darkfeature.kanplan.enabled\",\"sd.slavalue.record.updated.date.enabled\",\"com.atlassian.jira.config.ProjectConfig.MENU\",\"com.atlassian.jira.projects.sidebar.DEFER_RESOURCES\",\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled\",\"com.atlassian.jira.agile.darkfeature.sprint.goal.enabled\",\"jira.zdu.admin-updates-ui\",\"jira.zdu.jmx-monitoring\",\"sd.sla.improved.rendering.enabled\",\"sd.canned.responses.enabled\",\"sd.new.settings.sidebar.location.disabled\",\"jira.zdu.cluster-upgrade-state\",\"com.atlassian.jira.agile.darkfeature.splitissue\",\"com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED\",\"com.atlassian.feedback.feedback-button-move-to-header-enable\",\"jira.export.csv.enabled\"],\"feature-flag-states\":{\"com.atlassian.jira.agile.darkfeature.kanplan\":false,\"sd.internal.base.off.thread.on.completion.events\":false,\"jira.instrumentation.laas\":false,\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint\":false,\"com.atlassian.jira.issuetable.draggable\":true,\"jira.create.linked.issue\":true,\"com.atlassian.jira.agile.darkfeature.sprint.goal\":false,\"jira.sal.host.connect.accessor.existing.transaction.will.create.transactions\":true,\"jira.jql.suggestrecentfields\":false,\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions\":false,\"jira.jql.smartautoselectfirst\":false,\"com.atlassian.jira.agile.darkfeature.optimistic.transitions\":true,\"com.atlassian.jira.issuetable.move.links.hidden\":true,\"jira.priorities.per.project\":true,\"com.atlassian.jira.upgrade.startup.fix.index\":true,\"jira.renderer.consider.variable.format\":true}}";
+WRM._unparsedData["jira.webresources:default-comment-security-level.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://docs.atlassian.com/jira/jcore-docs-076/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-restrictacomment\",\"isLocal\":false}";
+WRM._unparsedData["jira.webresources:dateFormatProvider.allFormats"]="{\"dateFormats\":{\"meridiem\":[\"AM\",\"PM\"],\"eras\":[\"BC\",\"AD\"],\"months\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"monthsShort\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"],\"weekdaysShort\":[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],\"weekdays\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]},\"lookAndFeelFormats\":{\"relativize\":\"true\",\"time\":\"HH:mm\",\"day\":\"EEEE HH:mm\",\"dmy\":\"dd/MMM/yy\",\"complete\":\"dd/MMM/yy HH:mm\"}}";
+WRM._unparsedData["com.atlassian.jira.jira-issue-nav-components:issueviewer.features"]="{\"rteEnabled\":true}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-dnd-attachment-plugin:dnd-issue-drop-zone.thumbnail-mime-types"]="\"image/vnd.wap.wbmp,image/png,image/x-png,image/jpeg,image/bmp,image/gif\"";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-dnd-attachment-plugin:dnd-issue-drop-zone.upload-limit"]="\"62914560\"";
+WRM._unparsedData["com.atlassian.plugins.helptips.jira-help-tips:help-tip-manager.JiraHelpTipData"]="{\"anonymous\":true}";
+WRM._unparsedData["com.atlassian.jira.jira-view-issue-plugin:controller-subtasks.controller.subtasks.parameters"]="{\"url\":\"/rest/api/2/issue/{issueId}/subtask/move\"}";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["jira.webresources:avatar-picker.data"]="{}";
+WRM._unparsedData["com.atlassian.feedback.jira-feedback-plugin:button-resources-init.data"]="{\"jira.feedback.plugin.issue.collector.core\":\"https://jira.atlassian.com/s/576e9ab86257d4f65f6ea5b6dd50de44-T/en_UK3ljiw5/71006/b6b48b2829824b869586ac216d119363/2.0.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-UK&collectorId=abbf546d\",\"jira.feedback.plugin.issue.collector.default\":\"https://jira.atlassian.com/s/576e9ab86257d4f65f6ea5b6dd50de44-T/en_UK3ljiw5/71006/b6b48b2829824b869586ac216d119363/2.0.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-UK&collectorId=abbf546d\",\"jira.feedback.plugin.issue.collector.service.desk\":\"https://jira.atlassian.com/s/576e9ab86257d4f65f6ea5b6dd50de44-T/en_UK3ljiw5/71006/b6b48b2829824b869586ac216d119363/2.0.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-UK&collectorId=a698db21\",\"jira.feedback.plugin.issue.collector.software\":\"https://jira.atlassian.com/s/576e9ab86257d4f65f6ea5b6dd50de44-T/en_UK3ljiw5/71006/b6b48b2829824b869586ac216d119363/2.0.11/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-UK&collectorId=abbf546d\",\"isHeaderFeedbackButtonEnabled\":true}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:dismissedFlags.flags"]="{\"dismissed\":[]}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:newsletter-signup-tip-init.newsletterSignup"]="{\"signupDescription\":\"Get updates, inspiration and best practices from the team behind JIRA.\",\"formUrl\":\"https://www.atlassian.com/apis/exact-target/{0}/subscribe?mailingListId=1401671\",\"signupTitle\":\"Sign up!\",\"signupId\":\"newsletter-signup-tip\",\"showNewsletterTip\":false}";
+WRM._unparsedData["com.atlassian.jira.project-templates-plugin:project-templates-plugin-resources.ptAnalyticsData"]="{\"instanceCreatedDate\":\"2011-01-31\"}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-wiki-editor:wiki-editor-resources.help-data"]="{\"showHelp\":true,\"editorDocumentationUrl\":[\"https://docs.atlassian.com/jira/jcore-docs-076/Visual+editing\"],\"editorDocumentationTitle\":[\"Show me documentation for the visual editor\"]}";
+WRM._unparsedData["com.atlassian.jira.plugins.jira-wiki-editor:wiki-editor-resources.thumbnails-allowed"]="false";
+WRM._unparsedData["jira.webresources:user-message-flags.adminLockout"]="{}";
+WRM._unparsedData["jira.request.correlation-id"]="\"395e4b39804027\"";
+WRM._unparsedData["project-id"]="12310110";
+WRM._unparsedData["project-key"]="\"LUCENE\"";
+WRM._unparsedData["project-name"]="\"Lucene - Core\"";
+WRM._unparsedData["project-type"]="\"software\"";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:generic-filters"]="[{\"id\":\"allissues\",\"jql\":\"project = \\\"{0}\\\" ORDER BY {1}\",\"defaultOrderby\":\"created DESC\",\"label\":\"All issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[]},{\"id\":\"allopenissues\",\"jql\":\"project = \\\"{0}\\\" AND resolution = Unresolved ORDER BY {1}\",\"defaultOrderby\":\"priority DESC, updated DESC\",\"label\":\"Open issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"resolution\"]},{\"id\":\"doneissues\",\"jql\":\"project = \\\"{0}\\\" AND statusCategory = Done ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Done issues\",\"requiresUser\":false,\"supportsInlineIssueCreate\":false,\"fields\":[\"status\"]},{\"id\":\"recentlyviewed\",\"jql\":\"project = \\\"{0}\\\" AND issuekey in issueHistory() ORDER BY {1}\",\"defaultOrderby\":\"lastViewed DESC\",\"label\":\"Viewed recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"issuekey\"]},{\"id\":\"addedrecently\",\"jql\":\"project = \\\"{0}\\\" AND created \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"created DESC\",\"label\":\"Created recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"created\"]},{\"id\":\"resolvedrecently\",\"jql\":\"project = \\\"{0}\\\" AND resolutiondate \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Resolved recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":false,\"fields\":[\"resolutiondate\"]},{\"id\":\"updatedrecently\",\"jql\":\"project = \\\"{0}\\\" AND updated \u003e= -1w ORDER BY {1}\",\"defaultOrderby\":\"updated DESC\",\"label\":\"Updated recently\",\"requiresUser\":false,\"supportsInlineIssueCreate\":true,\"fields\":[\"updated\"]}]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:default-filter-priority"]="[\"allopenissues\",\"allissues\"]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:can-manage-filters"]="false";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:project-filters"]="[]";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:can-create-issues"]="false";
+WRM._unparsedData["projectId"]="12310110";
+WRM._unparsedData["projectKey"]="\"LUCENE\"";
+WRM._unparsedData["projectType"]="\"software\"";
+WRM._unparsedData["com.atlassian.jira.jira-projects-issue-navigator:server-rendered"]="true";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/a8a4711bc3f2eb261d8c8fd9fbcbba8b-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1fca1750044f2777c977e8d8cc023344/_/download/contextbatch/css/_super/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all"> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/74ac580603ca910fff0cfdf319e54add-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/fbf45109b31165e5b7740a9d72318cea/_/download/contextbatch/css/project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super/batch.css?agile_global_admin_condition=true&amp;hc-enabled=true&amp;is-server-instance=true&amp;jag=true&amp;jira.create.linked.issue=true&amp;nps-acknowledged=true&amp;richediton=true" data-wrm-key="project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super" data-wrm-batch-type="context" media="all"> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/611672383f6cab00ab202241ba6f9d68-T/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/7.6.3/_/download/batch/com.atlassian.feedback.jira-feedback-plugin:button-resources-init/com.atlassian.feedback.jira-feedback-plugin:button-resources-init.css" data-wrm-key="com.atlassian.feedback.jira-feedback-plugin:button-resources-init" data-wrm-batch-type="resource" media="all"> 
+  <script type="text/javascript" src="/jira/s/98ceb006e504d7924d5ffc411626c6bc-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1fca1750044f2777c977e8d8cc023344/_/download/contextbatch/js/_super/batch.js?locale=en-UK" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/c1e4d26ea276469807c3dc0918df482c-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/fbf45109b31165e5b7740a9d72318cea/_/download/contextbatch/js/project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super/batch.js?agile_global_admin_condition=true&amp;hc-enabled=true&amp;is-server-instance=true&amp;jag=true&amp;jira.create.linked.issue=true&amp;locale=en-UK&amp;nps-acknowledged=true&amp;richediton=true" data-wrm-key="project.issue.navigator,jira.view.issue,jira.global,atl.general,jira.general,-_super" data-wrm-batch-type="context" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/6bf9253c8d533109c3b02e26794be24e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/871d45c9f322a22cb3aa9b7948a69803/_/download/contextbatch/js/atl.global,-_super/batch.js?locale=en-UK" data-wrm-key="atl.global,-_super" data-wrm-batch-type="context" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1.0/_/download/batch/jira.webresources:calendar-en/jira.webresources:calendar-en.js" data-wrm-key="jira.webresources:calendar-en" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1.0/_/download/batch/jira.webresources:calendar-localisation-moment/jira.webresources:calendar-localisation-moment.js" data-wrm-key="jira.webresources:calendar-localisation-moment" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/7.6.3/_/download/batch/com.atlassian.feedback.jira-feedback-plugin:button-resources/com.atlassian.feedback.jira-feedback-plugin:button-resources.js" data-wrm-key="com.atlassian.feedback.jira-feedback-plugin:button-resources" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/ccd2e67b523185973473e8bd5735c8f9-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/e0de73613a1027de08f3da6a45e1d1a2/_/download/contextbatch/css/jira.global.look-and-feel,-_super/batch.css" data-wrm-key="jira.global.look-and-feel,-_super" data-wrm-batch-type="context" media="all"> 
+  <script type="text/javascript" src="/jira/rest/api/1.0/shortcuts/76005/33e5e0166867c8c9228d44506f60b2e8/shortcuts.js?context=issuenavigation&amp;context=issueaction"></script> 
+  <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.jira.jira-issue-nav-components:inline-edit-enabled"]="true";
+WRM._unparsedData["should-display-chaperone"]="false";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script> 
+  <link type="text/css" rel="stylesheet" href="/jira/s/15712b600e9aecf72ffd9fd3704a0c78-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/6b22a15c7b83f87a47b1757076f43542/_/download/contextbatch/css/com.atlassian.jira.projects.sidebar.init,-_super,-project.issue.navigator,-jira.view.issue/batch.css?jira.create.linked.issue=true&amp;richediton=true" data-wrm-key="com.atlassian.jira.projects.sidebar.init,-_super,-project.issue.navigator,-jira.view.issue" data-wrm-batch-type="context" media="all"> 
+  <script type="text/javascript" src="/jira/s/6579b6b8ba67abaa496e39b9242a18a4-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/6b22a15c7b83f87a47b1757076f43542/_/download/contextbatch/js/com.atlassian.jira.projects.sidebar.init,-_super,-project.issue.navigator,-jira.view.issue/batch.js?jira.create.linked.issue=true&amp;locale=en-UK&amp;richediton=true" data-wrm-key="com.atlassian.jira.projects.sidebar.init,-_super,-project.issue.navigator,-jira.view.issue" data-wrm-batch-type="context" data-initially-rendered></script> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="ajs-can-search-users" content="false"> 
+  <meta name="ajs-can-edit-watchers" content="false"> 
+  <meta name="ajs-default-avatar-url" content="https://issues.apache.org/jira/secure/useravatar?size=xsmall&amp;avatarId=10453"> 
+  <meta name="ajs-issue-project-type" content="software"> 
+  <meta name="ajs-issue-key" content="LUCENE-4182"> 
+  <meta name="ajs-server-view-issue-is-editable" content="false"> 
+  <title>[LUCENE-4182] DocumentsWriterFlushControl.assertMemory tripped by NGramTokenizerTest.testRandomStrings - ASF JIRA</title> 
+  <link rel="search" type="application/opensearchdescription+xml" href="/jira/osd.jsp" title="[LUCENE-4182] DocumentsWriterFlushControl.assertMemory tripped by NGramTokenizerTest.testRandomStrings - ASF JIRA"> 
+ </head> 
+ <body id="jira" class="aui-layout aui-theme-default " data-version="7.6.3"> 
+  <div id="page"> 
+   <header id="header" role="banner"> 
+    <script>
+require(["jquery", "jira/license-banner"], function ($, licenseBanner) {
+    $(function () {
+        licenseBanner.showLicenseBanner("");
+        licenseBanner.showLicenseFlag("");
+    });
+});
+</script> 
+    <nav class="aui-header aui-dropdown2-trigger-group" role="navigation">
+     <div class="aui-header-inner">
+      <div class="aui-header-before">
+       <a class=" aui-dropdown2-trigger app-switcher-trigger" aria-controls="app-switcher" aria-haspopup="true" role="button" tabindex="0" data-aui-trigger href="#app-switcher"><span class="aui-icon aui-icon-small aui-iconfont-appswitcher">Linked Applications</span></a>
+       <div id="app-switcher" class="aui-dropdown2 aui-style-default" role="menu" aria-hidden="true" data-is-switcher="true" data-environment="{&quot;isUserAdmin&quot;:false,&quot;isAppSuggestionAvailable&quot;:false,&quot;isSiteAdminUser&quot;:false}">
+        <div role="application">
+         <div class="app-switcher-loading">
+          Loading…
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="aui-header-primary">
+       <h1 id="logo" class="aui-header-logo aui-header-logo-custom"><a href="https://issues.apache.org/jira/secure/MyJiraHome.jspa"><img src="/jira/s/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/_/jira-logo-scaled.png" alt="ASF JIRA"></a></h1>
+       <ul class="aui-nav">
+        <li><a href="/jira/secure/Dashboard.jspa" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="home_link" aria-haspopup="true" aria-controls="home_link-content" title="View and manage your dashboards" accesskey="d">Dashboards</a>
+         <div class="aui-dropdown2 aui-style-default" id="home_link-content" data-aui-dropdown2-ajax-key="home_link"></div></li>
+        <li><a href="/jira/browse/LUCENE" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="browse_link" aria-haspopup="true" aria-controls="browse_link-content" title="View recent projects and browse a list of projects" accesskey="p">Projects</a>
+         <div class="aui-dropdown2 aui-style-default" id="browse_link-content" data-aui-dropdown2-ajax-key="browse_link"></div></li>
+        <li><a href="/jira/issues/" class=" aui-nav-link aui-dropdown2-trigger aui-dropdown2-ajax" id="find_link" aria-haspopup="true" aria-controls="find_link-content" title="Search for issues and view recent issues" accesskey="i">Issues</a>
+         <div class="aui-dropdown2 aui-style-default" id="find_link-content" data-aui-dropdown2-ajax-key="find_link"></div></li> 
+       </ul>
+      </div>
+      <div class="aui-header-secondary">
+       <ul class="aui-nav">
+        <li id="quicksearch-menu"> 
+         <form action="/jira/secure/QuickSearch.jspa" method="get" id="quicksearch" class="aui-quicksearch dont-default-focus ajs-dirty-warning-exempt"> 
+          <input id="quickSearchInput" class="search" type="text" title="Search" placeholder="Search" name="searchString" accessKey="q"> 
+          <input type="submit" class="hidden" value="Search"> 
+         </form> </li> 
+        <li><a class="jira-feedback-plugin" role="button" aria-haspopup="true" id="jira-header-feedback-link" href="#"><span class="aui-icon aui-icon-small jira-feedback-plugin-icon">Give feedback to Atlassian</span></a></li> 
+        <li id="system-help-menu"> <a class="aui-nav-link aui-dropdown2-trigger" id="help_menu" aria-haspopup="true" aria-owns="system-help-menu-content" href="https://docs.atlassian.com/jira/jcore-docs-076/" target="$textUtils.htmlEncode($rootHelpMenuItem.params.target)" title="Help"><span class="aui-icon aui-icon-small aui-iconfont-help">Help</span></a> 
+         <div id="system-help-menu-content" class="aui-dropdown2 aui-style-default"> 
+          <div class="aui-dropdown2-section"> 
+           <ul id="jira-help" class="aui-list-truncate"> 
+            <li> <a id="view_core_help" class="aui-nav-link " title="Go to the online documentation for JIRA Core" href="https://docs.atlassian.com/jira/jcore-docs-076/" target="_blank">JIRA Core help</a> </li> 
+            <li> <a id="keyshortscuthelp" class="aui-nav-link " title="Get more information about JIRA's Keyboard Shortcuts" href="/jira/secure/ViewKeyboardShortcuts!default.jspa" target="_blank">Keyboard Shortcuts</a> </li> 
+            <li> <a id="view_about" class="aui-nav-link " title="Get more information about JIRA" href="/jira/secure/AboutPage.jspa">About JIRA</a> </li> 
+            <li> <a id="view_credits" class="aui-nav-link " title="See who did what" href="/jira/secure/JiraCreditsPage!default.jspa" target="_blank">JIRA Credits</a> </li> 
+           </ul> 
+          </div> 
+         </div> </li> 
+        <li id="user-options"> <a class="aui-nav-link login-link" href="/jira/login.jsp?os_destination=%2Fbrowse%2FLUCENE-4182">Log In</a> 
+         <div id="user-options-content" class="aui-dropdown2 aui-style-default"> 
+          <div class="aui-dropdown2-section"> 
+          </div> 
+         </div> </li> 
+       </ul>
+      </div>
+     </div>
+     <!-- .aui-header-inner-->
+    </nav>
+    <!-- .aui-header --> 
+   </header> 
+   <section id="content" role="main"> 
+    <big-pipe data-id="sidebar-id" unresolved></big-pipe>
+    <div class="aui-sidebar  sidebar-placeholder">
+     <div class="aui-sidebar-wrapper">
+      <div class="aui-sidebar-body"></div>
+      <div class="aui-sidebar-footer">
+       <a class="aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy" data-tooltip="Expand sidebar ( [ )" href="#"><span class="aui-icon aui-icon-small"></span></a>
+      </div>
+     </div>
+    </div>
+    <script id="projects-sidebar-init">
+    require(['jira/projects/sidebar/expansion-manager'], function(expansionManager) {
+        var scriptTag = document.getElementById('projects-sidebar-init');
+        var sidebar = AJS.sidebar('.aui-sidebar');
+        expansionManager(sidebar);
+        scriptTag.parentElement.removeChild(scriptTag);
+    });
+    </script>
+    <div class="aui-page-panel">
+     <div class="aui-page-panel-inner">
+      <div class="issue-navigator">
+       <div class="content">
+        <div class="issue-view">
+         <div class="navigation-tools">
+          <div class="pager-container"></div>
+         </div>
+         <div class="issue-container">
+          <div id="issue-content" class="issue-edit-form">
+           <header id="stalker" class="issue-header js-stalker">
+            <div class="issue-header-content">
+             <header class="aui-page-header">
+              <div class="aui-page-header-inner">
+               <div class="aui-page-header-image">
+                <span id="12310110" class="aui-avatar aui-avatar-large aui-avatar-project"><span class="aui-avatar-inner"><img id="project-avatar" alt="Uploaded image for project: 'Lucene - Core'" src="https://issues.apache.org/jira/secure/projectavatar?pid=12310110&amp;avatarId=10061"></span></span>
+               </div>
+               <!-- .aui-page-header-image -->
+               <div class="aui-page-header-main">
+                <ol class="aui-nav aui-nav-breadcrumbs">
+                 <li><a id="project-name-val" href="/jira/browse/LUCENE">Lucene - Core</a></li>
+                 <li><a class="issue-link" data-issue-key="LUCENE-4182" href="/jira/browse/LUCENE-4182" id="key-val" rel="12596381">LUCENE-4182</a></li>
+                </ol>
+                <h1 id="summary-val">DocumentsWriterFlushControl.assertMemory tripped by NGramTokenizerTest.testRandomStrings</h1>
+               </div>
+               <!-- .aui-page-header-main -->
+               <div class="aui-page-header-actions">
+                <div id="issue-header-pager"></div>
+               </div>
+               <!-- .aui-page-header-actions -->
+              </div>
+              <!-- .aui-page-header-inner -->
+             </header>
+             <!-- .aui-page-header -->
+             <div class="command-bar">
+              <div class="ops-cont">
+               <div class="ops-menus aui-toolbar">
+                <div class="toolbar-split toolbar-split-left">
+                 <ul id="opsbar-ops-login-lnk_container" class="toolbar-group pluggable-ops">
+                  <li class="toolbar-item"><a id="ops-login-lnk" title="Log In" class="toolbar-trigger" href="/jira/login.jsp?os_destination=%2Fbrowse%2FLUCENE-4182"><span class="trigger-label">Log In</span></a></li>
+                 </ul>
+                 <ul id="opsbar-opsbar-operations" class="toolbar-group pluggable-ops"></ul>
+                 <ul id="opsbar-opsbar-transitions" class="toolbar-group pluggable-ops"></ul>
+                 <ul id="opsbar-opsbar-admin" class="toolbar-group pluggable-ops"></ul>
+                </div>
+                <div class="toolbar-split toolbar-split-right">
+                 <ul id="opsbar-jira.issue.tools" class="toolbar-group pluggable-ops">
+                  <li class="toolbar-item">
+                   <div>
+                    <a href="#" id="viewissue-export" aria-owns="viewissue-export_drop" aria-haspopup="true" title="Export this issue in another format" class="toolbar-trigger aui-button aui-style-default aui-dropdown2-trigger"><span class="icon icon-default aui-icon aui-icon-small aui-iconfont-export"></span> <span class="dropdown-text">Export</span></a>
+                    <div id="viewissue-export_drop" class="aui-style-default aui-dropdown2">
+                     <ul>
+                      <li class="aui-list-item"><a href="/jira/si/jira.issueviews:issue-xml/LUCENE-4182/LUCENE-4182.xml" id="jira.issueviews:issue-xml"><span class="trigger-label">XML</span></a></li>
+                      <li class="aui-list-item"><a href="/jira/si/jira.issueviews:issue-word/LUCENE-4182/LUCENE-4182.doc" id="jira.issueviews:issue-word"><span class="trigger-label">Word</span></a></li>
+                      <li class="aui-list-item"><a href="/jira/si/jira.issueviews:issue-html/LUCENE-4182/LUCENE-4182.html" id="jira.issueviews:issue-html"><span class="trigger-label">Printable</span></a></li>
+                      <li class="aui-list-item"><a href="/jira/si/com.atlassian.jira.plugins.jira-importers-plugin:issue-json/LUCENE-4182/LUCENE-4182.json" id="com.atlassian.jira.plugins.jira-importers-plugin:issue-json"><span class="trigger-label">JSON</span></a></li>
+                     </ul>
+                    </div>
+                   </div></li>
+                 </ul>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </header>
+           <div class="issue-body-content">
+            <div class="aui-group issue-body">
+             <div class="aui-item issue-main-column">
+              <div id="details-module" class="module toggle-wrap">
+               <div id="details-module_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Details</h2>
+               </div>
+               <div class="mod-content"> 
+                <ul id="issuedetails" class="property-list two-cols"> 
+                 <li class="item"> 
+                  <div class="wrap"> 
+                   <strong class="name">Type:</strong> 
+                   <span id="type-val" class="value"> <img alt="" height="16" src="/jira/secure/viewavatar?size=xsmall&amp;avatarId=21133&amp;avatarType=issuetype" title="Bug - A problem which impairs or prevents the functions of the product." width="16"> Bug </span> 
+                  </div> </li> 
+                 <li class="item item-right"> 
+                  <div class="wrap"> 
+                   <strong class="name">Status:</strong> 
+                   <span id="status-val" class="value"> <span class=" jira-issue-status-lozenge aui-lozenge jira-issue-status-lozenge-green jira-issue-status-lozenge-done jira-issue-status-lozenge-max-width-medium" data-tooltip="<span class=&quot;jira-issue-status-tooltip-title&quot;>Closed</span><br><span class=&quot;jira-issue-status-tooltip-desc&quot;>The issue is considered finished, the resolution is correct. Issues which are not closed can be reopened.</span>">Closed</span> </span> 
+                  </div> </li> 
+                 <li class="item new"> 
+                  <div class="wrap"> 
+                   <strong class="name">Priority:</strong> 
+                   <span id="priority-val" class="value"> <img alt="" height="16" src="/jira/images/icons/priorities/major.svg" title="Major - Major loss of function." width="16"> Major </span> 
+                  </div> </li> 
+                 <li class="item item-right"> 
+                  <div class="wrap"> 
+                   <strong class="name">Resolution:</strong> 
+                   <span id="resolution-val" class="value resolved"> Fixed </span> 
+                  </div> </li> 
+                 <li class="item"> 
+                  <div class="wrap"> 
+                   <strong class="name">Affects Version/s:</strong> 
+                   <span id="versions-val" class="value"> None </span> 
+                  </div> </li> 
+                 <li class="item item-right"> 
+                  <div class="wrap"> 
+                   <strong class="name">Fix Version/s:</strong> 
+                   <span id="fixfor-val" class="value"> <span class="shorten" id="fixVersions-field"> <a href="/jira/issues/?jql=project+%3D+LUCENE+AND+fixVersion+%3D+4.1" title="4.1 Major release after 4.0">4.1</a>, <a href="/jira/issues/?jql=project+%3D+LUCENE+AND+fixVersion+%3D+6.0" title="6.0 Major release after 5.5">6.0</a> </span> </span> 
+                  </div> </li> 
+                 <li class="item"> 
+                  <div class="wrap"> 
+                   <strong class="name">Component/s:</strong> 
+                   <span id="components-val" class="value"> None </span> 
+                  </div> </li> 
+                 <li class="item full-width"> 
+                  <div class="wrap" id="wrap-labels"> 
+                   <strong class="name">Labels:</strong> 
+                   <div class="labels-wrap value"> 
+                    <span class="labels" id="labels-12596381-value">None</span> 
+                   </div> 
+                  </div> </li> 
+                </ul> 
+                <div id="customfieldmodule"> 
+                 <div class="aui-tabs horizontal-tabs" id="customfield-tabs"> 
+                  <div id="customfield-panel-1" class="tabs-pane active-pane"> 
+                   <ul class="property-list"> 
+                    <li id="rowForcustomfield_12310120" class="item"> 
+                     <div class="wrap"> 
+                      <strong title="Lucene Fields" class="name">Lucene Fields:</strong> 
+                      <div id="customfield_12310120-val" class="value type-multicheckboxes" data-fieldtype="multicheckboxes" data-fieldtypecompletekey="com.atlassian.jira.plugin.system.customfieldtypes:multicheckboxes"> 
+                       <div class="shorten" id="customfield_12310120-field"> 
+                        <span>New</span>, 
+                        <span>Patch Available</span> 
+                       </div> 
+                      </div> 
+                     </div> </li> 
+                   </ul> 
+                  </div> 
+                 </div>
+                </div> 
+               </div>
+              </div>
+              <div id="descriptionmodule" class="module toggle-wrap">
+               <div id="descriptionmodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Description</h2>
+               </div>
+               <div class="mod-content">
+                <div id="description-val" class="field-ignore-highlight"> 
+                 <div class="user-content-block"> 
+                  <div class="preformatted panel" style="border-width: 1px;">
+                   <div class="preformattedContent panelContent"> 
+                    <pre>
+Build: http://jenkins.sd-datasolutions.de/job/Lucene-Solr-trunk-Linux-Java6-64/1090/
+
+1 tests failed.
+REGRESSION:  org.apache.lucene.analysis.ngram.NGramTokenizerTest.testRandomStrings
+
+Error Message:
+some thread(s) failed
+
+Stack Trace:
+java.lang.RuntimeException: some thread(s) failed
+       at __randomizedtesting.SeedInfo.seed([256D0DE54BD0473A:ADE40D5BE8D4100F]:0)
+       at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkRandomData(BaseTokenStreamTestCase.java:463)
+       at org.apache.lucene.analysis.ngram.NGramTokenizerTest.testRandomStrings(NGramTokenizerTest.java:106)
+       at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+       at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+       at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+       at java.lang.reflect.Method.invoke(Method.java:597)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1969)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner.access$1100(RandomizedRunner.java:132)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner$6.evaluate(RandomizedRunner.java:814)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner$7.evaluate(RandomizedRunner.java:875)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner$8.evaluate(RandomizedRunner.java:889)
+       at org.apache.lucene.util.TestRuleSetupTeardownChained$1.evaluate(TestRuleSetupTeardownChained.java:50)
+       at org.apache.lucene.util.TestRuleFieldCacheSanity$1.evaluate(TestRuleFieldCacheSanity.java:32)
+       at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:45)
+       at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+       at org.apache.lucene.util.TestRuleReportUncaughtExceptions$1.evaluate(TestRuleReportUncaughtExceptions.java:68)
+       at org.apache.lucene.util.TestRuleThreadAndTestName$1.evaluate(TestRuleThreadAndTestName.java:48)
+       at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner.runSingleTest(RandomizedRunner.java:821)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner.access$700(RandomizedRunner.java:132)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner$3$1.run(RandomizedRunner.java:669)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner$3.evaluate(RandomizedRunner.java:695)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:734)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:745)
+       at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:45)
+       at org.apache.lucene.util.TestRuleReportUncaughtExceptions$1.evaluate(TestRuleReportUncaughtExceptions.java:68)
+       at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:38)
+       at org.apache.lucene.util.TestRuleIcuHack$1.evaluate(TestRuleIcuHack.java:51)
+       at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+       at org.apache.lucene.util.TestRuleNoInstanceHooksOverrides$1.evaluate(TestRuleNoInstanceHooksOverrides.java:53)
+       at org.apache.lucene.util.TestRuleNoStaticHooksShadowing$1.evaluate(TestRuleNoStaticHooksShadowing.java:52)
+       at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:36)
+       at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+       at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:56)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner.runSuite(RandomizedRunner.java:605)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner.access$400(RandomizedRunner.java:132)
+       at com.carrotsearch.randomizedtesting.RandomizedRunner$2.run(RandomizedRunner.java:551)
+
+
+
+
+Build Log:
+[...truncated 3668 lines...]
+  [junit4] Suite: org.apache.lucene.analysis.ngram.NGramTokenizerTest
+  [junit4] ERROR   3162s J1 | NGramTokenizerTest.testRandomStrings
+  [junit4]    &gt; Throwable #1: java.lang.RuntimeException: some thread(s) failed
+  [junit4]    &gt;        at __randomizedtesting.SeedInfo.seed([256D0DE54BD0473A:ADE40D5BE8D4100F]:0)
+  [junit4]    &gt;        at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkRandomData(BaseTokenStreamTestCase.java:463)
+  [junit4]    &gt;        at org.apache.lucene.analysis.ngram.NGramTokenizerTest.testRandomStrings(NGramTokenizerTest.java:106)
+  [junit4]    &gt;        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  [junit4]    &gt;        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+  [junit4]    &gt;        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+  [junit4]    &gt;        at java.lang.reflect.Method.invoke(Method.java:597)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.invoke(RandomizedRunner.java:1969)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.access$1100(RandomizedRunner.java:132)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$6.evaluate(RandomizedRunner.java:814)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$7.evaluate(RandomizedRunner.java:875)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$8.evaluate(RandomizedRunner.java:889)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleSetupTeardownChained$1.evaluate(TestRuleSetupTeardownChained.java:50)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleFieldCacheSanity$1.evaluate(TestRuleFieldCacheSanity.java:32)
+  [junit4]    &gt;        at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:45)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleReportUncaughtExceptions$1.evaluate(TestRuleReportUncaughtExceptions.java:68)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleThreadAndTestName$1.evaluate(TestRuleThreadAndTestName.java:48)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.runSingleTest(RandomizedRunner.java:821)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.access$700(RandomizedRunner.java:132)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$3$1.run(RandomizedRunner.java:669)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$3.evaluate(RandomizedRunner.java:695)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:734)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:745)
+  [junit4]    &gt;        at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:45)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleReportUncaughtExceptions$1.evaluate(TestRuleReportUncaughtExceptions.java:68)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:38)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleIcuHack$1.evaluate(TestRuleIcuHack.java:51)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleNoInstanceHooksOverrides$1.evaluate(TestRuleNoInstanceHooksOverrides.java:53)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleNoStaticHooksShadowing$1.evaluate(TestRuleNoStaticHooksShadowing.java:52)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:36)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:56)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.runSuite(RandomizedRunner.java:605)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.access$400(RandomizedRunner.java:132)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$2.run(RandomizedRunner.java:551)
+  [junit4]    &gt; Throwable #2: java.lang.RuntimeException: Thread threw an uncaught exception, thread: Thread[Thread-548,5,]
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RunnerThreadGroup.processUncaught(RunnerThreadGroup.java:96)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.runSingleTest(RandomizedRunner.java:857)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.access$700(RandomizedRunner.java:132)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$3$1.run(RandomizedRunner.java:669)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$3.evaluate(RandomizedRunner.java:695)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$4.evaluate(RandomizedRunner.java:734)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$5.evaluate(RandomizedRunner.java:745)
+  [junit4]    &gt;        at org.apache.lucene.util.AbstractBeforeAfterRule$1.evaluate(AbstractBeforeAfterRule.java:45)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleReportUncaughtExceptions$1.evaluate(TestRuleReportUncaughtExceptions.java:68)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleStoreClassName$1.evaluate(TestRuleStoreClassName.java:38)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleIcuHack$1.evaluate(TestRuleIcuHack.java:51)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.rules.SystemPropertiesInvariantRule$1.evaluate(SystemPropertiesInvariantRule.java:55)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleNoInstanceHooksOverrides$1.evaluate(TestRuleNoInstanceHooksOverrides.java:53)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleNoStaticHooksShadowing$1.evaluate(TestRuleNoStaticHooksShadowing.java:52)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleAssertionsRequired$1.evaluate(TestRuleAssertionsRequired.java:36)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleMarkFailure$1.evaluate(TestRuleMarkFailure.java:48)
+  [junit4]    &gt;        at org.apache.lucene.util.TestRuleIgnoreTestSuites$1.evaluate(TestRuleIgnoreTestSuites.java:56)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.runSuite(RandomizedRunner.java:605)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner.access$400(RandomizedRunner.java:132)
+  [junit4]    &gt;        at com.carrotsearch.randomizedtesting.RandomizedRunner$2.run(RandomizedRunner.java:551)
+  [junit4]    &gt; Caused by: java.lang.AssertionError: ram was 41605728 expected: 40986328 flush mem: 27371536 activeMem: 14234192 pendingMem: 0 flushingMem: 2 blockedMem: 0 peakDeltaMem: 3715948
+  [junit4]    &gt;        at __randomizedtesting.SeedInfo.seed([256D0DE54BD0473A]:0)
+  [junit4]    &gt;        at org.apache.lucene.index.DocumentsWriterFlushControl.assertMemory(DocumentsWriterFlushControl.java:114)
+  [junit4]    &gt;        at org.apache.lucene.index.DocumentsWriterFlushControl.doAfterDocument(DocumentsWriterFlushControl.java:181)
+  [junit4]    &gt;        at org.apache.lucene.index.DocumentsWriter.updateDocuments(DocumentsWriter.java:348)
+  [junit4]    &gt;        at org.apache.lucene.index.IndexWriter.updateDocuments(IndexWriter.java:1174)
+  [junit4]    &gt;        at org.apache.lucene.index.IndexWriter.addDocuments(IndexWriter.java:1134)
+  [junit4]    &gt;        at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:157)
+  [junit4]    &gt;        at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:145)
+  [junit4]    &gt;        at org.apache.lucene.analysis.BaseTokenStreamTestCase.checkRandomData(BaseTokenStreamTestCase.java:555)
+  [junit4]    &gt;        at org.apache.lucene.analysis.BaseTokenStreamTestCase.access$000(BaseTokenStreamTestCase.java:57)
+  [junit4]    &gt;        at org.apache.lucene.analysis.BaseTokenStreamTestCase$AnalysisThread.run(BaseTokenStreamTestCase.java:414)
+  [junit4]    &gt;
+  [junit4]   2&gt; TEST FAIL: useCharFilter=false text='s z zxpw qu j jlpc \u10bd\u10bb\u10b4\u10c3\u10ab\u10a5 ag zuv vtjj \u0492\ue462\ue1b8\u02cd\uaf99\u026a cxv  xcyqyq m\ud9cbb \u1b84\u1ba7\u1b8c\u1b86 zq \u2059 fkg \u16f1\u16cf\u16f5\u16ca\u16ce\u16e4\u16a2 ya[ik \u0009^1  ;&amp;# \uaa44\uaa13\uaa5b\uaa59\uaa12\uaa16 \ua965\ua97d\ua964\ua97d\ua968\ua974\ua966 \ue5db\uac21   \ue714\u6564et\u885d kjkqd .{ \ue932 \uf987 smyv bynhphqp kbv ] ]{1 qtrr \u2de6\u2df9\u2dfd \u042f$ twbpfnaz \uf12a\u8760c\uf242\u65dd ptwfoph [{1, t xmbvs OmFr \ua9d8\ua9c3\ua9a0\ua9c8\ua9db\ua9da\ua9c8\ua983 \u10431 \ud7c9\ud7d9\ud7e1\ud7fe\ud7d6\ud7b6 \u5649\uabdd~ e iceex hlglb ppcbklfa spq  \ua778\ua7ae \u258d\u2594\u2583\u259b\u2584\u258d\u2592\u259e \u034f jhbacf \u1ba7\u1b92\u1ba2\u1b88 yi q \ueab0\u9dc33\u065b\u0134\u0793 (h{0,5 cgg Swe \u0398\uf2c5[\u1920\ue5f9\u0589\u813a o \ua5ea\ua52f  r bWf  \u319c\u3198\u319d\u3193\u319e\u319a z|z.) \u24e3\u24de\u24d4\u2487\u24ce vqaaafd ? \u2bb9\u2b65\u2b3b\u2b9e  -yv.{0,5} \ue611\u01033\u0342\uea5c\u4164)\u0677  jnfaymol j \u2508 vvge \uf437\uc22d  pfoubst av \u26a3\u26b8\u266c\u2695\u269b \u4ddf \ua15d\ua3ef\ua2c2 &lt;/p  focqf \u014d\ub45ei -h \ua8fe\ua8f1\ua8ec\ua8fd\ua8f7 \u5ca7\u07cf ' \u02c0\u0342\ue884\u2890v\u9f78d oqsnpewn xbblilaf tndwtfqtj bjedbercm  By \u23f2 \u2df7\u2dfd\u2de2\u2de4 vdxdw \u6809\u9e9cf\ud632\uf524  \u10816  \ua800\ua81f\ua81a\ua821\ua80a\ua808 \ua73d\ua781\ua7ae all &gt; \ua820\ua80b \u30d2\u30df\u30ff\u30f3 \u1008b vjijpdh &lt;/script&gt; \u10164\u10183  myzcm \ua726 vkp iljo xetk athqzre fx juik \u0692  f(r 5\u7485\u6675 lvle  \u79300\u2370e\ufdab\uff94\uffb7\uf855T \u2618k ?{0,5}jn[?eh( qpawziia  ctb \u2b33\u2bad\u2bb6 uq  \ufe3c\u0794\uf225 \ua966\ue47a\u058a\ue094 hmb vef gunpnry \u0175 {0 lgr rspeigro \u0cf9\u0cfe dqg \u1b40\u1b03\u1b67\u1b08\u1b00\u1b22\u1b0f  acvfnq \u001e u \uf3c5\u29ff\uf172\u05e7\uf12f\u0651 fhb m lxjaa \u1c4d\u1c07\u1c3f\u1c09\u1c1b gdg \u1006\u105c\u1080\u1057\u1017\u1044\u1090 9\u043c\u523d5h\u0350 \u1d36a\u1d373 hxvvq hp ;--&gt; 9\u4362f\ue6cab\\M\u0213 \u1c40\u1c2a\u1c40\u1c02 \u118a#\ueedb\uf9946 trm  \ue434dP\uffc9\ua0fe0\u001c \u24e0\u2468\u24c9\u24ba\u24e4\u2467 cylyAdr \u0455\u038e\uf37ak ggk hodch \u10850\u10850\u1085c\u10851\u10851 \u1103 vmbr \ub7963 \u0d5e\u0d6b\u0d39\u0d59\u0d1d\u0d0c\u0d3c \u015f\u01f0H\ucd55\u3fe0\u000e \ufe16\ufe1a\ufe18\ufe1e\ufe12\ufe11\ufe1e\ufe11\ufe1f )(]).{0,5}q \u0382\ud0047F\u5267\ue3c2 &lt;/ &amp;# Tl\u0013\u6363\u11c61  gqftlg  S &lt;!-- vy \u1fab vbe uth uep \u26a00\u25de5 \u07b2\ua5a2 pojdwa _\uad8b1b\u8d40 dzjra patxxtyk \u17ed\uff16o kvqyelu  \u31e6\u31ce\u31eb\u31e8 \ubcc2\u037ezH zx \u1e82\u1eca\u1ea9 zaki \u050c\u1b6e\uef15&gt; \u2c60\u2c75\u2c78\u2c70\u2c65 x \u1fff\u1f27\u1fee \n\\\"\\' \uf0c7v\u3347Xy\uf83b \uebacd\u7a90f\ub5a7 rowfh \u1fe11\ufa3f\u0016\u96a6 pja euu \u8edc\ue07b\ubdf4\ub689\ub8b31h\u5a38 acqheoidhmu 7\u24f0\u087f\u8578\u4555 ksszgdl \u12d7\u12d8\u133b\u1211\u1280 kyfcnb ejnep \"p \u1968\u1967\u1950\u1956 ejinsu ohkiz  rcksdpve \ufcf7\u016a \ua5bd\ua504\ua5ea\ua540\ua5d5\ua627 \ue6a7\u7764\u7d60d\ub4cc\u5156\ufb49\u06b3\u0001 fervu  xn \u2d40\u2d5d\u2d3a\u2d7f\u2d4e vgs fsut {0,5}s \u10060\u10072\u10075 xxgks \u2813\u28a1  wusp ejjafxhc ihde zitwdlxavrh eh poh ri x\u667c6\u01f6 paie \ua8e6\ua8ef\ua8e0\ua8f5\ua8f2\ua8fa \u0685 pmacb jeo \uff52\uff77 zy '&lt;p&gt; ?rel \\' \u27d6\u27ce tu \ufe17\ufe13 zb shlkou K  zvjowv gy sl \uaac8\uaad1\uaab4\uaaac\uaa97\uaad7\uaab5\uaaa8\uaac7\uaad8\uaa9e 4  \u0003' \\\"\" \u20e6\u20e3\u20f5 nfkwsd rwlw \uf41f ewv az  \u07bb qtc  ndUYsp  \u3160\u314e\u3136\u3139\u3185\u3133\u3175 debq   vdfd \u7d87f\u1983\ue1d4.- yeo \u0485ml z &lt;?\n'\\'&lt;/s &lt; u fhk \u07f2\u0325\u16a242 ptma \u0a85\u0ad8\u0a82\u0a90\u0ae0 \u6f84\u8a56\u1dec\u450e\u2d22c\u10da6f \u1d7c\u1d2f \ufa3c\u1430\u2b9be\u0770\u0018 lcgnclfdii ,\u54cf\u01ad\ubcfdf \u103cb\u103d9   \"  | \u00f0\u00c6\u00bb\u00cb\u00cc\u00dd\u00fb rmi \ufc97\ufd78\ufbce ynclv \ufcca\ufc0b\ufb6a\ufc25 hpnukxtjn ptuoqdda \u00e2\u597a\u0010\u2883\ub3cd\ue10f\uf3c8 j muwt bw \u37c3\ua4873 x \u87fe\u4a5f2\ufda5  \u2ad79\u2b5bf\u2b21c\u2ad13\u2b102 skrl rgepp \u1939\u1920\u1948\u1904\u194c \u07be \ueaef\uedfe\u0481\u010d \ubb01a\uce0a\u0668 &lt;/   ancxfe  fhgaca  nk 3\u45aa s]o]{0,  \u7152 tv \u044e\u02d6\u09e8 \u0a66\u0a69\u0a2e\u0a47\u0a62\u0a1c\u0a0b \u173f\u172b \u0504\u0515\u0504\u0520 \u9d67\uc6e0\ue13e\r\u6a67z \u02b3V\u6ff7\uf534\ueade\ue092\u06a2 b ebchlicd  \u04f9\u4141d\u0011\ue6ae \u0937\u097b\u092c\u096f\u0928\u0944\u0941 iwwrdqu  nkkz mu[[. \\'--&gt;&amp; ckbhwuat \u2e01\u2e2e\u2e12\u2e33\u2e30 &gt;c \u1118\u1138\u1172\u1137\u11e8\u110a\u1147 \u0467 o \ue87ff  \u1090d\u10900  nreqyjvatc  \ued5a\uf44b udmc wnmg \u20da\u20d7\u20d4\u20ea\u20e4 \u2e2d\u2e33\u2e34 \u2ff9\u2ff1\u2ffd\u2ff3 \u1aa7\u1a28 wmwm \u2554\u2571\u250f\u2558\u2521\u250d\u252b o kjes uq \ufe1f\ufe13\ufe16\ufe14\ufe15\ufe13\ufe17\ufe1d aeebxvf o[hk][( veh \u06e2\u00ad\u0125\ued9c\u2223 rwf lcmtqev Ksvu \ue01c4\ue0146\ue0182 jtx ljpqre etzwnjnn BOmuXt bs \u0cac\u0cb7 lij eu   x \ufe2b\u1054\u0454\ue410 rd fscl  &amp;#x&amp; gkmrw \u2cd4\u2cfd\u2cf3\u2c88\u2cf1\u2c98 \u0c29\u0c09\u0c75\u0c4e zrhpfAdpax \u05477 &amp;Ps  \ua6dc\ua6ae \u5b38e\ue7dbZ\ud038e\ua712b b{1,5})h rt \u185b \u31a9\u31ba\u31a9\u31bb\u31b7\u31b2\u31a9\u31ba \u2cf5\u2cfa\u2ca9\u2cfd ovxf xegi \uaec48\u09bb\ufd01\ua107\uf5c2 \u2f70\u2f9a cppxm zzi ?&gt;&lt;! epsrs \u076e\u0761\u0754\u075e\u075f\u075a\u0754\u0763 \u1093f\u10922   ` ]{0, &amp; qgbiwn  &lt; vyge acmvidw xbwgrppk \uf612p\u05f5^\u048f\u056d \ud6436\u9cde0\u274e\u0592 tamcca \ufd7b\ufbf9\ufb88\ufbae tusifiwj \u000f\u0600\uef93}\u28e7\u599ab zk \u09ed\u09d1 &gt; y \u013d\u0171\u011e\u0142\u012f irxvlpgbl xiw tjdelwn lxlojUEj  Ttik xtoxop dansms  \u29b5\u2983\u299a\u2988\u29b1 |(](|s[ tgllq vmuy ksizv \ua77f\ua74a\ua759\ua799\ua7f4\ua75b\ua7ee\ua770 vvm agcuehf syu f \ufe79\u001d raxj \u8f2aH \u207a\u2086\u207f\u208b\u207b\u2088\u2098 \ud813b\u1f70  vpawp hevp \u4436\ueace9\u2133 koaba mikat \u31fe\u31f8\u31f6\u31f2\u31f5\u31f3\u31f2\u31fd\u31ff \ue19b\u0424\u04f6K\ucab95 thmvy  \uffa6\uff6e\uff1c\uff98\uff82\uff44 \\'\\ pahfinz \uf650\ue338\u15b4\u0011\" \uf9a3\ufac3\uf905\uf9d1\ufa80\uf976 ' \u1357\u1244\u1336\u1209\u124f\u1338 o pora   \u3107\u3106\u312e\u310e\u3126\u3115\u3108 \u0014 \ua92c\ua905\ua920 \u8dfe2\u31102\ue695\uf742 nxsxezzn quende \u2d6e\u2d72\u2d4a\u2d6f aqroaomb  w.b({0 wtx ot \u2116\u2120\u2131 \uff65\u25ed\u023e\u3389\uecca\u89590\ud4325\ua3e9dx vj \uec30\u06057 oiq sfncjcxm jkcycin  \u040e anrwz \u024c\u42e01 &lt;!--# fe qnf lq 6;T awm huxr d)l \ue404\ucfb1 \ua557\ua5be\ua588\ua5f3\ua58a\ua57c\ua5a6  L0\uf8ed q pbyvjuqtq \u0c51\u0c50 hsjfsnig glgw \u4d2d\u0342T\ufb58D\u0ed5 fmft ?&gt;&lt;! p \u3b83a\ue92b\uc2d0\u0c95\u0091 \u2565 \u0a8e\u0ab2\u0acc\u0ac6 \u10a06\u10a27  ke bromtk hoixcmuvf onmotohc m\uf434\u2451  pesvv glrugbidmi aRRrrF ofopzwucn \u32b8\u86f4\uf05b \u2c98\u2c82\u2c97  ?s|]ql \u13c3\u13e3\u13e2\u13ac  mrgslmse \uf717 )wlax]|[ atq \u03ea}\u105b9a\u0443  ck  \ufa368\u0e3a \u5cae4&amp;\ua107\u8581\uf5d0 \uf2d03\u0005 &lt;p&gt;?&gt;&lt;?-- \u2458\u2454\u2450\u2442\u2450\u2446\u2452\u2451\u2444 \u174f\u1741\u174f wksf gsunjwo \u10348\u10344 \u4a4e\u10e36a\uf305 &gt;&lt;/s \u0dfa\u0dbb\u0df5\u0d81\u0dc1\u0db2\u0dd7  otfvyni vc x \u0816\u0833\u082b\u0822\u0829\u080e \u477f\u0652\u03c3\u0301 \ua1cac \u16c6\u001c \ufe9c\ufe92 zzTWohEr \u0e48\u0e25\u0e23\u0e1c\u0e6b tqff x.)mpp f \uf876W\uea505I\u72df\u8c470 kt| xkyjxh ujerwftr \u2e5a\u2e78\u2e19\u2e44\u2e4d\u2e55\u2e47  msllr 5\ueac9\ufc31o \u039d\u9a5b\uf61b\ue5d5\u07b0\ue641\ua924\u07e5 g \ua907\ua900\ua92e \ua0468\ue2fb\ue945\uceaf \u16ea\u16fd\u16ea\u16b3\u16e3\u16ee\u16b1\u16cb\u16e8\u16bf \u1941\u1908\u1911\u194d\u193d\u1936\u1935 \u20d9\u20d8\u20eb\u20ea\u20ea\u20fa\u20ed jdrslh \u2153\u2171\u2180\u2181\u2161\u2153\u2160 \u0921 \u001c\u032ak \u10485\u10487 rqxuf I\ufce8 \u703e\u964d\u80bb\u6647\u739c\u75b5\u5f5d yu guanyrd rwuue c wv \u1c0c\u1c39\u1c21\u1c38 giu \u592da\u0440\u82a2\ue661  aqxoj \uac3f\u0018\u001a\ue7a8  uaj qio \u1e78\u1ee1\u1e27\u1e33 \u0220\u0227\u0209\u0229\u023f zrt crjd  yh yzn nkndmyewfqzi \ud54a\uc064\u00dd\ucb2d\u4d6b jmohh \u0b3d\u0b0b\u0b0c\u0b10\u0b46\u0b45 pzwi \\\"- ahbbaye tiazuvfnfh Q\u0179 \u2c68\u2c77\u2c7c kbpre aobgk uzsxgtxp &amp;;&gt;&lt; n r \u68ca0\u00b1 kaqtji ] yq =^ \u10a78\u10a6c\u10a60 \ufe64\ufe6e\ufe53 hjMQtFba swv \u1f193 &amp;#x54c {0,5} qxj qeat \ufe52\ufe66\ufe65 \u069a\ued9c\u037a\u00e7\u0657|\u0400 rjc yaeqtzpgsu \u72bdO\u0517\u4d4fa\uc910\u5b30 @\u02f5 \ua726 y\ua148\uf2b4 oaq \u2325 \ue153X p zdb \ud6bbN\u218e} \u1033f\u10347\u10341 d \u10016\u10071 \u309b \u0da2\u0da9 {1 \u9ed2\u8b89\u0a42 wpv ot g  oedh L\ub94f9u;Q \u0539\uaa76\u9e9b\u31d4 qje neizli xzxgeh \u2413 \u033f\u001f &amp;#x3 \u2e34\u2e28\u2e5d\u2e08 xpne \u1029d zhj  \u01ed\uf1f2a\ufca5# ]|yd{0  lgfxbowak  fyuv ymsh ervcv \u22fc\u22bb \ufeaf\ufee6\ufeeb\ufef1\ufe71 ogrkop  \u319d \ud4b6\u614db \u2a08\u2a1c\u2a2a\u2ace\u2a86\u2a10\u2af9\u2a58\u2a43\u2a3f\u2abb\u2acc &lt;  \u008b\uf68de\u06e5 \u104a2\u10482 qxurjt \uf7db\uf352\ue29c \"&lt;p \u10286\u10280 hasmw  lmga mu \ufd0f\ubee28\u0648\u9aea\u1013b6\u8174\u0006\ue2aed ` w mciod aysqvom qnrtdqmqu nf nexjvlz \u2182\u2154\u2154\u2184\u216c \u05d1\uf045\ucd7e5\u2af3\u16683 pw dva \\\"&lt;    \uf151\u0016\u053fe Y\u0002\u7872 \ufe1a\ufe17\ufe14\ufe18 jidqkxf bbr \u3190\u3196\u319e\u3194\u319b\u3194\u3195\u3191 llizhg wnkzu  jfcz \u05349\u0011 \u5050l\u0391\u06a0 \u5ef8\u03bd\ubc21 \u001e  \u0013\ufcc7 \ua8bb\ua8da pqsuegc ihux zgxsqjzsckix olu iext  ptfvv A\u59c7\u050c  nf cnteyylh m \uf0e2\u97f9t\u31183 lrtv &lt;p&gt;&lt;/   &lt;?&amp;s jhwuauv OfwV \uecbf^\u03e3\uc563\ued78\u584e\ue177 \u169f\u1691\u169a\u169c\u1681 n ahfejklim \u00b7-\ufea9 dbg bwdkew slxkv \uf723  fmntdq qjkfhl a fr[[ \u1041a\u1044b gu \u1d355 e |])cev \u1033b\u10333\u10332 Y \u3027\u300d\u3019 w \u0770\u076f\u0761\u0775\u0760\u076c\u0774 pvduh pstk mzh rg \ua8d6 gtex \u2335\u237b\u2344\u238e fyns uirr  \u0fc5\u0fad\u0f51 jwfpos bc \u03df\u03c5\u0395\u03b0\u0384 \u13186\u1302f\u1340e\u133e0 \u313b\u3136 oo{ upa \u19c2\u198f\u1998\u199e nko \u1d36a wro dpu \ua84f\ua878\ua852 Y\ucd66 btpml hefxu u \uf4fc\u0708\u0669\u9520 kkbiqh weecmoy gej xAm hn &lt;   frge wuc &amp;#1564800  zfi xon ozbtjdbnjqx \u04de\u0421\u047c\u04d1 iy \ufe35\ufe47\ufe3e tyrbgo czunk o\u05a1 &lt;?&lt;p oz igye \u24af\u24d0\u249c\u248e\u24cf\u24bf \ud7c3\uf4c0 xeqodif pyl(a ni \u12387\u122db mmibcrb  pboxwmy k ghtr lwqolgdvc \ud7e9\ud7ec\ud7d3\ud7cb\ud7ff &amp;# \uaac1\uaa98\uaaba\uaab0\uaaa1 \u0c7d\uaa2d\u7302\u6246f\uce3e3 ixmms \uff1f\uff80\uffa4 \ue2d2\u01ed t?](k bai \u214e\u214b\u2143 npmzph \ua4fc\ua4e2\ua4d4\ua4d3\ua4d4  \ua82f\ua81e\ua82f\ua809 o \u2175\u216c sibzotjcl zwaoxf bchxwxe  w oes iz  rmiq cm  \uf1b5\u05b6\u74a80\u06a2\ufcbc \u458b  jbwscrrdaor pbra \ua7db\ua729\ua756\ua7f6\ua762\ua763 \uff64\ua5121\ue447\u05c6 akf suk lgpjc lixjys wjrf'
+  [junit4]   2&gt; NOTE: reproduce with: ant test  -Dtestcase=NGramTokenizerTest -Dtests.method=testRandomStrings -Dtests.seed=256D0DE54BD0473A -Dtests.multiplier=3 -Dtests.locale=es_AR -Dtests.timezone=Asia/Baku -Dargs="-Dfile.encoding=UTF-8"
+  [junit4]   2&gt;
+  [junit4]    &gt; (@AfterClass output)
+  [junit4]   2&gt; NOTE: test params are: codec=Lucene40: {dummy=MockFixedIntBlock(blockSize=1329)}, sim=RandomSimilarityProvider(queryNorm=true,coord=true): {dummy=DFR I(n)3(800.0)}, locale=es_AR, timezone=Asia/Baku
+  [junit4]   2&gt; NOTE: Linux 2.6.32-41-server amd64/Sun Microsystems Inc. 1.6.0_32 (64-bit)/cpus=8,threads=1,free=222774808,total=419037184
+  [junit4]   2&gt; NOTE: All tests run in this JVM: [TestWordlistLoader, TestTurkishLowerCaseFilter, TestGermanMinimalStemFilter, TestSpanishAnalyzer, TestCJKWidthFilter, HunspellStemmerTest, TestDutchStemmer, TokenTypeSinkTokenizerTest, TestCharFilter, TestStemmerOverrideFilter, TestSolrSynonymParser, DateRecognizerSinkTokenizerTest, ShingleFilterTest, TestItalianLightStemFilter, TestThaiAnalyzer, TestPortugueseMinimalStemFilter, TestCharArraySet, TestKeepWordFilter, TestSnowball, TestLengthFilter, TestLimitTokenCountAnalyzer, TestFrenchLightStemFilter, TestItalianAnalyzer, TestLatvianStemmer, TestNorwegianLightStemFilter, TestGermanNormalizationFilter, TestPathHierarchyTokenizer, TokenRangeSinkTokenizerTest, TestHungarianAnalyzer, TestCharArrayIterator, TestCzechAnalyzer, TestSynonymMapFilter, TestBulgarianStemmer, CommonGramsFilterTest, TestPortugueseStemFilter, WikipediaTokenizerTest, TestCharTokenizers, TestRussianLightStemFilter, TestTypeTokenFilter, TestGermanAnalyzer, TestFinnishLightStemFilter, TestHindiAnalyzer, TestMappingCharFilter, TestBugInSomething, TestPerFieldAnalzyerWrapper, NGramTokenizerTest]
+  [junit4]   2&gt;
+  [junit4] Completed on J1 in 3162.49s, 8 tests, 1 error &lt;&lt;&lt; FAILURES!
+
+[...truncated 23 lines...]
+BUILD FAILED
+/mnt/ssd/jenkins/workspace/Lucene-Solr-trunk-Linux-Java6-64/checkout/build.xml:29: The following error occurred while executing this line:
+/mnt/ssd/jenkins/workspace/Lucene-Solr-trunk-Linux-Java6-64/checkout/lucene/build.xml:456: The following error occurred while executing this line:
+/mnt/ssd/jenkins/workspace/Lucene-Solr-trunk-Linux-Java6-64/checkout/lucene/common-build.xml:1435: The following error occurred while executing this line:
+/mnt/ssd/jenkins/workspace/Lucene-Solr-trunk-Linux-Java6-64/checkout/lucene/analysis/build.xml:101: The following error occurred while executing this line:
+/mnt/ssd/jenkins/workspace/Lucene-Solr-trunk-Linux-Java6-64/checkout/lucene/analysis/build.xml:38: The following error occurred while executing this line:
+/mnt/ssd/jenkins/workspace/Lucene-Solr-trunk-Linux-Java6-64/checkout/lucene/module-build.xml:62: The following error occurred while executing this line:
+/mnt/ssd/jenkins/workspace/Lucene-Solr-trunk-Linux-Java6-64/checkout/lucene/common-build.xml:1037: The following error occurred while executing this line:
+/mnt/ssd/jenkins/workspace/Lucene-Solr-trunk-Linux-Java6-64/checkout/lucene/common-build.xml:760: There were test failures: 139 suites, 891 tests, 1 error, 1 ignored
+
+Total time: 60 minutes 57 seconds
+Build step 'Execute shell' marked build as failure
+Archiving artifacts
+Recording test results
+Email was triggered for: Failure
+Sending email for trigger: Failure
+</pre> 
+                   </div>
+                  </div> 
+                 </div> 
+                </div> 
+               </div>
+              </div>
+              <div id="dnd-metadata" class="module toggle-wrap">
+               <div id="dnd-metadata_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Attachments</h2>
+               </div>
+               <div class="mod-content">
+                <div id="dnd-metadata-webpanel" data-can-attach="false" data-project-type="software" data-upload-limit="62914560" data-thumbnails-allowed="false"></div>
+               </div>
+              </div>
+              <div id="attachmentmodule" class="module toggle-wrap">
+               <div id="attachmentmodule_heading" class="mod-header">
+                <ul class="ops">
+                 <li class="drop">
+                  <div class="aui-dd-parent">
+                   <a href="#" class="icon drop-menu js-default-dropdown" title="Options"><span>Options</span></a>
+                   <div class="aui-dropdown-content aui-list">
+                    <ul id="attachment-sorting-options" class="aui-list-section aui-first">
+                     <li class="aui-list-item"><a id="attachment-sort-key-name" href="/jira/browse/LUCENE-4182?attachmentSortBy=fileName#attachmentmodule" class="aui-list-checked aui-checked aui-list-item-link" title="viewissue.subtasks.tab.show.all.name"><span>Sort By Name</span></a></li>
+                     <li class="aui-list-item"><a id="attachment-sort-key-date" href="/jira/browse/LUCENE-4182?attachmentSortBy=dateTime#attachmentmodule" class="aui-list-checked aui-list-item-link" title="Sort By Date"><span>Sort By Date</span></a></li>
+                    </ul>
+                    <ul id="attachment-sorting-order-options" class="aui-list-section aui-last">
+                     <li class="aui-list-item"><a id="attachment-sort-direction-asc" href="/jira/browse/LUCENE-4182?attachmentOrder=asc#attachmentmodule" class="aui-list-checked aui-checked aui-list-item-link" title="Ascending"><span>Ascending</span></a></li>
+                     <li class="aui-list-item"><a id="attachment-sort-direction-desc" href="/jira/browse/LUCENE-4182?attachmentOrder=desc#attachmentmodule" class="aui-list-checked aui-list-item-link" title="Descending"><span>Descending</span></a></li>
+                    </ul>
+                   </div>
+                  </div></li>
+                </ul>
+                <h2 class="toggle-title">Attachments</h2>
+               </div>
+               <div class="mod-content">
+                <ol id="file_attachments" class="item-attachments" data-sort-key="fileName" data-sort-order="asc">
+                 <li class="attachment-content js-file-attachment" data-attachment-id="12549665" data-issue-id="12596381" data-attachment-type="file">
+                  <div class="attachment-thumb">
+                   <a href="/jira/secure/attachment/12549665/LUCENE-4182.patch" draggable="true" data-downloadurl="text/x-patch:LUCENE-4182.patch:https://issues.apache.org/jira/secure/attachment/12549665/LUCENE-4182.patch"><span class="aui-icon aui-icon-small attachment-icon aui-iconfont-devtools-file" title="File"></span></a>
+                  </div>
+                  <dl>
+                   <dt class="attachment-title">
+                    <a href="/jira/secure/attachment/12549665/LUCENE-4182.patch" title="Latest  18/Oct/12 10:48 - Simon Willnauer" draggable="true" data-downloadurl="text/x-patch:LUCENE-4182.patch:https://issues.apache.org/jira/secure/attachment/12549665/LUCENE-4182.patch">LUCENE-4182.patch</a>
+                   </dt>
+                   <dd class="attachment-delete">
+                    <span class="icon"></span>
+                   </dd>
+                   <dd class="attachment-date">
+                    <time class="livestamp" datetime="2012-10-18T10:48:49.712Z">18/Oct/12 10:48</time>
+                   </dd>
+                   <dd class="attachment-size">
+                    3 kB
+                   </dd>
+                   <dd class="attachment-author">
+                    Simon Willnauer
+                   </dd>
+                  </dl></li>
+                </ol>
+               </div>
+              </div>
+              <div id="activitymodule" class="module toggle-wrap">
+               <div id="activitymodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Activity</h2>
+               </div>
+               <div class="mod-content"> 
+                <big-pipe data-id="activity-panel-pipe-id" style="height: 70px"> 
+                 <div></div> 
+                </big-pipe> 
+               </div>
+              </div>
+             </div>
+             <div id="viewissuesidebar" class="aui-item issue-side-column">
+              <div id="peoplemodule" class="module toggle-wrap">
+               <div id="peoplemodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">People</h2>
+               </div>
+               <div class="mod-content"> 
+                <ul class="item-details" id="peopledetails"> 
+                 <li class="people-details"> 
+                  <dl> 
+                   <dt>
+                    Assignee:
+                   </dt> 
+                   <dd> 
+                    <span id="assignee-val" class="view-issue-field"> <span class="user-hover" id="issue_summary_assignee_simonw" rel="simonw" data-user="{&quot;avatarUrl&quot;:&quot;https://issues.apache.org/jira/secure/useravatar?size=xsmall&amp;avatarId=10452&quot;,&quot;displayName&quot;:&quot;Simon Willnauer&quot;,&quot;emailAddress&quot;:&quot;simonw@apache.org&quot;,&quot;username&quot;:&quot;simonw&quot;}"> <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://issues.apache.org/jira/secure/useravatar?size=small&amp;avatarId=10452" alt="simonw"></span></span> Simon Willnauer </span> </span> 
+                   </dd> 
+                  </dl> 
+                  <dl> 
+                   <dt>
+                    Reporter:
+                   </dt> 
+                   <dd> 
+                    <span id="reporter-val" class="view-issue-field"> <span class="user-hover" id="issue_summary_reporter_mikemccand" rel="mikemccand" data-user="{&quot;avatarUrl&quot;:&quot;https://issues.apache.org/jira/secure/useravatar?size=xsmall&amp;avatarId=10452&quot;,&quot;displayName&quot;:&quot;Michael McCandless&quot;,&quot;emailAddress&quot;:&quot;lucene@mikemccandless.com&quot;,&quot;username&quot;:&quot;mikemccand&quot;}"> <span class="aui-avatar aui-avatar-small"><span class="aui-avatar-inner"><img src="https://issues.apache.org/jira/secure/useravatar?size=small&amp;avatarId=10452" alt="mikemccand"></span></span> Michael McCandless </span> </span> 
+                   </dd> 
+                  </dl> </li> 
+                </ul> 
+                <ul class="item-details"> 
+                 <li> 
+                  <dl> 
+                   <dt>
+                    Votes:
+                   </dt> 
+                   <dd> 
+                    <span id="vote-data" class="aui-badge vote-state-off">0</span> 
+                    <span id="vote-label" title="You have to be logged in to vote for an issue.">Vote for this issue</span> 
+                   </dd> 
+                  </dl> 
+                  <dl> 
+                   <dt>
+                    Watchers:
+                   </dt> 
+                   <dd> 
+                    <span id="watcher-data" class="aui-badge watch-state-off">3</span> 
+                    <span id="watch-label" title="You have to be logged in to watch an issue.">Start watching this issue</span> 
+                   </dd> 
+                  </dl> </li> 
+                </ul> 
+               </div>
+              </div>
+              <div id="datesmodule" class="module toggle-wrap">
+               <div id="datesmodule_heading" class="mod-header">
+                <ul class="ops"></ul>
+                <h2 class="toggle-title">Dates</h2>
+               </div>
+               <div class="mod-content"> 
+                <ul class="item-details"> 
+                 <li> 
+                  <dl class="dates"> 
+                   <dt>
+                    Created:
+                   </dt> 
+                   <dd class="date user-tz" title="29/Jun/12 11:45"> 
+                    <span data-name="Created" id="created-val" data-fieldtype="datetime"> <time class="livestamp" datetime="2012-06-29T11:45:34+0000">29/Jun/12 11:45</time> </span> 
+                   </dd> 
+                  </dl> 
+                  <dl class="dates"> 
+                   <dt>
+                    Updated:
+                   </dt> 
+                   <dd class="date user-tz" title="09/May/16 18:32"> 
+                    <span data-name="Updated" id="updated-val" data-fieldtype="datetime"> <time class="livestamp" datetime="2016-05-09T18:32:27+0000">09/May/16 18:32</time> </span> 
+                   </dd> 
+                  </dl> 
+                  <dl class="dates"> 
+                   <dt>
+                    Resolved:
+                   </dt> 
+                   <dd class="date user-tz" title="18/Oct/12 18:08"> 
+                    <span data-name="Resolved" id="resolutiondate-val" data-fieldtype="datetime"> <time class="livestamp" datetime="2012-10-18T18:08:47+0000">18/Oct/12 18:08</time> </span> 
+                   </dd> 
+                  </dl> </li> 
+                </ul> 
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <!-- .aui-page-panel-inner -->
+    </div>
+    <!-- .aui-page-panel -->
+    <div class="issue-navigator-init"></div> 
+   </section> 
+   <footer id="footer" role="contentinfo"> 
+    <section class="footer-body"> 
+     <ul class="atlassian-footer"> 
+      <li> Atlassian JIRA <a class="seo-link" rel="nofollow" href="https://www.atlassian.com/software/jira">Project Management Software</a> <span id="footer-build-information">(v7.6.3#76005-<span title="8a4e38d34af948780dbf52044e7aafb13a7cae58" data-commit-id="8a4e38d34af948780dbf52044e7aafb13a7cae58}">sha1:8a4e38d</span>)</span> </li> 
+      <li> <a id="about-link" rel="nofollow" href="/jira/secure/AboutPage.jspa/secure/AboutPage.jspa">About JIRA</a> </li> 
+      <li> <a id="footer-report-problem-link" rel="nofollow" href="/jira/secure/CreateIssue!default.jspa">Report a problem</a> </li> 
+     </ul> 
+     <ul class="atlassian-footer"> 
+      <li class="licensemessage"> Powered by a free Atlassian <a rel="nofollow" href="http://www.atlassian.com/software/jira">JIRA</a> open source license for Apache Software Foundation. Try JIRA - <a rel="nofollow" href="http://www.atlassian.com/software/jira">bug tracking software</a> for <i>your</i> team. </li> 
+     </ul> 
+     <div id="footer-logo">
+      <a rel="nofollow" href="http://www.atlassian.com/">Atlassian</a>
+     </div> 
+    </section> 
+    <fieldset class="hidden parameters"> 
+     <input type="hidden" title="loggedInUser" value=""> 
+     <input type="hidden" title="ajaxTimeout" value="The call to the JIRA server did not complete within the timeout period.  We are unsure of the result of this operation."> 
+     <input type="hidden" title="JiraVersion" value="7.6.3"> 
+     <input type="hidden" title="ajaxUnauthorised" value="You are not authorised to perform this operation. Please log in."> 
+     <input type="hidden" title="baseURL" value="https://issues.apache.org/jira"> 
+     <input type="hidden" title="ajaxCommsError" value="The JIRA server could not be contacted. This may be a temporary glitch or the server may be down. "> 
+     <input type="hidden" title="ajaxServerError" value="The JIRA server was contacted but has returned an error response. We are unsure of the result of this operation."> 
+     <input type="hidden" title="ajaxErrorCloseDialog" value="Close this dialog and press refresh in your browser"> 
+     <input type="hidden" title="ajaxErrorDialogHeading" value="Communications Breakdown"> 
+     <input type="hidden" title="dirtyMessage" value="You have entered new data on this page. If you navigate away from this page without first saving your data, the changes will be lost."> 
+     <input type="hidden" title="dirtyDialogMessage" value="You have entered new data in this dialog. If you navigate away from this dialog without first saving your data, the changes will be lost. Click cancel to return to the dialog."> 
+     <input type="hidden" title="keyType" value="Type"> 
+     <input type="hidden" title="keyThen" value="then"> 
+     <input type="hidden" title="dblClickToExpand" value="Double click to expand"> 
+     <input type="hidden" title="actions" value="Actions"> 
+     <input type="hidden" title="removeItem" value="Remove"> 
+     <input type="hidden" title="workflow" value="Workflow"> 
+     <input type="hidden" title="labelNew" value="New Label"> 
+     <input type="hidden" title="issueActionsHint" value="Begin typing for available operations or press down to see all"> 
+     <input type="hidden" title="closelink" value="Close"> 
+     <input type="hidden" title="dotOperations" value="Operations"> 
+     <input type="hidden" title="dotLoading" value="Loading..."> 
+     <input type="hidden" title="frotherSuggestions" value="Suggestions"> 
+     <input type="hidden" title="frotherNomatches" value="No Matches"> 
+     <input type="hidden" title="multiselectVersionsError" value="{0} is not a valid version."> 
+     <input type="hidden" title="multiselectComponentsError" value="{0} is not a valid component."> 
+     <input type="hidden" title="multiselectGenericError" value="The value {0} is invalid."> 
+    </fieldset> 
+   </footer> 
+  </div> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1.0/_/download/batch/jira.webresources:bigpipe-js/jira.webresources:bigpipe-js.js" data-wrm-key="jira.webresources:bigpipe-js" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["activity-panel-pipe-id"]="\"\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n\\n    \u003cdiv class=\\\"tabwrap tabs2\\\"\u003e\\n\\n        \u003cul id=\\\"issue-tabs\\\" class=\\\"tabs horizontal\\\"\u003e\\n                                \\n            \u003cli  data-id=\\\"all-tabpanel\\\" data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\" data-label=\\\"All\\\" data-href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"all-tabpanel\\\" href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.jira.plugin.system.issuetabpanels:all-tabpanel\\\"\u003e\u003cstrong\u003eAll\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  class=\\\"active\\\" id=\\\"comment-tabpanel\\\"  data-id=\\\"comment-tabpanel\\\" data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel\\\" data-label=\\\"Comments\\\" data-href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel\\\"\u003e\\n                            \u003cstrong tabindex=\\\"0\\\"\u003eComments\u003c\\/strong\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  data-id=\\\"worklog-tabpanel\\\" data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\" data-label=\\\"Work Log\\\" data-href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"worklog-tabpanel\\\" href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.jira.plugin.system.issuetabpanels:worklog-tabpanel\\\"\u003e\u003cstrong\u003eWork Log\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  data-id=\\\"changehistory-tabpanel\\\" data-key=\\\"com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\" data-label=\\\"History\\\" data-href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"changehistory-tabpanel\\\" href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.jira.plugin.system.issuetabpanels:changehistory-tabpanel\\\"\u003e\u003cstrong\u003eHistory\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  data-id=\\\"activity-stream-issue-tab\\\" data-key=\\\"com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\" data-label=\\\"Activity\\\" data-href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"activity-stream-issue-tab\\\" href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.atlassian.streams.streams-jira-plugin:activity-stream-issue-tab\\\"\u003e\u003cstrong\u003eActivity\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                                \\n            \u003cli  data-id=\\\"transitions-summary-tabpanel\\\" data-key=\\\"com.googlecode.jira-suite-utilities:transitions-summary-tabpanel\\\" data-label=\\\"Transitions\\\" data-href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.googlecode.jira-suite-utilities:transitions-summary-tabpanel\\\"\u003e\\n                            \u003ca class=\\\"ajax-activity-content\\\" id=\\\"transitions-summary-tabpanel\\\" href=\\\"\\/jira\\/browse\\/LUCENE-4182?page=com.googlecode.jira-suite-utilities:transitions-summary-tabpanel\\\"\u003e\u003cstrong\u003eTransitions\u003c\\/strong\u003e\u003c\\/a\u003e\\n                        \u003c\\/li\u003e\\n                \u003c\\/ul\u003e\\n\\n                    \u003cdiv class=\\\"sortwrap\\\"\u003e\\n                                    \u003ca class=\\\"issue-activity-sort-link ajax-activity-content\\\" rel=\\\"nofollow\\\" data-tab-sort data-order=\\\"desc\\\" href=\\\"\\/jira\\/browse\\/LUCENE-4182?actionOrder=desc\\\" title=\\\"Ascending order - Click to sort in descending order\\\"\u003e\\n                        \u003cspan class=\\\"aui-icon aui-icon-small aui-iconfont-up\\\"\u003eAscending order - Click to sort in descending order\u003c\\/span\u003e\\n                    \u003c\\/a\u003e\\n                            \u003c\\/div\u003e\\n            \u003c\\/div\u003e\\n    \u003cdiv class=\\\"issuePanelWrapper\\\"\u003e\\n        \u003cdiv class=\\\"issuePanelProgress\\\"\u003e\u003c\\/div\u003e\\n        \u003cdiv class=\\\"issuePanelContainer\\\" id=\\\"issue_actions_container\\\"\u003e\\n                                    \\n\\n\\n\u003cdiv id=\\\"comment-13478070\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/LUCENE-4182?focusedCommentId=13478070&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13478070\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"mikemccand\\\" id=\\\"commentauthor_13478070_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=mikemccand\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"mikemccand\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Michael McCandless\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13478070_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'17\\/Oct\\/12 17:50\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-17T17:50:01+0000\'\u003e17\\/Oct\\/12 17:50\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eThis happened again ... scary assert trip in DWPT:\u003c\\/p\u003e\\n\\n\u003cdiv class=\\\"preformatted panel\\\" style=\\\"border-width: 1px;\\\"\u003e\u003cdiv class=\\\"preformattedContent panelContent\\\"\u003e\\n\u003cpre\u003e1 tests failed.\\nREGRESSION:  org.apache.lucene.index.TestBagOfPositions.test\\n\\nError Message:\\nCaptured an uncaught exception in thread: Thread[id=644, name=Thread-561, state=RUNNABLE, group=TGRP-TestBagOfPositions]\\n\\nStack Trace:\\ncom.carrotsearch.randomizedtesting.UncaughtExceptionError: Captured an uncaught exception in thread: Thread[id=644, name=Thread-561, state=RUNNABLE, group=TGRP-TestBagOfPositions]\\nCaused by: java.lang.AssertionError: ram was 33879456 expected: 33851840 flush mem: 18092896 activeMem: 15786560 pendingMem: 0 flushingMem: 3 blockedMem: 0 peakDeltaMem: 99136\\n        at __randomizedtesting.SeedInfo.seed([11A534B74B63930E]:0)\\n        at org.apache.lucene.index.DocumentsWriterFlushControl.assertMemory(DocumentsWriterFlushControl.java:114)\\n        at org.apache.lucene.index.DocumentsWriterFlushControl.doAfterDocument(DocumentsWriterFlushControl.java:181)\\n        at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:384)\\n        at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1443)\\n        at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:1122)\\n        at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:201)\\n        at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:160)\\n        at org.apache.lucene.index.TestBagOfPositions$1.run(TestBagOfPositions.java:110)\\n\\n\\n\\n\\nBuild Log:\\n[...truncated 420 lines...]\\n[junit4:junit4] Suite: org.apache.lucene.index.TestBagOfPositions\\n[junit4:junit4]   2&gt; NOTE: download the large Jenkins line-docs file by running \'ant get-jenkins-line-docs\' in the lucene directory.\\n[junit4:junit4]   2&gt; NOTE: reproduce with: ant test  -Dtestcase=TestBagOfPositions -Dtests.method=test -Dtests.seed=11A534B74B63930E -Dtests.multiplier=3 -Dtests.nightly=true -Dtests.slow=true -Dtests.linedocsfile=\\/home\\/hudson\\/lucene-data\\/enwiki.random.lines.txt -Dtests.locale=fi -Dtests.timezone=Africa\\/Conakry -Dtests.file.encoding=ISO-8859-1\\n[junit4:junit4] ERROR    206s J0 | TestBagOfPositions.test &lt;&lt;&lt;\\n[junit4:junit4]    &gt; Throwable #1: com.carrotsearch.randomizedtesting.UncaughtExceptionError: Captured an uncaught exception in thread: Thread[id=644, name=Thread-561, state=RUNNABLE, group=TGRP-TestBagOfPositions]\\n[junit4:junit4]    &gt; Caused by: java.lang.AssertionError: ram was 33879456 expected: 33851840 flush mem: 18092896 activeMem: 15786560 pendingMem: 0 flushingMem: 3 blockedMem: 0 peakDeltaMem: 99136\\n[junit4:junit4]    &gt;    at __randomizedtesting.SeedInfo.seed([11A534B74B63930E]:0)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriterFlushControl.assertMemory(DocumentsWriterFlushControl.java:114)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriterFlushControl.doAfterDocument(DocumentsWriterFlushControl.java:181)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:384)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1443)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:1122)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:201)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:160)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.TestBagOfPositions$1.run(TestBagOfPositions.java:110)\\n[junit4:junit4]    &gt; Throwable #2: com.carrotsearch.randomizedtesting.UncaughtExceptionError: Captured an uncaught exception in thread: Thread[id=643, name=Thread-560, state=RUNNABLE, group=TGRP-TestBagOfPositions]\\n[junit4:junit4]    &gt; Caused by: java.lang.AssertionError: ram was 33879456 expected: 33851840 flush mem: 18092896 activeMem: 15786560 pendingMem: 0 flushingMem: 3 blockedMem: 0 peakDeltaMem: 99136\\n[junit4:junit4]    &gt;    at __randomizedtesting.SeedInfo.seed([11A534B74B63930E]:0)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriterFlushControl.assertMemory(DocumentsWriterFlushControl.java:114)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriterFlushControl.doAfterDocument(DocumentsWriterFlushControl.java:181)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:384)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1443)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:1122)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:201)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:160)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.TestBagOfPositions$1.run(TestBagOfPositions.java:110)\\n[junit4:junit4]   2&gt; NOTE: test params are: codec=Lucene41: {field=PostingsFormat(name=SimpleText)}, sim=RandomSimilarityProvider(queryNorm=false,coord=yes): {field=DFR I(ne)B1}, locale=fi, timezone=Africa\\/Conakry\\n[junit4:junit4]   2&gt; NOTE: FreeBSD 9.0-RELEASE amd64\\/Sun Microsystems Inc. 1.6.0_32 (64-bit)\\/cpus=16,threads=1,free=59768416,total=212926464\\n[junit4:junit4]   2&gt; NOTE: All tests run in this JVM: [TestCachingTokenFilter, TestNGramPhraseQuery, TestMockCharFilter, TestSpanMultiTermQueryWrapper, TestPriorityQueue, TestMockDirectoryWrapper, TestIndexWriterExceptions, TestIOUtils, TestSegmentReader, TestLevenshteinAutomata, TestRollingBuffer, TestCustomSearcherSort, ThrowInUncaught, Test2BTerms, TestDemo, TestFlushByRamOrCountsPolicy, TestArrayUtil, TestBooleanScorer, TestIndexWriterNRTIsCurrent, TestBooleanQueryVisitSubscorers, TestSegmentTermEnum, TestIndexWriterCommit, TestCopyBytes, TestSloppyPhraseQuery, TestSort, TestTieredMergePolicy, TestTimeLimitingCollector, TestExplanations, TestBagOfPositions]\\n\u003c\\/pre\u003e\\n\u003c\\/div\u003e\u003c\\/div\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"mikemccand\\\" id=\\\"commentauthor_13478070_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=mikemccand\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"mikemccand\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Michael McCandless\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13478070_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'17\\/Oct\\/12 17:50\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-17T17:50:01+0000\'\u003e17\\/Oct\\/12 17:50\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    This happened again ... scary assert trip in DWPT: \\n\\n  \\n 1 tests failed.\\nREGRESSION:  org.apache.lucene.index.TestBagOfPositions.test\\n\\nError Message:\\nCaptured an uncaught exception in thread: Thread[id=644, name=Thread-561, state=RUNNABLE, group=TGRP-TestBagOfPositions]\\n\\nStack Trace:\\ncom.carrotsearch.randomizedtesting.UncaughtExceptionError: Captured an uncaught exception in thread: Thread[id=644, name=Thread-561, state=RUNNABLE, group=TGRP-TestBagOfPositions]\\nCaused by: java.lang.AssertionError: ram was 33879456 expected: 33851840 flush mem: 18092896 activeMem: 15786560 pendingMem: 0 flushingMem: 3 blockedMem: 0 peakDeltaMem: 99136\\n        at __randomizedtesting.SeedInfo.seed([11A534B74B63930E]:0)\\n        at org.apache.lucene.index.DocumentsWriterFlushControl.assertMemory(DocumentsWriterFlushControl.java:114)\\n        at org.apache.lucene.index.DocumentsWriterFlushControl.doAfterDocument(DocumentsWriterFlushControl.java:181)\\n        at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:384)\\n        at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1443)\\n        at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:1122)\\n        at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:201)\\n        at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:160)\\n        at org.apache.lucene.index.TestBagOfPositions$1.run(TestBagOfPositions.java:110)\\n\\n\\n\\n\\nBuild Log:\\n[...truncated 420 lines...]\\n[junit4:junit4] Suite: org.apache.lucene.index.TestBagOfPositions\\n[junit4:junit4]   2&gt; NOTE: download the large Jenkins line-docs file by running \'ant get-jenkins-line-docs\' in the lucene directory.\\n[junit4:junit4]   2&gt; NOTE: reproduce with: ant test  -Dtestcase=TestBagOfPositions -Dtests.method=test -Dtests.seed=11A534B74B63930E -Dtests.multiplier=3 -Dtests.nightly=true -Dtests.slow=true -Dtests.linedocsfile=\\/home\\/hudson\\/lucene-data\\/enwiki.random.lines.txt -Dtests.locale=fi -Dtests.timezone=Africa\\/Conakry -Dtests.file.encoding=ISO-8859-1\\n[junit4:junit4] ERROR    206s J0 | TestBagOfPositions.test &lt;&lt;&lt;\\n[junit4:junit4]    &gt; Throwable #1: com.carrotsearch.randomizedtesting.UncaughtExceptionError: Captured an uncaught exception in thread: Thread[id=644, name=Thread-561, state=RUNNABLE, group=TGRP-TestBagOfPositions]\\n[junit4:junit4]    &gt; Caused by: java.lang.AssertionError: ram was 33879456 expected: 33851840 flush mem: 18092896 activeMem: 15786560 pendingMem: 0 flushingMem: 3 blockedMem: 0 peakDeltaMem: 99136\\n[junit4:junit4]    &gt;    at __randomizedtesting.SeedInfo.seed([11A534B74B63930E]:0)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriterFlushControl.assertMemory(DocumentsWriterFlushControl.java:114)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriterFlushControl.doAfterDocument(DocumentsWriterFlushControl.java:181)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:384)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1443)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:1122)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:201)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:160)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.TestBagOfPositions$1.run(TestBagOfPositions.java:110)\\n[junit4:junit4]    &gt; Throwable #2: com.carrotsearch.randomizedtesting.UncaughtExceptionError: Captured an uncaught exception in thread: Thread[id=643, name=Thread-560, state=RUNNABLE, group=TGRP-TestBagOfPositions]\\n[junit4:junit4]    &gt; Caused by: java.lang.AssertionError: ram was 33879456 expected: 33851840 flush mem: 18092896 activeMem: 15786560 pendingMem: 0 flushingMem: 3 blockedMem: 0 peakDeltaMem: 99136\\n[junit4:junit4]    &gt;    at __randomizedtesting.SeedInfo.seed([11A534B74B63930E]:0)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriterFlushControl.assertMemory(DocumentsWriterFlushControl.java:114)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriterFlushControl.doAfterDocument(DocumentsWriterFlushControl.java:181)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.DocumentsWriter.updateDocument(DocumentsWriter.java:384)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.IndexWriter.updateDocument(IndexWriter.java:1443)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.IndexWriter.addDocument(IndexWriter.java:1122)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:201)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.RandomIndexWriter.addDocument(RandomIndexWriter.java:160)\\n[junit4:junit4]    &gt;    at org.apache.lucene.index.TestBagOfPositions$1.run(TestBagOfPositions.java:110)\\n[junit4:junit4]   2&gt; NOTE: test params are: codec=Lucene41: {field=PostingsFormat(name=SimpleText)}, sim=RandomSimilarityProvider(queryNorm=false,coord=yes): {field=DFR I(ne)B1}, locale=fi, timezone=Africa\\/Conakry\\n[junit4:junit4]   2&gt; NOTE: FreeBSD 9.0-RELEASE amd64\\/Sun Microsystems Inc. 1.6.0_32 (64-bit)\\/cpus=16,threads=1,free=59768416,total=212926464\\n[junit4:junit4]   2&gt; NOTE: All tests run in this JVM: [TestCachingTokenFilter, TestNGramPhraseQuery, TestMockCharFilter, TestSpanMultiTermQueryWrapper, TestPriorityQueue, TestMockDirectoryWrapper, TestIndexWriterExceptions, TestIOUtils, TestSegmentReader, TestLevenshteinAutomata, TestRollingBuffer, TestCustomSearcherSort, ThrowInUncaught, Test2BTerms, TestDemo, TestFlushByRamOrCountsPolicy, TestArrayUtil, TestBooleanScorer, TestIndexWriterNRTIsCurrent, TestBooleanQueryVisitSubscorers, TestSegmentTermEnum, TestIndexWriterCommit, TestCopyBytes, TestSloppyPhraseQuery, TestSort, TestTieredMergePolicy, TestTimeLimitingCollector, TestExplanations, TestBagOfPositions]\\n \\n               \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-13478870\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/LUCENE-4182?focusedCommentId=13478870&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13478870\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"simonw\\\" id=\\\"commentauthor_13478870_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=simonw\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"simonw\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Simon Willnauer\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13478870_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'18\\/Oct\\/12 09:22\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-18T09:22:39+0000\'\u003e18\\/Oct\\/12 09:22\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eOk guys, I think I have found the problem here. Let me try to explain.... (watch out, lots of numbers coming up...)\u003cbr\\/\u003e\\nI use the initial failure to explain this:\u003cbr\\/\u003e\\nactiveMemory=14234192\u003cbr\\/\u003e\\nflushMemory=27371536\u003cbr\\/\u003e\\nactualMemory=41605728\u003cbr\\/\u003e\\nexpectedMemory=40986328\u003cbr\\/\u003e\\nactualMemory-expectedMemory = 619400\u003c\\/p\u003e\\n\\n\u003cp\u003ein this example we have 4 threads &amp; 2 of them are flushing right now (I checked with the seed to get RAM buffer &amp; numThreads). This means we have 2 DWPT flushing and 4 DWPT that are accepting documents ie. there are 2 threads in flight (we can\'t have more than 4 DWPT since numThreads=2). The largest document we have seen is peakDelta=3715948. Stall-Control kicks in once we cross 2xmaxRamBuffer (16MB here) -&gt; stallLimit=33554432. Lets say both in-flight threads have a very large document (close to the peak) so we have ~7431896 (7MB) in flight. If we subtract this from the active memory (activeMem-inFlight = 6802296) we should have stalled at 2*16MB total ram usage (34173832 bytes) which was already the case before those two threads passed the stall control. Yet, if a 3rd thread took a DWPT that we already see in the flushing state when we trip the assert here we get to 3*peakDelta = 11147844 and subtract it from the actualMemory (actualMemory-3*peakDelta = 30457884 &lt; 2x16MB). Conclusion: the assert is not correct! It is possible that we see up peakDelta * numActiveThreadStates in flight since we can\'t tell how many threads are indexing so there could be n threads flushing and m threads indexing (holding a DWPT) while the total number of threads is much higher than the number of threadstates. I will change the assert to be a better upperbound though.\u003c\\/p\u003e\\n\\n\u003cp\u003eI hope this makes sense to you and I didn\'t miss anything\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"simonw\\\" id=\\\"commentauthor_13478870_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=simonw\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"simonw\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Simon Willnauer\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13478870_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'18\\/Oct\\/12 09:22\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-18T09:22:39+0000\'\u003e18\\/Oct\\/12 09:22\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    Ok guys, I think I have found the problem here. Let me try to explain.... (watch out, lots of numbers coming up...) \\nI use the initial failure to explain this: \\nactiveMemory=14234192 \\nflushMemory=27371536 \\nactualMemory=41605728 \\nexpectedMemory=40986328 \\nactualMemory-expectedMemory = 619400 \\n\\n in this example we have 4 threads &amp; 2 of them are flushing right now (I checked with the seed to get RAM buffer &amp; numThreads). This means we have 2 DWPT flushing and 4 DWPT that are accepting documents ie. there are 2 threads in flight (we can\'t have more than 4 DWPT since numThreads=2). The largest document we have seen is peakDelta=3715948. Stall-Control kicks in once we cross 2xmaxRamBuffer (16MB here) -&gt; stallLimit=33554432. Lets say both in-flight threads have a very large document (close to the peak) so we have ~7431896 (7MB) in flight. If we subtract this from the active memory (activeMem-inFlight = 6802296) we should have stalled at 2*16MB total ram usage (34173832 bytes) which was already the case before those two threads passed the stall control. Yet, if a 3rd thread took a DWPT that we already see in the flushing state when we trip the assert here we get to 3*peakDelta = 11147844 and subtract it from the actualMemory (actualMemory-3*peakDelta = 30457884 &lt; 2x16MB). Conclusion: the assert is not correct! It is possible that we see up peakDelta * numActiveThreadStates in flight since we can\'t tell how many threads are indexing so there could be n threads flushing and m threads indexing (holding a DWPT) while the total number of threads is much higher than the number of threadstates. I will change the assert to be a better upperbound though. \\n\\n I hope this makes sense to you and I didn\'t miss anything              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-13478900\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/LUCENE-4182?focusedCommentId=13478900&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13478900\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"simonw\\\" id=\\\"commentauthor_13478900_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=simonw\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"simonw\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Simon Willnauer\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13478900_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'18\\/Oct\\/12 10:48\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-18T10:48:49+0000\'\u003e18\\/Oct\\/12 10:48\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003ehere is a patch fixing the upperbound and adding some more insight into the assert.\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"simonw\\\" id=\\\"commentauthor_13478900_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=simonw\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"simonw\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Simon Willnauer\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13478900_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'18\\/Oct\\/12 10:48\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-18T10:48:49+0000\'\u003e18\\/Oct\\/12 10:48\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    here is a patch fixing the upperbound and adding some more insight into the assert.              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-13478911\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/LUCENE-4182?focusedCommentId=13478911&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13478911\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"mikemccand\\\" id=\\\"commentauthor_13478911_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=mikemccand\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"mikemccand\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Michael McCandless\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13478911_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'18\\/Oct\\/12 11:16\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-18T11:16:22+0000\'\u003e18\\/Oct\\/12 11:16\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003e+1\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"mikemccand\\\" id=\\\"commentauthor_13478911_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=mikemccand\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"mikemccand\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Michael McCandless\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13478911_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'18\\/Oct\\/12 11:16\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-18T11:16:22+0000\'\u003e18\\/Oct\\/12 11:16\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    +1              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-13479200\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/LUCENE-4182?focusedCommentId=13479200&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13479200\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"simonw\\\" id=\\\"commentauthor_13479200_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=simonw\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"simonw\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Simon Willnauer\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13479200_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'18\\/Oct\\/12 18:08\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-18T18:08:47+0000\'\u003e18\\/Oct\\/12 18:08\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003ecommitted to trunk in rev. 1399757 backported to 4.x in rev. 1399758\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"simonw\\\" id=\\\"commentauthor_13479200_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=simonw\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"simonw\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Simon Willnauer\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13479200_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'18\\/Oct\\/12 18:08\'\u003e\u003ctime class=\'livestamp\' datetime=\'2012-10-18T18:08:47+0000\'\u003e18\\/Oct\\/12 18:08\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    committed to trunk in rev. 1399757 backported to 4.x in rev. 1399758              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-13610664\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/LUCENE-4182?focusedCommentId=13610664&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13610664\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"commit-tag-bot\\\" id=\\\"commentauthor_13610664_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=commit-tag-bot\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"commit-tag-bot\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Commit Tag Bot\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13610664_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'22\\/Mar\\/13 16:25\'\u003e\u003ctime class=\'livestamp\' datetime=\'2013-03-22T16:25:22+0000\'\u003e22\\/Mar\\/13 16:25\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003e\u003cspan class=\\\"error\\\"\u003e&#91;branch_4x commit&#93;\u003c\\/span\u003e Simon Willnauer\u003cbr\\/\u003e\\n\u003ca href=\\\"http:\\/\\/svn.apache.org\\/viewvc?view=revision&amp;revision=1399758\\\" class=\\\"external-link\\\" rel=\\\"nofollow\\\"\u003ehttp:\\/\\/svn.apache.org\\/viewvc?view=revision&amp;revision=1399758\u003c\\/a\u003e\u003c\\/p\u003e\\n\\n\u003cp\u003e\u003ca href=\\\"https:\\/\\/issues.apache.org\\/jira\\/browse\\/LUCENE-4182\\\" title=\\\"DocumentsWriterFlushControl.assertMemory tripped by NGramTokenizerTest.testRandomStrings\\\" class=\\\"issue-link\\\" data-issue-key=\\\"LUCENE-4182\\\"\u003e\u003cdel\u003eLUCENE-4182\u003c\\/del\u003e\u003c\\/a\u003e: consider concurrent in-flight add \\/ update process in memory assert\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"commit-tag-bot\\\" id=\\\"commentauthor_13610664_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=commit-tag-bot\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"commit-tag-bot\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Commit Tag Bot\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13610664_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'22\\/Mar\\/13 16:25\'\u003e\u003ctime class=\'livestamp\' datetime=\'2013-03-22T16:25:22+0000\'\u003e22\\/Mar\\/13 16:25\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                     &#91;branch_4x commit&#93;  Simon Willnauer \\n http:\\/\\/svn.apache.org\\/viewvc?view=revision&amp;revision=1399758  \\n\\n   LUCENE-4182  : consider concurrent in-flight add \\/ update process in memory assert              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \\n\\n\\n\u003cdiv id=\\\"comment-13654203\\\" class=\\\"issue-data-block activity-comment twixi-block  expanded\\\"\u003e\\n    \u003cdiv class=\\\"twixi-wrap verbose actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Collapse comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-expanded\\\"\u003e\u003cspan\u003eHide\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-links\\\"\u003e\\n                \u003ca href=\\\"\\/jira\\/browse\\/LUCENE-4182?focusedCommentId=13654203&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13654203\\\"\\n                   title=\\\"Right click and copy link for a permanent link to this comment.\\\" class=\\\"activitymodule-link issue-comment-action\\\"\u003e\\n                    \u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-link\\\"\u003ePermalink\u003c\\/span\u003e\u003c\\/a\u003e\\n                                            \u003c\\/div\u003e\\n            \u003cdiv class=\\\"action-details\\\"\u003e        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"thetaphi\\\" id=\\\"commentauthor_13654203_verbose\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=thetaphi\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"thetaphi\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Uwe Schindler\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13654203_verbose subText\'\u003e\u003cspan class=\'date user-tz\' title=\'10\\/May\\/13 10:34\'\u003e\u003ctime class=\'livestamp\' datetime=\'2013-05-10T10:34:23+0000\'\u003e10\\/May\\/13 10:34\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e  \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n        \u003cdiv class=\\\"action-body flooded\\\"\u003e\u003cp\u003eClosed after release.\u003c\\/p\u003e \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n    \u003cdiv class=\\\"twixi-wrap concise actionContainer\\\"\u003e\\n        \u003cdiv class=\\\"action-head\\\"\u003e\\n            \u003ca href=\\\"#\\\" title=\\\"Expand comment\\\" class=\\\"twixi\\\"\u003e\u003cspan class=\\\"icon-default aui-icon aui-icon-small aui-iconfont-collapsed\\\"\u003e\u003cspan\u003eShow\u003c\\/span\u003e\u003c\\/span\u003e\u003c\\/a\u003e\\n            \u003cdiv class=\\\"action-details flooded\\\"\u003e\\n                        \\n    \\n    \\n    \\n                \\n\\n    \u003ca class=\\\"user-hover user-avatar\\\" rel=\\\"thetaphi\\\" id=\\\"commentauthor_13654203_concise\\\" href=\\\"\\/jira\\/secure\\/ViewProfile.jspa?name=thetaphi\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-xsmall\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"https:\\/\\/issues.apache.org\\/jira\\/secure\\/useravatar?size=xsmall&amp;avatarId=10452\\\" alt=\\\"thetaphi\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e Uwe Schindler\u003c\\/a\u003e\\n added a comment  - \u003cspan class=\'commentdate_13654203_concise subText\'\u003e\u003cspan class=\'date user-tz\' title=\'10\\/May\\/13 10:34\'\u003e\u003ctime class=\'livestamp\' datetime=\'2013-05-10T10:34:23+0000\'\u003e10\\/May\\/13 10:34\u003c\\/time\u003e\u003c\\/span\u003e\u003c\\/span\u003e                    Closed after release.              \u003c\\/div\u003e\\n        \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\u003c\\/div\u003e\\n                             \u003c\\/div\u003e\\n    \u003c\\/div\u003e\\n\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script> 
+  <script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["scope-filter-data"]="{\"createScopeActions\":[],\"scopes\":[]}";
+WRM._unparsedData["sidebar-collapsed-by-default"]="true";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:can-manage"]="false";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:with-icons"]="false";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:shortcuts"]="[]";
+WRM._unparsedData["com.atlassian.jira.projects.shortcuts:project-id"]="12310110";
+WRM._unparsedData["sidebar-id"]="\"\u003cdiv class=\\\"aui-sidebar  projects-sidebar sidebar-pending\\\" \u003e\u003cdiv class=\\\"aui-sidebar-wrapper\\\"\u003e\u003cdiv class=\\\"aui-sidebar-body\\\"\u003e\u003cheader class=\\\"aui-page-header\\\"\u003e\u003cdiv class=\\\"aui-page-header-inner\\\"\u003e\u003cdiv class=\\\"aui-page-header-image\\\"\u003e\u003ca href=\\\"\\/jira\\/projects\\/LUCENE\\/summary\\\" title=\\\"Lucene - Core\\\" class=\\\"jira-project-avatar\\\"\u003e\u003cspan class=\\\"aui-avatar aui-avatar-large aui-avatar-project\\\"\u003e\u003cspan class=\\\"aui-avatar-inner\\\"\u003e\u003cimg src=\\\"\\/jira\\/secure\\/projectavatar?pid=12310110&amp;avatarId=10061\\\" alt=\\\"Lucene - Core\\\" \\/\u003e\u003c\\/span\u003e\u003c\\/span\u003e\u003cimg src=\\\"data:image\\/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI\\/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDMwMCAzMDAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwMCAzMDA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnIGlkPSJMYXllcl8yIj4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRjc5MjMyOyIgZD0iTTE1MCwwQzY2LjY2NywwLDAsNjYuNjY3LDAsMTUwczY2LjY2NywxNTAsMTUwLDE1MHMxNTAtNjYuNjY3LDE1MC0xNTBTMjMzLjMzMywwLDE1MCwweg0KCQkgTTEzNi42NjcsMTc4LjMzM0wxMjUsMTkwbC00MS42NjctNDBMOTUsMTM4LjMzM2wzMC0zMEwxMzYuNjY3LDEyMGwtMzAsMzBMMTM2LjY2NywxNzguMzMzeiBNMjA1LDE2MS42NjdsLTMwLDMwTDE2My4zMzMsMTgwDQoJCWwzMC0zMGwtMzAtMzBMMTc1LDEwOC4zMzNMMjE2LjY2NywxNTBMMjA1LDE2MS42Njd6Ii8+DQo8L2c+DQo8Zz4NCgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgcG9pbnRzPSIxNzUsMTkxLjY2NyAyMDUsMTYxLjY2NyAyMTYuNjY3LDE1MCAxNzUsMTA4LjMzMyAxNjMuMzMzLDEyMCAxOTMuMzMzLDE1MCAxNjMuMzMzLDE4MCAJIi8+DQoJPHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGRkZGRjsiIHBvaW50cz0iMTI1LDEwOC4zMzMgOTUsMTM4LjMzMyA4My4zMzMsMTUwIDEyNSwxOTAgMTM2LjY2NywxNzguMzMzIDEwNi42NjcsMTUwIDEzNi42NjcsMTIwIAkiLz4NCjwvZz4NCjwvc3ZnPg0K\\\" alt=\\\"Icon indicating the project type\\\" class=\\\"jira-project-avatar-icon\\\" \\/\u003e\u003c\\/a\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-image --\u003e\u003cdiv class=\\\"aui-page-header-main\\\"\u003e\u003ch1\u003e\u003cdiv class=\\\"aui-group aui-group-split\\\"\u003e\u003cdiv class=\\\"aui-item project-title\\\"\u003e\u003ca href=\\\"\\/jira\\/projects\\/LUCENE\\/summary\\\" title=\\\"Lucene - Core\\\"\u003eLucene - Core\u003c\\/a\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/h1\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-main --\u003e\u003c\\/div\u003e\u003c!-- .aui-page-header-inner --\u003e\u003c\\/header\u003e\u003c!-- .aui-page-header --\u003e\u003cnav class=\\\"aui-navgroup aui-navgroup-vertical\\\"\u003e\u003cdiv class=\\\"aui-navgroup-inner sidebar-content-container\\\"\u003e\u003cdiv class=\\\"aui-sidebar-group aui-sidebar-group-tier-one\\\" data-id=\\\"sidebar-navigation-panel\\\"\u003e\u003cul class=\\\"aui-nav\\\"\u003e\u003cli class=\\\"aui-nav-selected\\\" \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/jira\\/projects\\/LUCENE\\/issues\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-issue-navigator:sidebar-issue-navigator\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-issues\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Issues\\\"\u003eIssues\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/jira\\/projects\\/LUCENE?selectedItem=com.atlassian.jira.jira-projects-plugin:report-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:report-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large agile-icon-report\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Reports\\\"\u003eReports\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003cli  \u003e\u003ca class=\\\"aui-nav-item \\\" href=\\\"\\/jira\\/projects\\/LUCENE?selectedItem=com.atlassian.jira.jira-projects-plugin:components-page\\\" data-link-id=\\\"com.atlassian.jira.jira-projects-plugin:components-page\\\" \u003e\u003cspan class=\\\"aui-icon aui-icon-large icon-sidebar-components\\\"\u003e\u003c\\/span\u003e\u003cspan class=\\\"aui-nav-item-label\\\" title=\\\"Components\\\"\u003eComponents\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/li\u003e\u003c\\/ul\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/nav\u003e\u003c\\/div\u003e\u003cdiv class=\\\"aui-sidebar-footer\\\"\u003e\u003ca class=\\\"aui-button aui-button-subtle aui-sidebar-toggle aui-sidebar-footer-tipsy\\\" data-tooltip=\\\"Expand sidebar ( [ )\\\" href=\\\"#\\\"\u003e\u003cspan class=\\\"aui-icon aui-icon-small\\\"\u003e\u003c\\/span\u003e\u003c\\/a\u003e\u003c\\/div\u003e\u003c\\/div\u003e\u003c\\/div\u003e\"";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script> 
+  <script type="text/javascript" src="/jira/s/d41d8cd98f00b204e9800998ecf8427e-CDN/3pgavk/76005/1c78b578e5c0e813799ab2baea47b6f7/1.0/_/download/batch/jira.webresources:bigpipe-init/jira.webresources:bigpipe-init.js" data-wrm-key="jira.webresources:bigpipe-init" data-wrm-batch-type="resource" data-initially-rendered></script> 
+  <form id="jira_request_timing_info" class="dont-default-focus"> 
+   <fieldset class="parameters hidden"> 
+    <input type="hidden" title="jira.request.start.millis" value="1520245194624"> 
+    <input type="hidden" title="jira.request.server.time" value="138"> 
+    <input type="hidden" title="jira.request.id" value="619x94600958x1"> 
+    <input type="hidden" title="jira.session.expiry.time" value="-"> 
+    <input type="hidden" title="jira.session.expiry.in.mins" value="-"> 
+    <input id="jiraConcurrentRequests" type="hidden" name="jira.request.concurrent.requests" value="2"> 
+    <input type="hidden" title="db.reads.time.in.ms" value="24"> 
+    <input type="hidden" title="db.conns.time.in.ms" value="30"> 
+   </fieldset> 
+  </form> 
+  <!--
+	                 REQUEST ID : 619x94600958x1
+	          REQUEST TIMESTAMP : [05/Mar/2018:10:19:54 +0000]
+	               REQUEST TIME : 0.1380
+	                 ASESSIONID : -
+	        CONCURRENT REQUESTS : 2
+
+	                      db.reads : OpSnapshot{name='db.reads', invocationCount=16, elapsedTotal=24876709, elapsedMin=605231, elapsedMax=9264611, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+	                      db.conns : OpSnapshot{name='db.conns', invocationCount=20, elapsedTotal=30618340, elapsedMin=634397, elapsedMax=9294612, resultSetSize=0, cpuTotal=0, cpuMin=0, cpuMax=0}
+-->   
+ </body>
+</html>
