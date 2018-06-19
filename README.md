@@ -68,13 +68,14 @@ How to run the PatchParser
   - `git clone https://github.com/AutoProRepair/PatchParser.git`
 
 2. Collecting the six Java projects ([`commons-io`](https://github.com/apache/commons-io), [`commons-lang`](https://github.com/apache/commons-lang), [`commons-math`](https://github.com/apache/commons-math), [`derby`](https://github.com/apache/derby), [`lucene-solr`](https://github.com/apache/lucene-solr), and [`mahout`](https://github.com/apache/mahout)) from GitHub to create the subjects.
-- `./subjects/run.sh`
+- `cd PatchParser`
+- `./subjects/run.sh` After running it, there are six new directories for the six Java projects in the directory "`subjects/`", which have the same names as their project names respectively.
 
 3. Collecting patch-related commits and parsing code changes of patches
 - `./run.sh`
 
 * If it executes successfully, 
-    * The **first step** makes statistics of project LOC, which show the code line numbers of all projects, respectively.<br>
+    * The **first step** makes statistics of project LOC, which show the code line numbers of all projects respectively.
     * The **second step** will collect the fixed bug reports from JIRA issue tracking system. The results are stored in the directory "`data/BugReports/`".<br>
     * The **third step** collects bug-fix-related commits with bugID of bug reports and bug-related keywords from project repositories.
 It also will fileter out changes of test code. Its output consists of three kinds of files: 
