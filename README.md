@@ -19,7 +19,7 @@ which further can be used to mine fix patterns for Java bugs.
 PatchParser can provide the detailed statistics of fine-grained code entities impacted by patches, which can be used to build the knowledge on repair actions with fine-grained code entities for researchers.
 
 **Example of a bug-fix patch parsed by PatchParser:**<br>
-```Java
+```diff
 Project: commons-math
 Bug ID: MATH-29
 Commit ID: cedf0d27f9e9341a9e9fa8a192735a0c2e11be40
@@ -30,17 +30,17 @@ Commit ID: cedf0d27f9e9341a9e9fa8a192735a0c2e11be40
 +   return FastMath.pow(2 * FastMath.PI, -0.5 * dim) *
               FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals);
 
-Parsed Result:
-UPD ReturnStatement@@"return FastMath.pow(2 * FastMath.PI, -dim / 2) * FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals);" to "return FastMath.pow(2 * FastMath.PI, -0.5 * dim) * FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals);".
----UPD InfixExpression@@"FastMath.pow(2 * FastMath.PI, -dim / 2) * FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals)" to "FastMath.pow(2 * FastMath.PI, -0.5 * dim) * FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals)".
-------UPD MethodInvocation@@"FastMath.pow(2 * FastMath.PI, -dim / 2)" to "FastMath.pow(2 * FastMath.PI, -0.5 * dim)".
----------UPD InfixExpression@@"-dim / 2" to "-0.5 * dim".
-------------UPD PrefixExpression@@"-dim" to "-0.5".
----------------DEL SimpleName@@"dim" from "-dim".
----------------INS NumberLiteral@@"0.5" to "-dim".
-------------UPD Operator@@"/" to "*".
-------------DEL NumberLiteral@@"2" from "2".
-------------INS SimpleName@@"dim" to "2".
+ Parsed Result:
+ UPD ReturnStatement@@"return FastMath.pow(2 * FastMath.PI, -dim / 2) * FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals);" to "return FastMath.pow(2 * FastMath.PI, -0.5 * dim) * FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals);".
+ ---UPD InfixExpression@@"FastMath.pow(2 * FastMath.PI, -dim / 2) * FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals)" to "FastMath.pow(2 * FastMath.PI, -0.5 * dim) * FastMath.pow(covarianceMatrixDeterminant, -0.5) * getExponentTerm(vals)".
+ ------UPD MethodInvocation@@"FastMath.pow(2 * FastMath.PI, -dim / 2)" to "FastMath.pow(2 * FastMath.PI, -0.5 * dim)".
+ ---------UPD InfixExpression@@"-dim / 2" to "-0.5 * dim".
+ ------------UPD PrefixExpression@@"-dim" to "-0.5".
+ ---------------DEL SimpleName@@"dim" from "-dim".
+ ---------------INS NumberLiteral@@"0.5" to "-dim".
+ ------------UPD Operator@@"/" to "*".
+ ------------DEL NumberLiteral@@"2" from "2".
+ ------------INS SimpleName@@"dim" to "2".
 ```
 
 This document describes how to use this dataset and how to reproduce the result of our paper below. Please cite the following paper if you utilize the tool.
@@ -82,5 +82,5 @@ It also will fileter out changes of test code. Its output consists of three kind
         * **Fixed version** of the Java code file, stored in the directory "`data/PatchCommits/Linked_or_Keywords/<ProjectName>/revFiles/`".
         * **Diff Hunk** of the code changes of fixing the bug, stored in the directory "`data/PatchCommits/Linked_or_Keywords/<ProjectName>/DiffEntries/`".
     * The **forth step** will further filter out the Java code files that only contain non-Java code changes.<br>
-    * The **fifth step** make statistics of diff hunk sizes of code changes. The results will be stored in the directory "`data/DiffentrySizes/`".<br>
+    * The **fifth step** makes statistics of diff hunk sizes of code changes. The results will be stored in the directory "`data/DiffentrySizes/`".<br>
     * The **sixth step** will parse code changes of patches and make statistics of fine-grained code entities impatced by patches. The results will be stored in the directory "`data/ParseResults/`". 
