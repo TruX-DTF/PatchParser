@@ -9,8 +9,7 @@ mvn compile
 mvn dependency:copy-dependencies
 mvn package
 mv -f target/Parser-0.0.1-SNAPSHOT.jar target/dependency/
-cd ..
 
-java -cp "Parser/target/dependency/*" -Xmx2g edu.lu.uni.serval.Main
-java -cp "Parser/target/dependency/*" -Xmx2g edu.lu.uni.serval.Main2
+java -cp "target/dependency/*" -Xmx2g edu.lu.uni.serval.Main
+java -cp "target/dependency/*" -Xmx2g edu.lu.uni.serval.Main2
 
