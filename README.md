@@ -11,7 +11,7 @@ It further automatically parses bug-fix patches by taking input the buggy and fi
  - **Bug linking**: we identify the reported and fixed bug IDs (e.g, **MATH-929**) in JIRA issue tracking system with two criteria: (1) **Issue Type** is `bug` and (2) **Resolution** is `fixed`. PatchParser thus collects bug-fix commits by identifying such reported and fixed bug IDs in commit messages.
 
 **Parsing of bug-fix patches:**<br>
-PatchParser takes input the buggy and fixed versions of a Java code file containing a bug fix, which are extracted by travelling the project repository with collected bug fix commits in the previous process, to parse bug fix patches by leveraging [GumTree](https://github.com/GumTreeDiff/gumtree/). PatchParser further regroups [GumTree](https://github.com/GumTreeDiff/gumtree/) output to present code change actions of bug-fix patches at AST level in terms of hierarchical construct.
+PatchParser takes input the buggy and fixed versions of a Java code file containing a bug fix, which are extracted by traversing the project repository with collected bug fix commits in the previous process, to parse bug fix patches by leveraging [GumTree](https://github.com/GumTreeDiff/gumtree/). PatchParser further regroups [GumTree](https://github.com/GumTreeDiff/gumtree/) output to present code change actions of bug-fix patches at AST level in terms of hierarchical construct.
 
 The results of parsed patches are fine-grained, detailed and hierarchical code change actions at abstract syntax tree (AST) level, which can explicitly provide a graphic representation of the hierarchical repair actions for each bug-fix patch. 
 The parsed patches can help researchers understand the code change action knowledge of bug fixes at AST level, 
