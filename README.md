@@ -53,7 +53,7 @@ This document describes how to use this dataset and how to reproduce the result 
   Series = {ICSME 2018},
   Year = {2018},
   address = {Madrid, Spain},
-  pages = {1--12}
+  pages = {304--315}
 }
 ```
 
