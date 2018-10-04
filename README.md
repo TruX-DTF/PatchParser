@@ -47,7 +47,7 @@ This document describes how to use this dataset and how to reproduce the result 
 
 ```
 @inproceedings{liu2018closer,
-  Author = {Liu, Kui and Kim, Dongsun and Koyuncu, Anil and Li, Li and Bissyande, Tegawend{\'e} Fran{\c{c}}ois D Assise and Le Traon, Yves},
+  Author = {Liu, Kui and Kim, Dongsun and Koyuncu, Anil and Li, Li and F. Bissyand{\'e}, Tegawend{\'e} and Le Traon, Yves},
   Title = {A Closer Look at Real-World Patches},
   Booktitle = {Proceedings of the 34th IEEE International Conference on Software Maintenance and Evolution},
   Series = {ICSME 2018},
