@@ -46,8 +46,8 @@ Commit ID: cedf0d27f9e9341a9e9fa8a192735a0c2e11be40
 This document describes how to use this dataset and how to reproduce the result of our paper below. Please cite the following paper if you utilize the tool.
 
 ```
-@inproceedings{kui2018closer,
-  Author = {Kui Liu and Dongsun Kim and Li Li and Koyuncu Anil and Tegawend\'e F. Bissyand\'e and Yves Le Traon},
+@inproceedings{liu2018closer,
+  Author = {Liu, Kui and Kim, Dongsun and Koyuncu, Anil and Li, Li and Bissyande, Tegawend{\'e} Fran{\c{c}}ois D Assise and Le Traon, Yves},
   Title = {A Closer Look at Real-World Patches},
   Booktitle = {Proceedings of the 34th IEEE International Conference on Software Maintenance and Evolution},
   Series = {ICSME 2018},
